@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(94, 93, 93, 0.912);
+    /* background-image: url(https://getwallpapers.com/wallpaper/full/e/2/a/7654.jpg); */
+    background-image: url(SuccessDesktop.jpg);
+    background-size: cover;
+    
+}
+header::before{
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 75%);
+}
+#container{
+
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    /* background-color: rgb(59, 59, 188,25%); */
+    backdrop-filter: blur(5px);
+    /* filter: blur(10px); */
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.845);
+    /* box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.845); */
+    color: white;
+    position: relative;
+}
+#container:hover{
+    border: none;
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.845);
+    /* box-shadow: 0 0 20px 1px rgba(14, 246, 29, 0.845); */
+}
+
+#buttonform{
+    width: 200px;
+    height: 28px;
+    background-color: white;
+    color: rgb(18, 18, 18);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top:50px;
+    overflow: hidden;
+}
+#buttonform span{
+    position: absolute;
+    z-index: 0;
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+    /* right: 0px; */
+    border-radius: 5px;
+}
+#buttonform #singin{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 0px;
+    font-size: 15px;
+    z-index: 1;
+    color: white;
+    padding: 10px 26px;
+    /* background-color: red; */
+}
+#buttonform #singup{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0px;
+    font-size: 15px;
+    z-index: 1;
+    padding: 10px 26px;
+    /* background-color: green; */
+}
+
+
+#card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+#card1{
+    display: none;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+input[type='text'], input[type='password']{
+    width: 260px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 0 10px ;
+    border: none;
+}
+
+#ver{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin: 10px 0 10px 0;
+}
+.btn1{
+    width: 200px;
+    height: 35px;
+    margin: 20px 15%;
+    background-color: transparent;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid white;
+    /* overflow: hidden; */
+}
+.btn1:hover{
+    #btn11{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 97%;
+        height: 77%;
+        background-color: blue;
+        border-radius: 3px;
+    }
+    border: none; 
+    box-shadow: 0 0 10px 2px ;
+}
+#messeger{
+    position: absolute;
+    color: white;
+    top: 50px;
+}

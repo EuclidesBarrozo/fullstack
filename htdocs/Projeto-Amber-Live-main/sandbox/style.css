@@ -1,0 +1,24 @@
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: transform 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão em 10% */
+}
+#container-botao{
+    width: fit-content;
+    box-sizing: content-box;
+    border: 1px solid black;
+    overflow: hidden;
+}

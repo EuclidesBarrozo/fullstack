@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+        Nota 1: <input type="text" id="nota1">
+        Nota 2: <input type="text" id="nota2">
+        Nota 3: <input type="text" id="nota3">
+        <br>
+        Média:    <input type="text" id="media" disabled>
+        Situação: <input type="text" id="situacao" disabled>
+        
+        <button onclick="return media()">Calcular Média</button>
+        <br>
+        
+        <div id ="divRecuperacao">
+        Nota recuperação: <input type="text" id="nr">
+        <button onclick="return recuperacao()">Calcular Recuperação</button><br>
+        Média Recuperação: <input type="text" id="mRec" disabled>
+        Situação Final: <input type="text" id="sRec" disabled>
+        </div>
+
+    <script>
+        document.getElementById("divRecuperacao").style.display = "none";
+
+        function media() {
+            var n1 = document.getElementById('nota1').value;
+            var n2 = document.getElementById('nota2').value;
+            var n3 = document.getElementById('nota3').value;
+
+            var media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3)) / 3;
+
+            if (media >= 7) {
+                situacao = "Aprovado!";
+            }
+            else{
+                situacao = "Recuperação!";
+                document.getElementById("divRecuperacao").style.display = 'block';
+            }
+            
+            document.getElementById('media').value = media;
+            document.getElementById('situacao').value = situacao;
+
+            return false;
+        };
+
+        function recuperacao() {
+            //(média anterior + recuperação)/2 = 5
+            var mediaAnterior = document.getElementById('media').value;
+            var notaRecuperacao = document.getElementById('nr').value;
+
+            mediaRecuperacao = (parseFloat(mediaAnterior) + parseFloat(notaRecuperacao))/2;
+
+            if (mediaRecuperacao >= 5) {
+                situacao = "Aprovado!";
+            }
+            else{
+                situacao = "Reprovado!";
+            }
+            document.getElementById('mRec').value = mediaRecuperacao;
+            document.getElementById('sRec').value = situacao;
+        }
+    </script>
+</body>
+
+</html>

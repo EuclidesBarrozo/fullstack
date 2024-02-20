@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            list-style:none;/*remove os pontos*/
+            border:1px solid #c0c0c0;
+            float:left;/*posicionamento*/
+            
+        }
+        .menu li{
+            position:relative;/*elemento pai*/
+            float:left;/*um ao lado do outro*/
+            border-right:1px solid #c0c0c0;
+            
+        }
+        .menu li  ul{
+            position:absolute;/*sua posição depende de onde está a tag pai*/
+            background-color:#fff;
+            top:25px;
+            display:none; /*deixa a lista oculta*/
+        }    
+        .menu li:hover ul{ 
+            display:block; /*deixa a lista visível e organizada em blocos verticais*/
+        }
+        .menu li ul li{
+            border:1px solid #c0c0c0;
+            display:block;
+            width:150px;
+        }
+        .menu li a{
+            color:#333; 
+            text-decoration:none; 
+            padding:5px 10px; 
+            display:block;
+        }
+        .menu li a:hover{
+            background:#333;
+            color:#fff;
+            text-shadow:0px 0px 5px #fff;/*sombra do texto*/
+}
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="formulario.html">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">O que fazemos?</a>
+            <ul>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">SEO</a></li>
+                <li><a href="#">Design</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</body>
+</html>

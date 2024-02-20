@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="calculo">
+        Capital: <input type="text" id="capital">
+        Taxa: <input type="text" id="taxa">
+        Tempo: <input type="text" id="tempo">
+        <br>
+        Juros: <input type="number" id="juros" disabled>
+        <input type="submit" value="Calcular">
+    </form>
+    <script>
+        document.getElementById('calculo').onsubmit = function () {
+            var c = document.getElementById('capital').value;
+            var i = document.getElementById('taxa').value;
+            var t = document.getElementById('tempo').value;
+            
+            var juros = parseFloat(c) * parseFloat(i)/100 * parseFloat(t);
+           
+            document.getElementById('juros').value = juros;
+            return false;
+        };
+    </script>
+</body>
+
+</html>

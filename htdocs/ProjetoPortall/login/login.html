@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <h1 id="messeger"></h1>
+        <div id="container">
+            <div id="buttonform">
+                <span id="btfspan"></span>
+                <button id="singin">login</button>
+                <button id="singup">register</button>
+            </div>
+            <div id="card">
+                <input type="text" placeholder="E-mail" id="in1">
+                <input type="password" placeholder="Password" id="in2">
+                <div id="ver">
+                    <input type="checkbox">
+                    <span>Visualizar</span>
+                </div>
+                <button class="btn1" onclick="btnEnviar()">Enviar
+                    <div id="btn11"></div>
+                </button>
+            </div>
+            <div id="card1">
+                <input type="text" placeholder="Usuario">
+                <input type="text" placeholder="E-mail">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Repeat Password">
+                <div id="ver">
+                    <input type="checkbox">
+                    <span>Remember Password</span>
+                </div>
+                <button class="btn1" >Enviar
+                    <div id="btn11"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var buttonform = document.querySelector('#buttonform')
+        const btfspan = document.querySelector('#btfspan')
+        var singin = document.querySelector('#singin')
+        var singup = document.querySelector('#singup')
+        var card = document.querySelector('#card')
+        var card1 = document.querySelector('#card1')
+        let i = 0
+        singin.addEventListener('click',()=>{
+            btfspan.style.left='0' 
+            singin.style.color='white'
+            singup.style.color='black'
+            card.style.display='flex'
+            card1.style.display='none'
+            
+        })
+        singup.addEventListener('click',()=>{
+            // btfspan.style.left='0' 
+            btfspan.style.left='50%' 
+            singin.style.color='black'
+            singup.style.color='white'
+            card.style.display='none'
+            card1.style.display='flex'
+        })
+
+        function btnEnviar(){
+            in1 = document.getElementById('in1')
+            in2 = document.getElementById('in2')
+            messeger = document.getElementById('messeger')
+
+            console.log('casa')
+            if(in1.value == "admin" && in2.value=="admin"){
+                location.href = '../amazon/amazon.html'
+            }else{
+                in1.value =''
+                in2.value =''
+                messeger.textContent = 'Email ou Senha Incorretos'
+                setTimeout(trocar,2000)
+            }
+        }
+
+        function trocar(){
+            messeger.textContent = ''
+        }
+     
+    </script>
+    
+</body>
+</html>

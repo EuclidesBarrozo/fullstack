@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+<button onclick="btnLevar()" id="levar">Levar</button>
+<button onclick="criar()">criar</button>
+<div id="container"></div>
+
+
+
+
+<script src="add.js"></script>
+<script>
+
+
+var container = document.getElementById('container')
+
+console.log(obj.length)
+
+const conte = obj.length
+let i = 0
+
+// function criar(){
+
+//     while(i<conte){
+//         console.log(i)
+    
+//         lista.value = obj[i].lista
+//         tipo.value = obj[i].tipo
+//         votacao.value = obj[i].votacao
+//         stream.value = obj[i].stream
+//         titulo.value = obj[i].titulo
+//         faixa.value = obj[i].faixa
+//         sinopes.value = obj[i].sinopes
+//         genero.value = obj[i].genero
+//         img.value = obj[i].img
+//         fundo.value = obj[i].fundo
+//         gene.value = obj[i].gene
+
+//         levar.click()
+
+//         i++
+        
+//     }
+    
+
+// }
+        // tipo.value = obj[i].tipo
+        // votacao.value = obj[i].votacao
+        // stream.value = obj[i].stream
+        // titulo.value = obj[i].titulo
+        // faixa.value = obj[i].faixa
+        // sinopes.value = obj[i].sinopes
+        // genero.value = obj[i].genero
+        // img.value = obj[i].img
+        // fundo.value = obj[i].fundo
+        // gene.value = obj[i].gene
+
+// Cria um objeto XMLHttpRequest
+// chamar()
+
+// function chamar(){
+//   while(i<conte){
+//       criar()
+//       i++
+//   }
+// }
+
+
+// Define um evento de retorno para ser executado quando a solicitação for concluída
+function criar(){
+  if(i<conte){
+
+  
+    var xhr = new XMLHttpRequest();
+  
+    xhr.open("POST", "addInsert.php");
+  
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  
+    console.log(i)
+    xhr.send(`tipo=${obj[i].tipo}&votacao=${obj[i].votacao}&stream=${obj[i].stream}&titulo=${obj[i].titulo}&faixa=${obj[i].faixa}&sinopes=${obj[i].sinopes}&genero=${obj[i].genero}&img=${obj[i].img}&fundo=${obj[i].fundo}&gene=${obj[i].gene}`)
+  
+    xhr.onload = function() {
+      if (this.status === 200) {
+        // Exibe uma mensagem de sucesso
+        // alert("A solicitação foi enviada com sucesso.");
+      } else {
+        // Exibe uma mensagem de erro
+        // alert("Ocorreu um erro ao enviar a solicitação.");
+      }
+    };
+    
+    container.innerHTML = ` id=${i}, titulo=${obj[i].titulo}`
+    i++
+  }
+  
+}
+
+
+
+
+</script>
+</body>
+</html>

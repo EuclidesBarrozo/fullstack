@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="amazon.css">
+</head>
+<body>
+    <div id="inicio">
+        <h1 id="h1inicio">PortAll<span id="spannicio">.</span></h1>
+    </div>
+    <div id="quiz">
+        <div id="containerquiz">
+
+        </div>
+    </div>
+    <header>
+        <div id="portall">
+            <h1 id="h1portall" onclick="h1portall1()">PortAll<span>.</span></h1>
+        </div>
+        <div id="pes">
+            <input type="text" id="Pesquisar" onclick="visi()">
+            <div id="logoPes">
+                <img src="20231230_121853.png" alt="">
+            </div>
+            <!-- <button>procurar</button> -->
+            
+        </div>
+        <img id="imgHeader" src="">
+        
+        <h3 id="addRem" class=""></h3>
+        <h3 id="listaVery" class=""></h3>
+        <div id="sobre">
+            <div id="stream">
+                <img src="" alt="" id="streamimg">
+            </div>
+            <h3 id="resBusca" class="sobreC"></h3>
+            <input type="hidden" id="votacao" value="300">
+            <audio id="audios">
+                <source id="musicasShow" src="" type="audio/mp3">
+            </audio>
+            <input type="hidden" id="songs" value="">
+            <h2 id="votacaoP" class=""></h2>
+            
+            <h1 id="titulo" class="sobreC"></h1>
+            <div id="fai" class="sobreC">
+                <h3 id="faixa" ></h3>
+                <h3 id="faixa2"></h3>
+                <h3 id="faixa3"></h3>
+            </div>
+            <div id="player">
+                <div id="play" onclick="play1()">▶</div>
+                <div id="pause" onclick="pause1()"><div id="pause2"></div></div>
+                <h3 id="mduracao"></h3>
+                <h3 id="mcorrer"></h3>
+            </div>
+            
+            <p id="sinopes" class="sobreC"></p>
+            <h3 id="generoSobre" class="sobreC"></h3>
+            <input type="hidden" id="objPegar">
+            <div id="botoes" class="sobreC">
+                <button onclick="add()" id="btnAdd" class="botoesF">+</button>
+                <button onclick="votacaoEs()" id="btnVoto" class="botoesF">Voto</button>
+            </div>
+        </div>
+        <div id="menu-diplay">
+            <div id="hamburguer">
+                <div id="ham1"></div>
+                <div id="ham2"></div>
+                <div id="ham3"></div>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li onclick="procurar()" id="menuLi0" class="menuLi"><img src="20231230_114810.png" class="imgicone"><a href="#" class="liA" id="meuLiA0" >Pesquisar</a></li>
+                    <li onclick="menuLi(this)" id="menuLi1" class="menuLi"><img src="20231227_104343.png" class="imgicone"><a href="#" class="liA" id="meuLiA1" >Animes</a></li>
+                    <li onclick="menuLi(this)" id="menuLi2" class="menuLi"><img src="20231227_103925.png" class="imgicone"><a href="#" class="liA" id="meuLiA2" >Filmes</a></li>
+                    <li onclick="menuLi(this)" id="menuLi3" class="menuLi"><img src="20231227_110710.png" class="imgicone"><a href="#" class="liA" id="meuLiA3">Jogos</a></li>
+                    <li onclick="menuLi(this)" id="menuLi4" class="menuLi"><img src="20231227_110911.png" class="imgicone"><a href="#" class="liA" id="meuLiA4" >Livros</a></li>
+                    <li onclick="menuLi(this)" id="menuLi5" class="menuLi"><img src="20231227_103115.png" class="imgicone"><a href="#" class="liA" id="meuLiA5" >Series</a></li>
+
+                    <li onclick="menuLi(this)" id="menuLi6" class="menuLi"><img src="20231227_121102.png" class="imgicone"><a href="#" class="liA" id="meuLiA6" >Lista</a></li>
+                    <!-- <li onclick="menuLi(this)" id="menuLi6" class="menuLi"><img src="" class="imgicone"><a href="#" class="liA" id="meuLiA6" onclick="aref(this)">Lista</a></li> -->
+                </ul>
+            </nav>
+        </div>
+        <button onclick="ocultarC()" id="btnOcutar">^</button>
+        <button onclick="next()" id="btnNext">></button>
+        <button onclick="prev()" id="btnPrev"><</button>
+        <button onclick="nextP()" id="btnNextP">></button>
+        <button onclick="prevP()" id="btnPrevP"><</button>
+        
+        <div id="container">
+            <div id="gene0" class="genero">
+                
+            </div>
+            <div id="gene1" class="genero">
+                
+            </div>
+            <div id="gene2" class="genero">
+                
+            </div>
+            <div id="gene3" class="genero">
+                
+            </div>
+            <div id="gene4" class="genero">
+                
+            </div>
+            <div id="gene5" class="genero">
+                
+            </div>
+            <div id="gene6" class="genero">
+                
+            </div>
+        </div>
+        <div id="radios">
+            <button id="passP" onclick="passPr()"><</button>
+            <input type="radio" name="rd" id="radio0" class="radiosC" cheched onclick="slid(this)">
+            <input type="radio" name="rd" id="radio1" class="radiosC" onclick="slid(this)">
+            <input type="radio" name="rd" id="radio2" class="radiosC" onclick="slid(this)">
+            <input type="radio" name="rd" id="radio3" class="radiosC" onclick="slid(this)">
+            <input type="radio" name="rd" id="radio4" class="radiosC" onclick="slid(this)">
+            <input type="radio" name="rd" id="radio5" class="radiosC" onclick="slid(this)">
+            <input type="radio" name="rd" id="radio6" class="radiosC" onclick="slid(this)">
+            <input type="radio" name="rd" id="radio7" class="radiosC" onclick="slid(this)">
+            <input type="radio" name="rd" id="radio8" class="radiosC" onclick="slid(this)">
+            <input type="radio" name="rd" id="radio9" class="radiosC" onclick="slid(this)">
+            
+
+            <button id="passN" onclick="passNe()" >></button>
+            <button id="pula" onclick="pular()" >Pular  ▶I</button>
+            
+
+        </div>
+    </header>
+
+
+    <script src="amazon.js"></script>
+
+    <script>
+        const arrayValor = obj
+
+        const btn = document.getElementById('btn')
+        // const btnRem = document.getElementById('btnRem')
+
+        // btnRem.style.display = 'none'
+        
+
+        
+
+        const mduracao = document.getElementById('mduracao')
+        const songs = document.getElementById('songs')
+        const meuLiA6 = document.getElementById('meuLiA6')
+        const inicio = document.getElementById('inicio')
+        const faixa2 = document.getElementById('faixa2')
+        const gene1 = document.getElementById('gene1')
+        const h1portall = document.getElementById('h1portall')
+        const gene0 = document.getElementById('gene0')
+        const classMenuLi = document.querySelectorAll('.menuLi')
+        const liA = document.querySelectorAll('.liA')
+        const imgicone = document.querySelectorAll('.imgicone')
+        const classGenero = document.querySelectorAll('.genero')
+        const pesquisar = document.querySelectorAll('.pesquisar')
+        const menuDiplay = document.getElementById('menu-diplay')
+        const hamburguer = document.getElementById('hamburguer')
+        const btnPrev = document.getElementById('btnPrev')
+        const btnNext = document.getElementById('btnNext')
+        const container = document.getElementById('container')
+        const player = document.getElementById('player')
+        const play = document.getElementById('play')
+        const pause = document.getElementById('pause')
+        const imgHeader = document.getElementById('imgHeader')
+        const btnOcutar = document.getElementById('btnOcutar')
+        const ativoLi = document.querySelectorAll('.menuLi')
+        const objPegar = document.getElementById('objPegar')
+        const gene6 = document.getElementById('gene6')
+        const menuLi6 = document.getElementById('menuLi6')
+        const btnAdd = document.getElementById('btnAdd')
+        const btnNextP = document.getElementById('btnNextP')
+        const btnPrevP = document.getElementById('btnPrevP')
+        const pes = document.getElementById('pes')
+        const menuLi1 = document.getElementById('menuLi1')
+        const pula = document.getElementById('pula')
+        const passN = document.getElementById('passN')
+        const radiosC = document.querySelectorAll('.radiosC')
+        const meusLi = document.querySelectorAll('.menuLi') 
+
+        const audios = document.getElementById('audios')
+        const musicasShow = document.getElementById('musicasShow')
+        musicasShow.src = `./musicas/${songs.value}`
+
+        
+        player.style.display = 'none'
+
+
+
+        
+
+        // brincar Inicio
+        function array(){
+            
+
+            const arrayO = obj.sort((a,b)=> b.votacao - a.votacao)
+
+            this.trM = arrayO.slice(0,10)
+
+            // console.log(this.trM[0])
+            // console.log(this.trM)
+        }
+
+        // brincar Fim
+
+
+        setTimeout(comeco,5000)
+
+        function comeco(){
+            
+            inicio.style.display = 'none'
+            setTimeout(comeco,500)
+            
+            // listaVisivel()
+        }
+        
+
+
+        
+        // menuLi6.style.display = 'none'
+        btnAdd.style.display = 'none'
+
+
+        
+        
+        let rds = 0
+        // btn1()
+        
+        let rd = 0
+        function mais(){
+            rd++
+        }
+        
+        
+        function passar(){
+            array()
+            titulo.style.textTransform = 'capitalize'
+            h1portall.style.opacity = ''
+            var get = document.getElementById('radio' + rd)
+            get.checked = true
+            imgHeader.src = this.trM[0].fundo
+            streamimg.src = this.trM[0].stream
+            titulo.textContent = this.trM[0].titulo
+            faixa.textContent = this.trM[0].faixa[0]
+
+            votacao.textContent = this.trM[0].votacao
+            votacaoEs()
+
+            
+            faixa3.style.textTransform = 'capitalize'
+            faixa3.textContent = this.trM[0].tipo
+            audios.src = './musicas/'+ this.trM[0].musica
+            
+            this.trM[0].faixa[1]? faixa2.textContent = this.trM[0].faixa[1] : faixa2.textContent = ''
+
+            corFaixa2()
+
+            
+            sinopes.textContent = this.trM[0].sinopes
+            generoSobre.textContent = this.trM[0].genero
+            objPegar.textContent = JSON.stringify(trM[0])
+            btnAdd.style.display = ''
+            this.trM[0].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+            
+
+            
+
+            setTimeout(mais,500)
+            
+        }
+        setTimeout(passar,50)
+
+        
+        this.tsld =0
+        function slid(sld){
+            // console.log(trM)
+            this.tsld = sld.id.replace('radio','')
+            imgHeader.src = this.trM[tsld].fundo
+            streamimg.scr = this.trM[tsld].stream
+            titulo.textContent = this.trM[tsld].titulo
+            // 
+            faixa.textContent = this.trM[tsld].faixa[0]
+
+            votacao.textContent = this.trM[tsld].votacao
+            votacaoEs()
+            
+            
+            this.trM[tsld].faixa[1]? faixa2.textContent = this.trM[tsld].faixa[1] : faixa2.textContent = ''
+
+            faixa3.style.textTransform = 'capitalize'
+            faixa3.textContent = this.trM[tsld].tipo
+
+            corFaixa2()
+
+            audios.src = './musicas/'+ this.trM[tsld].musicas
+            sinopes.textContent = this.trM[tsld].sinopes
+            generoSobre.textContent = this.trM[tsld].genero
+            objPegar.textContent = JSON.stringify(this.trM[tsld])
+            btnAdd.style.display = ''
+            this.trM[tsld].lista == '0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+            // console.log(tsld)
+        }
+        let vrsld =0
+        vrsld = parseFloat(this.tsld)
+        function passNe(){
+            h=0
+            play.textContent = '▶'
+            vrsld++
+            if(vrsld == radiosC.length-1){
+                passN.disabled = true
+                passN.style.opacity = '0'
+            }
+            if(vrsld > 0){
+                passP.style.opacity = '1'
+                passP.disabled = false
+            }
+            var gh = document.getElementById('radio'+vrsld) 
+            gh.checked = true
+            imgHeader.src = trM[vrsld].fundo
+            streamimg.src = trM[vrsld].stream
+            titulo.textContent = trM[vrsld].titulo
+            // 
+            faixa.textContent = trM[vrsld].faixa[0]
+            votacao.textContent = trM[vrsld].votacao
+            votacaoEs()
+
+            faixa3.style.textTransform = 'capitalize'
+            faixa3.textContent = trM[vrsld].tipo
+
+            trM[vrsld].faixa[1]? faixa2.textContent = trM[vrsld].faixa[1] : faixa2.textContent = ''
+
+            corFaixa2()
+
+            audios.src = './musicas/'+ trM[vrsld].musicas
+            sinopes.textContent = trM[vrsld].sinopes
+            generoSobre.textContent = trM[vrsld].genero
+            objPegar.textContent = JSON.stringify(trM[vrsld])
+
+            trM[vrsld].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+
+            
+        }
+        passP.style.opacity = '0'
+        
+        function passPr(){
+            vrsld--
+            h=0
+            play.textContent = '▶'
+            if(vrsld == 0){
+                passN.disabled = false
+                passP.disabled = true
+                passP.style.opacity = '0'
+            }
+            
+            if(vrsld == radiosC.length-2){
+                passN.style.opacity = '1'
+            }
+            var gh = document.getElementById('radio'+vrsld) 
+            gh.checked = true
+            imgHeader.src = trM[vrsld].fundo
+            streamimg.src = trM[vrsld].stream
+            titulo.textContent = trM[vrsld].titulo
+            // 
+            faixa.textContent = trM[vrsld].faixa[0]
+            votacao.textContent = trM[vrsld].votacao
+            votacaoEs()
+            
+            faixa3.style.textTransform = 'capitalize'
+            faixa3.textContent = trM[vrsld].tipo
+
+            trM[vrsld].faixa[1]? faixa2.textContent = trM[vrsld].faixa[1] : faixa2.textContent = ''
+
+            corFaixa2()
+            
+            audios.src = './musicas/'+ trM[vrsld].musicas
+            sinopes.textContent = trM[vrsld].sinopes
+            generoSobre.textContent = trM[vrsld].genero
+            objPegar.textContent = JSON.stringify(trM[vrsld])
+
+            trM[vrsld].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+
+            
+        }
+
+        
+
+        function pular(){
+            
+            passN.style.display = 'none'
+            passP.style.display = 'none'
+            pula.style.display = 'none'
+            radiosC.forEach(rd=>{
+                rd.style.display = 'none'
+            })
+            menuLi1.click()
+        }
+
+        function aref(ahref){
+            var a = ahref.id.replace('menuLiA','')
+            var ta = document.getElementById('menuLi'+a)
+            ta.click()
+        }
+        
+        
+
+
+        
+
+        pes.style.display='none'
+
+        var pesquisarG = []
+        obj.sort((a,b)=> a.titulo.localeCompare(b.titulo))
+        pesquisarG.push(obj)
+        // console.log(pesquisarG)
+
+
+
+        const Pesquisar = document.getElementById('Pesquisar')
+
+        Pesquisar.style.display = 'none'
+        var lista = document.getElementById('lista')
+
+        Pesquisar.addEventListener('input',()=>{
+
+            
+            this.busca = Pesquisar.value.trim()
+
+            // document.removeEventListener('keydown',menuT)
+            
+            const objF = pesquisarG[0].filter(objeto => objeto.titulo.includes(busca))
+
+            // console.log(objF.length)
+            if(objF.length>0){
+                exibirRes(objF)
+                
+            }else{
+
+                gene0.innerHTML = ''
+                imgHeader.src = ''
+                streamimg.src = ''
+                titulo.textContent = ''
+                faixa.textContent = ''
+                faixa2.textContent = ''
+                votacao.textContent = ''
+                faixa3.textContent = ''
+                faixa2.style.background = 'transparent'
+                faixa2.style.border = 'none'
+                resBusca.textContent = '0 Resultados'
+                votacaoP.style.background =  'transparent'
+                votacaoP.style.borderColor =  'transparent'
+                votacaoP.textContent = ''
+                sinopes.textContent = ''
+                generoSobre.textContent = ''
+                objPegar.textContent = ''
+                btnAdd.style.display = 'none'
+                btnVoto.style.display = 'none'
+                stream.style.display = 'none'
+            }
+            
+            
+            
+            
+
+        })
+
+        var arrat = []
+        
+
+        function exibirRes(Ress){
+                
+                
+            gene0.innerHTML = ''
+
+            
+            
+            arrat=[]
+            
+            let r =0
+            
+            
+            Ress.forEach(res=>{
+                arrat.push(res)
+                // console.log(arrat)
+                
+                const teml = document.createElement('div')
+                // teml.textContent = res.titulo
+                teml.className = 'pesquisar'
+                teml.id = 'pes'+r
+                
+                const imgp = document.createElement('img')
+                imgp.src = res.img
+                
+                teml.appendChild(imgp)
+                gene0.appendChild(teml)
+                r++
+                
+            })  
+            
+            
+            if(gene0.children.length>0){
+                elevar0()
+            }
+
+           
+            bc=0
+
+            while(bc<gene0.children.length){
+                gene0.children[bc].classList.remove('bordar')
+                bc++
+            }
+            
+            gene0.children[0].classList.add('bordar')
+            
+            stream.style.display =  ''
+            imgHeader.src = arrat[0].fundo
+            streamimg.src = arrat[0].stream
+            titulo.textContent = arrat[0].titulo
+            faixa.textContent = arrat[0].faixa[0]
+            votacao.textContent = arrat[0].votacao
+            votacaoEs()
+
+            // if(this.c.id == 'gene0' || this.c.id == 'gene6' ){
+                faixa3.style.textTransform = 'capitalize'
+                faixa3.textContent = arrat[0].tipo
+            // }else{
+            //     faixa3.style.textTransform = ''
+            //     faixa3.textContent = ''
+            // }
+
+            resBusca.textContent = ''
+            if(arrat[0].faixa[1]){
+                faixa2.textContent = arrat[0].faixa[1] 
+            }else{
+                faixa2.textContent = ''
+            }
+            corFaixa2()
+
+            audios.src = './musicas/'+ arrat[0].musicas
+            sinopes.textContent = arrat[0].sinopes
+            generoSobre.textContent = arrat[0].genero
+            objPegar.textContent = JSON.stringify(arrat[0])
+            btnAdd.style.display = ''
+            btnVoto.style.display = ''
+            arrat[0].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+            
+            
+            
+        }
+
+        
+        let contG = 0
+        function elevar0(){
+            np=0
+            h=0
+            play.textContent = '▶'
+            gene0.style.transform = `translateX(-${v*np}px)`
+
+            if(gene0.children.length<=1){
+                var tcc = gene0.children[0].className
+                
+            }else{
+                var tcc = gene0.children[1].className
+                var gets = document.querySelectorAll('.'+tcc)
+                gets.forEach(get=>{
+                    get.addEventListener('click',()=>{
+                        
+                        var trId = get.id.replace('pes','')
+                        np=trId
+    
+                        gene0.style.transform = `translateX(-${v*np}px)`
+
+                        imgHeader.src = arrat[np].fundo
+                        streamimg.src = arrat[np].stream
+                        titulo.textContent = arrat[np].titulo
+                        faixa.textContent = arrat[np].faixa[0]
+                        faixa3.textContent = arrat[np].tipo
+
+                        votacao.textContent = arrat[np].votacao
+                        votacaoEs()
+
+                        arrat[np].faixa[1]? faixa2.textContent = arrat[np].faixa[1] : faixa2.textContent = ''
+                        corFaixa2()
+                        audios.src = './musicas/'+ arrat[np].musicas
+                        sinopes.textContent = arrat[np].sinopes
+                        generoSobre.textContent = arrat[np].genero
+                        objPegar.textContent = JSON.stringify(arrat[np])
+
+                        arrat[np].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+    
+                        contG = 0
+                        while(contG<gene0.children.length){
+                            gene0.children[contG].classList.remove('bordar')
+                            contG++
+                        }
+                        gene0.children[np].classList.add('bordar')
+
+                        if(np>0){
+                            btnPrevP.style.display = ''
+
+                        }
+                        // alert(trId)
+                    })
+                })
+
+            }
+
+                
+                
+        }
+
+        function procurar(){
+            oc=0
+            ocultarC
+            votacaoP.textContent = ''
+
+            h1portall.style.opacity = '60%'
+
+            // btnRem.style.display = 'none'
+            passN.style.display = 'none'
+            passP.style.display = 'none'
+            pula.style.display = 'none'
+            stream.style.display =  'none' 
+            faixa2.style.display =  'none'
+            votacaoP.style.background =  'transparent'
+            votacaoP.style.borderColor =  'transparent'
+            votacao.textContent =  ''
+            faixa3.style.display =  ''
+            // faixa3.style.display =  ''
+            gene0.innerHTML = ''
+            Pesquisar.value = ''
+            listaVery.style.display =  'none'
+            
+            
+
+
+            titulo.style.textTransform = 'capitalize'
+            radiosC.forEach(rdo=>{
+                rdo.style.display = 'none'
+            })
+
+            if(this.conteFilho>0){
+                btnAdd.style.display = ''
+                btnVoto.style.display = ''
+                votacao.style.display = ''
+                votacaoP.style.display = ''
+                stream.style.display =  ''
+            }else{
+                btnAdd.style.display = 'none'
+                btnVoto.style.display = 'none'
+                votacaoP.style.display = 'none'
+                // votacao.style.display = 'none'
+            }
+            pes.style.display=''
+            btnNextP.style.display='none'
+            btnPrevP.style.display='none'
+            btnNext.style.display='none'
+            btnPrev.style.display='none'
+            
+            
+            classMenuLi.forEach(Mli=>{
+                Mli.classList.remove('ativoLi')
+            })
+            classGenero.forEach(MGene=>{
+                MGene.style.display = 'none'
+            })
+            Pesquisar.style.display = 'flex'
+            // gene0.classList.add('ativoLi')
+            gene0.style.display ='flex'
+            container.style.display = ''
+
+            ham1.classList.remove('ativoHam1')
+            ham2.classList.remove('ativoHam2')
+            ham3.classList.remove('ativoHam3')
+            menuDiplay.style.width = ''
+
+            liA.forEach(mli=>{
+                mli.style.display = ''
+            })
+
+            this.hamI = 0
+
+
+            imgHeader.src = ''
+            streamimg.src = ''
+            titulo.textContent = ''
+            faixa.textContent = ''
+            faixa2.textContent = ''
+            votacao.textContent = ''
+            votacaoP.style.background =  ''
+            votacaoP.style.borderColor =  ''
+            faixa3.textContent = ''
+            sinopes.textContent = ''
+            generoSobre.textContent = ''
+            objPegar.textContent = ''
+            votacaoP.style.display = ''
+        }
+
+        let np =0
+        const v = 240
+
+        btnNextP.style.display = 'none'
+
+        function visi(){
+            // console.log(Pesquisar.value.trim())
+            btnNextP.style.display = ''
+            btnOcutar.style.display = ''
+            
+        }
+        
+        
+
+        
+        function nextP(){
+            h=0
+            play.textContent = '▶'
+            
+            var conteFilho = gene0.children.length
+            np++
+            
+            if(conteFilho>1 && np>=1){
+
+                btnPrevP.style.display = ''
+            }
+            if(np<conteFilho){
+                gene0.style.transform = `translateX(-${v*np}px)`
+            }else{
+                np=0
+                btnPrevP.style.display = 'none'
+                gene0.style.transform = 'translateX(0)'
+            }
+
+
+            bc = 0
+            while(bc<gene0.children.length){
+                gene0.children[bc].classList.remove('bordar')
+                bc++
+            }
+            gene0.children[np].classList.add('bordar')
+            
+
+
+            imgHeader.src = arrat[np].fundo
+            streamimg.src = arrat[np].stream
+            titulo.textContent = arrat[np].titulo
+
+            if(arrat[np].faixa[0]){
+                faixa.textContent = arrat[np].faixa[0]
+            }
+
+            faixa3.textContent = arrat[np].tipo
+
+            votacao.textContent = arrat[np].votacao
+            votacaoEs()
+
+            arrat[np].faixa[1]? faixa2.textContent = arrat[np].faixa[1] : faixa2.textContent = ''
+            corFaixa2()
+            audios.src = './musicas/'+ arrat[np].musicas
+            sinopes.textContent = arrat[np].sinopes
+            generoSobre.textContent = arrat[np].genero
+            objPegar.textContent = JSON.stringify(arrat[np])
+            arrat[np].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+
+        }
+        btnPrevP.style.display = 'none'
+
+        function prevP(){
+            h=0
+            play.textContent = '▶'
+            var conteFilho = gene0.children.length
+            np--
+            if(np<conteFilho){
+                gene0.style.transform = `translateX(-${v*np}px)`
+            }
+            
+            if(np==0){
+                np=0
+                btnPrevP.style.display = 'none'
+                
+            }
+
+
+            bc=0
+            while(bc<gene0.children.length){
+               
+                gene0.children[bc].classList.remove('bordar')
+                bc++
+            }
+
+            gene0.children[np].classList.add('bordar')
+
+            imgHeader.src = arrat[np].fundo
+            streamimg.src = arrat[np].stream
+            titulo.textContent = arrat[np].titulo
+            faixa.textContent = arrat[np].faixa[0]
+            faixa3.textContent = arrat[np].tipo
+
+            votacao.textContent = arrat[np].votacao
+            votacaoEs()
+
+            arrat[np].faixa[1]? faixa2.textContent = arrat[np].faixa[1] : faixa2.textContent = ''
+            corFaixa2()
+            audios.src = './musicas/'+ arrat[np].musicas
+            sinopes.textContent = arrat[np].sinopes
+            generoSobre.textContent = arrat[np].genero
+            objPegar.textContent = JSON.stringify(arrat[np])
+            arrat[np].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+            
+        }
+
+ 
+        let oc = 0
+        function ocultarC(){
+            oc++
+            if(oc==2){
+                oc=0
+                container.style.display= ''
+                btnOcutar.style.bottom = '170px'
+                btnOcutar.style.color = ''
+            }else{
+                container.style.display= 'none'
+                btnOcutar.style.bottom = '10px'
+                btnOcutar.style.color = 'white'
+            }
+        }
+        btnOcutar.style.display = 'none'
+
+
+        
+       
+
+
+        
+
+
+        const stream = document.getElementById('stream')
+        const titulo = document.getElementById('titulo')
+        const faixa = document.getElementById('faixa')
+        const sinopes = document.getElementById('sinopes')
+        const generoSobre = document.getElementById('generoSobre')
+
+
+        let todos = 0
+
+        // criar()
+
+        // function criar(){
+
+        //     todos = 0
+
+        //     obj.sort((a,b)=> a.titulo.localeCompare(b.titulo))
+    
+        //     while(todos<obj.length){
+        //         var generoObj = document.getElementById(obj[todos].gene)
+    
+        //         var div = document.createElement('div')
+        //         div.className = obj[todos].tipo
+                
+    
+        //         var img = document.createElement('img')
+        //         img.src = obj[todos].img
+        //         // img.className = 'im'+obj[todos].gene
+    
+        //         div.appendChild(img)
+        //         generoObj.appendChild(div)
+    
+        //         todos++
+        //     }
+        // }
+        
+
+
+        // teste comeco
+        var animesG = []
+        var filmesG = []
+        var jogosG = []
+        var livrosG = []
+        var seriesG = []
+        var myListas = []
+
+
+
+
+        var veryMyListas = []
+        
+
+
+
+        var arrayS = []
+        let lis = 0
+
+        // function listaVisivel(){
+        //     if(myListas.length >0){
+        //         menuLi6.style.display = ''
+        //     }else{
+        //         menuLi6.style.display = 'none'
+        //     }
+        // }
+        const sem = {
+            lista:"",tipo:"",votacao:"",stream:"",titulo:"sem-titulo",faixa:"",sinopes:"",genero:"",img:"",fundo:"",gene:''
+        }
+
+   
+        function add(){
+
+            // menuLi6.style.display = ''
+
+            var car = JSON.parse(objPegar.textContent)
+
+            var pObj = obj.findIndex(objmy=>objmy.titulo == car.titulo)
+
+            // console.log(pObj)
+
+            var joi = car.titulo.split(' ').join('')
+
+            if(veryMyListas.includes(joi)){
+                // alert('tem')
+                var pJoin = veryMyListas.indexOf(joi)
+                // alert(joi)
+                if(pJoin>0){
+                    // alert(`maior q zero${pJoin}`)
+                    // console.log(veryMyListas[pJoin])
+                    
+
+                        obj[pObj].lista = '0'
+                        btnAdd.textContent = '+'
+                        veryMyListas.splice(pJoin,1)
+                        myListas.splice(pJoin,1)
+    
+                        gene6.innerHTML=''
+                        mnb = 0
+                        addele(myListas)
+                        this.addC = obj[pObj].titulo
+
+                        // if(gene6.style.display == ''){
+                        // }
+                        // console.log(this.c)
+
+                        // console.log(this.c)
+
+                        if(typeof this.c == 'undefined'){
+                            
+                            addRem.textContent = `${this.addC} Removido da Lista `
+                            setTimeout(AddRem,2000)
+                            // passN.click()
+                        }
+                        else if(this.c.id == 'gene6'){
+                            
+                            addRem.textContent = `${this.addC} Removido da Lista `
+                            setTimeout(AddRem,2000)
+                            setTimeout(menuLi6.click(),500)
+                        }else{
+                            
+                            addRem.textContent = `${this.addC} Removido da Lista `
+                            setTimeout(AddRem,2000)
+                        }
+                        
+                    
+                    // listaVisivel()
+                    // menuLi6.style.display = 'none'
+                }
+                else{
+                    // alert(`igual a zero${veryMyListas[pJoin]}`)
+                    // if(confirm(`Deseja Remover ${obj[pObj].titulo} da Lista `)){
+
+                        obj[pObj].lista = '0'
+                        btnAdd.textContent = '+'
+                        veryMyListas.shift()
+                        myListas.shift()
+
+                        gene6.innerHTML=''
+                        mnb = 0
+                        addele(myListas)
+
+                        this.addC = obj[pObj].titulo
+                        
+
+                        // console.log(this.c)
+                        if(typeof this.c == 'undefined'){
+                            // addRem.textContent = 'casa'
+
+                            addRem.textContent = `${this.addC} Removido da Lista `
+
+                            setTimeout(AddRem,2000)
+
+                        }
+                        else if(this.c.id == 'gene6'){
+                            addRem.textContent = `${this.addC} Removido da Lista `
+                            setTimeout(AddRem,2000)
+                            setTimeout(menuLi6.click(),500)
+                            // menuLi6.click()
+                        }else{
+                            addRem.textContent = `${this.addC} Removido da Lista `
+
+                            setTimeout(AddRem,2000)
+                        }
+                    // }
+                    // menuLi6.click()
+                    // menuLi6.click()
+                    // zeroTexto()
+
+                }
+                
+
+            }else{
+                
+                // alert(`Item ${obj[pObj].titulo} Adicionado a sua Lista`)
+                obj[pObj].lista = '1'
+                btnAdd.textContent = '-'
+                veryMyListas.push(joi)
+                car.lista = '1'
+                myListas.push(car)
+
+                // console.log(myListas)
+                
+                gene6.innerHTML=''
+                mnb = 0
+                addele(myListas)
+                addRem.textContent = `${obj[pObj].titulo} Adicionado a Lista `
+                setTimeout(AddRem,2000)
+                // setTimeout(menuLi6.click(),500)
+                // faixa3.style.textTransform = 'capitalize'
+                // faixa3.textContent = myListas[0].tipo
+                
+                
+                
+            }
+            // if(myListas.length == 0){
+            //     // alert('casa')
+            //     btnAdd.style.display = 'none'
+            //     faixa2.style.display = 'none'
+            //     streamimg.style.display = 'none'
+            //     listaVery.textContent = 'Lista Vazia'
+
+            // }else{
+            //     btnAdd.style.display = ''
+            //     faixa2.style.display = ''
+            //     streamimg.style.display = ''
+            //     listaVery.textContent = ''
+            // }
+
+
+
+
+
+
+            // veryMyListas
+            // menuLi6.style.display = 'flex'
+            // console.log(veryMyListas)
+            // console.log(myListas)
+            // console.log(obj)
+
+            // if(myListas.some(objmy=>objmy.titulo == car.titulo)){
+            //     alert("Ja Existe na Lista")
+            // }else{
+            //     alert("Adicionado na Lista")
+            //     myListas.push(JSON.parse(objPegar.textContent))
+            //     // myListas.sort((a,b)=> a.titulo.localeCompare(b.titulo))
+
+            //     addele(myListas)
+            //     if(myListas.length>0){
+            //     menuLi6.style.display = 'flex'
+            //     }
+            // }
+              
+        }
+        // let mbv = 0
+        // function ante(){
+        //     this.c.style.transform = `translateX(-${v*()}px)`
+        // }
+        function AddRem(){
+            addRem.textContent =''
+        }
+        
+        let mnb = 0
+        function addele(Ress){
+            
+            mnb =0
+            // gene6.innerHTML = ''
+            
+            Ress.forEach(res=>{
+                var divs = document.createElement('div')
+                divs.className = 'MyLista'
+                divs.id = 'MyLista'+mnb
+                
+                var imgml = document.createElement('img')
+                imgml.src = res.img
+                // console.log(myListas[lis].img)
+                // img.className = 'im'+obj[todos].gene
+
+                divs.appendChild(imgml)
+                gene6.appendChild(divs)
+
+                mnb++
+
+            })
+            // console.log(myListas)
+            menuLi6.style.display = 'flex'
+            
+            // faixa3.style.textTransform = 'capitalize'
+            // faixa3.textContent = myListas[0].tipo
+        
+        }
+
+        
+
+
+
+        // function rem(){
+        //     // const menuLiA6 = document.getElementById('menuLiA6')
+        //     var remove = JSON.parse(objPegar.textContent)
+        //     var rmv = remove.titulo
+        //     // myListas.pop();
+        //     const indexobj = obj.findIndex(obj => obj.titulo == rmv)
+        //     const index = myListas.findIndex(obj => obj.titulo == rmv)
+        //     // if(index != -1){
+        //     //     // console.log(index)
+        //     // }else{
+        //     //     // console.log(myListas)
+        //     // }
+        //     if(index == 0){
+        //         if(confirm(`Deseja Remover ${myListas[index].titulo} da Sua Lista`)){
+        //             btnAdd.textContent = '+'
+        //             // console.log(`esse antes ${obj[indexobj].lista} + ${obj[indexobj].titulo}`)
+        //             obj[indexobj].lista = '0'
+        //             // console.log(`esseb depois ${obj[indexobj].lista} + ${obj[indexobj].titulo}`)
+        //             myListas.shift()
+        //             veryMyListas.shift()
+        //             mnb = 0
+        //             addele(myListas)
+        //             // listaVisivel()
+        //             console.log(myListas)
+        //             // menuLi6.style.display = 'none'
+        //             myListas.push(sem)
+
+        //             gene6.innerHTML=''
+        //             faixa2.style.display = 'none'
+        //             btnRem.style.display = 'none'
+        //             streamimg.style.display = 'none'
+        //             btnAdd.style.display = 'none'
+                    
+        //             zeroTexto()
+        //             verificarLista()
+        //             console.log(myListas)
+                    
+                    
+                    
+                    
+
+
+
+        //             // menuLi6.click()
+        //             // funcao()
+        //             // menuLi6.click()
+        //             // meuLiA6.click()
+        //             // imgicone[5].style.display = ''
+        //             // aref()
+        //         }
+                
+        //     }else{
+        //         if(confirm(`Deseja Remover ${myListas[index].titulo} da Sua Lista`)){
+        //             // console.log(`esseb antes ${obj[indexobj].lista} + ${obj[indexobj].titulo}`)
+        //             obj[indexobj].lista = '0'
+        //             // console.log(`esseb depois ${obj[indexobj].lista} + ${obj[indexobj].titulo}`)
+        //             btnAdd.textContent = '+'
+        //             myListas.splice(index,1)
+        //             veryMyListas.splice(index,1)
+        //             mnb = 0
+        //             gene6.innerHTML=''
+        //             addele(myListas)
+        //             // console.log(obj)
+        //             // gene6.style.transform = 'translate(0)'
+        //             // i=0
+        //             menuLi6.click()
+        //         }
+        //     }
+        //     if(myListas.length==0){
+        //         // alert('ultimo')
+        //         menuLi6.innerHTML = ''
+        //         // listaVisivel()
+        //         // menuLi6.style.display = 'none'
+        //         // gene1.innerHTML = ''
+        //         zeroTexto()
+        //         criar1() 
+        //         // menuLi1.click()
+        //     }{
+        //         // listaVisivel()
+        //         // menuLi6.style.display = ''
+        //     }
+        //     // imgHeader.src = myListas[0].img
+        //     // stream.textContent = myListas[0].stream
+        //     // titulo.textContent = myListas[0].titulo
+        //     // faixa.textContent = myListas[0].faixa
+        //     // sinopes.textContent = myListas[0].sinopes
+        //     // generoSobre.textContent = myListas[0].genero
+        //     // objPegar.textContent = JSON.stringify(myListas[0])
+         
+        //     // myListas.splice()
+        //     // console.log(veryMyListas)
+
+        // }
+        function aumentar(){
+            lis++
+        }
+        
+        function funcao(){
+            menuLi6.addEventListener('click',()=>{
+                meuLiA6.click()
+            })
+        }
+        
+
+        
+
+        let y = 0
+        while(y<obj.length){
+            if(obj[y].tipo == 'animes'){
+                animesG.push(obj[y])
+            }
+            if(obj[y].tipo == 'filmes'){
+                filmesG.push(obj[y])
+            }
+            if(obj[y].tipo == 'jogos'){
+                jogosG.push(obj[y])
+            }
+            if(obj[y].tipo == 'Livros'){
+                livrosG.push(obj[y])
+            }
+            if(obj[y].tipo == 'Series'){
+                seriesG.push(obj[y])
+            }
+            y++
+        }
+        
+        
+        container.style.display = 'none'
+        
+        btnPrev.style.display = 'none'
+        btnNext.style.display = 'none'
+
+        
+        this.hamI = 0
+
+        hamburguer.addEventListener("click",()=>{
+
+            var ativo = document.querySelector('.ativoLi')
+
+            // console.log(hamI)
+            this.hamI++
+            if(this.hamI==2){
+                this.hamI = 0
+                liA.forEach(elemento=>{
+                    elemento.style.display = ''
+                })
+                
+                ham1.classList.remove('ativoHam1')
+                ham2.classList.remove('ativoHam2')
+                ham3.classList.remove('ativoHam3')
+                
+                menuDiplay.style.width = '60px'
+                if(ativo){
+                    ativo.style.width =  '60px'
+                }
+                sobre.style.left = ''
+                // this.ck.style.width = '50px'
+                
+            }else{
+                liA.forEach(elemento=>{
+                    elemento.style.display = 'flex'
+
+                    
+                    ham1.classList.add('ativoHam1')
+                    ham2.classList.add('ativoHam2')
+                    ham3.classList.add('ativoHam3')
+                      
+                })
+                
+                menuDiplay.style.width = '300px'
+                menuDiplay.style.height = '100%'
+
+                sobre.style.left = '20%'
+
+
+               
+                
+
+                // ativoLi.style.width = '300px'
+                menuDiplay.style.background = ''
+                // this.ck.style.width = '150px'
+               
+                
+
+                ham1.classList.add('ativoHam1')
+                ham2.classList.add('ativoHam2')
+                ham3.classList.add('ativoHam3')
+                
+                // this.g.classList.add('ativoLi')
+
+                if(ativo){
+                    ativo.style.width =  '170px'
+                }
+            }
+            
+        })
+
+        var arrayobj = []
+
+        
+        
+        let i = 0
+        let cf =0
+
+            function zeroTexto(){
+                imgHeader.src = ""
+                // streamimg.src = ''
+                titulo.textContent = ''
+                faixa.textContent = ''
+                faixa2.textContent = ''
+                votacao.textContent = ''
+                // corFaixa2()
+                sinopes.textContent = ''
+                generoSobre.textContent = ''
+                objPegar.textContent = ''
+
+                // this.levar.length > 1 ? this.levar[0].lista =='0':
+
+                // function ch(){
+
+                //     // this.levar[0].lista =='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+                // }
+            }
+
+            let lv=0
+
+            function criar1(){
+                lv=0
+                while(lv<this.levar.length){
+ 
+                    var div = document.createElement('div')
+                    div.className = this.levar[lv].tipo
+                    div.id = this.levar[lv].tipo+lv
+        
+                    var img = document.createElement('img')
+                    img.src = this.levar[lv].img
+                    // img.className = 'im'+obj[todos].gene
+        
+                    div.appendChild(img)
+                    this.G.appendChild(div)
+        
+                    lv++
+                }
+            }
+            // let lt = 0
+            // function criarlista(){
+            //     lt=0
+            //     gene6.innerHTML = ''
+            //     while(lt<myListas.length){
+ 
+            //         var div = document.createElement('div')
+            //         div.className = "MyLista"
+            //         div.id = "MyLista"+lt
+        
+            //         var img = document.createElement('img')
+            //         img.src = this.levar[lt].img
+            //         // img.className = 'im'+obj[todos].gene
+        
+            //         div.appendChild(img)
+            //         gene6.appendChild(div)
+        
+            //         lt++
+            //     }
+            // }
+
+            function menuLi(ele){
+                resBusca.textContent = ''
+                faixa3.textContent = ''
+                oc=1
+                ocultarC()
+                
+
+                
+                h1portall.style.opacity = '60%'
+                radiosC.forEach(rd=>{
+                    rd.style.display = 'none'
+                })
+                passN.style.display = 'none'
+                passP.style.display = 'none'
+                pula.style.display = 'none'
+                pes.style.display='none'
+                btnNextP.style.display='none'
+                btnPrevP.style.display='none'
+                this.hamI=0
+
+                btnOcutar.style.display = 'flex'
+                
+                ;
+                if(ele.id == "menuLi1"){
+                    faixa3.style.display = 'none'
+                    this.levar = animesG
+                    gene0.innerHTML = ''
+                    Pesquisar.value = ''
+                    
+                    // btnRem.style.display = 'none'
+                    gene1.innerHTML = ''
+                    
+                    this.G = gene1
+                    zeroTexto()
+                    criar1()
+                    setTimeout(elevar,1000)
+                    stream.style.display = ''
+                    btnVoto.style.display = ''
+                    // elevar()
+
+                }
+                if(ele.id == "menuLi2"){
+                    faixa3.style.display = 'none'
+                    this.levar = filmesG
+                    gene0.innerHTML = ''
+                    Pesquisar.value = ''
+                    
+                    // btnRem.style.display = 'none'
+                    gene2.innerHTML = ''
+                    this.G = gene2
+                    zeroTexto()
+                    criar1()
+                    setTimeout(elevar,1000)
+                    stream.style.display = ''
+                    btnVoto.style.display = ''
+
+                }
+                if(ele.id == "menuLi3"){
+                    faixa3.style.display = 'none'
+                    this.levar = jogosG
+                    gene0.innerHTML = ''
+                    Pesquisar.value = ''
+                    // btnRem.style.display = 'none'
+                    gene3.innerHTML = ''
+                    this.G = gene3
+                    zeroTexto()
+                    criar1()
+                    setTimeout(elevar,1000)
+                    stream.style.display = ''
+                    btnVoto.style.display = ''
+
+                }
+                if(ele.id == "menuLi4"){
+                    faixa3.style.display = 'none'
+                    this.levar = livrosG
+                    gene0.innerHTML = ''
+                    Pesquisar.value = ''
+                    // btnRem.style.display = 'none'
+                    gene4.innerHTML = ''
+                    this.G = gene4
+                    zeroTexto()
+                    criar1()
+                    setTimeout(elevar,1000)
+                    stream.style.display = ''
+                    btnVoto.style.display = ''
+
+                }
+                if(ele.id == "menuLi5"){
+                    faixa3.style.display = 'none'
+                    this.levar = seriesG
+                    gene0.innerHTML = ''
+                    Pesquisar.value = ''
+                    // btnRem.style.display = 'none'
+                    gene5.innerHTML = ''
+                    this.G = gene5
+                    zeroTexto()
+                    criar1()
+                    setTimeout(elevar,1000)
+                    stream.style.display = ''
+                    btnVoto.style.display = ''
+
+                }
+                if(ele.id == "menuLi6"){
+                    // alert(ele.id)
+                    // console.log(myListas)
+                    this.levar = myListas
+                    // btnRem.style.display = 'none'
+
+                    gene0.innerHTML = ''
+                    
+                    Pesquisar.value = ''
+                    ti()
+                    verificarLista()
+                    
+                    // gene6.innerHTML = ''
+                    this.G = gene6
+                    
+                    // zeroTexto()
+                    // setTimeout(criarlista,1000)
+                    // criarlista()
+                    setTimeout(elevar,1000)
+                    faixa3.style.display = ''
+                    listaVery.style.display =  ''
+                    
+                    // faixa3.textContent = this.levar[0].tipo
+                    // faixa3.style.textTransform = 'capitalize'
+                    // faixa3.textContent = myListas[0].tipo
+
+                    
+                }
+      
+                
+                
+
+                if(this.levar.length>=1){
+
+                    imgHeader.src = this.levar[0].fundo
+                    streamimg.src = this.levar[0].stream
+                    titulo.textContent = this.levar[0].titulo
+                    faixa.textContent = this.levar[0].faixa[0]
+
+                    votacao.textContent = this.levar[0].votacao
+                    votacaoEs()
+
+                    console.log(this.levar)
+                    // if(this.levar == 'Lista'){
+                    //     // faixa3.style.display = ''
+                    //     faixa3.style.textTransform = 'capitalize'
+                    //     console.log(this.levar[0].tipo)
+                    //     faixa3.textContent = this.levar[0].tipo
+
+                    // }
+
+                    
+
+                    this.levar[0].faixa[1]? faixa2.textContent = this.levar[0].faixa[1] : faixa2.textContent = ''
+                    corFaixa2()
+                    audios.src = './musicas/'+ this.levar[0].musicas
+                    sinopes.textContent = this.levar[0].sinopes
+                    generoSobre.textContent = this.levar[0].genero
+                    objPegar.textContent = JSON.stringify(this.levar[0])
+    
+                    this.levar[0].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+                }
+                
+
+                ham1.classList.remove('ativoHam1')
+                ham2.classList.remove('ativoHam2')
+                ham3.classList.remove('ativoHam3')
+
+                container.style.display = ''
+                btnNext.style.display = ''
+                btnPrev.style.display = 'none'
+
+                menuDiplay.style.width = ''
+
+                // console.log(liA)
+                liA.forEach(elemento=>{
+                    elemento.style.display = ''
+                })
+                
+                classMenuLi.forEach(Mli=>{
+                    Mli.classList.remove('ativoLi')
+                })
+
+                // console.log(classGenero)
+                classGenero.forEach(MGene=>{
+                    MGene.style.display = 'none'
+                })
+
+                ele.classList.add('ativoLi')
+                this.g = ele
+                
+                this.ck = ele
+                this.ck.style.width = '50px'
+
+                // console.log(this.ck)
+
+
+                var tEle= ele.id.replace('menuLi','')
+                
+                var cEle = document.getElementById('gene'+tEle)
+                cEle.style.display = 'flex'
+
+                
+
+
+
+                this.c = cEle
+                
+
+                // console.log(this.c)
+                // if(this.c.children == my){
+                //     liA.style.display = ''
+                // }
+
+                if(this.c.children.length > 0){
+                    this.c.children[0].classList.add('bordar')
+                }
+
+                var crt = this.c.children
+                var contF = this.c.children.length
+
+                cf =0
+                while(contF>cf){
+                    crt[cf].classList.remove('bordar')
+                    cf++
+                }
+
+                if(this.c.children.length>=1){
+                    this.c.children[0].classList.add('bordar')
+                }
+
+                // console.log(this.c.children.length)
+
+                i=0
+                this.c.style.transform = `translateX(-${v*i}px)`
+                
+                this.b = this.c.children.length*v  
+
+                if(ele.id != "menuLi6" ){
+                    btnAdd.style.display = 'flex'
+                    qw=0
+                    faixa3.textContent = ''
+                    listaVery.textContent = ''
+
+                    // addId()
+                    // elevar()
+                }else{
+                    // btnRem.style.display = ''
+                    // btnAdd.style.display = 'none'
+                    saber()
+                }
+
+                
+
+
+            }
+            function ti(){
+                if(i<=2){
+                    // console.log('casa')
+                    btnPrev.style.display = 'none'
+                    
+                }else{
+                    btnPrev.style.display = ''
+                    
+                }
+            }
+
+            function saber(){
+                var gets = document.querySelectorAll('.MyLista')
+                faixa3.textContent = ''
+
+                gets.forEach(get=>{
+                    get.addEventListener('click',()=>{
+                        var ter = get.id.replace('MyLista','')
+
+                        i = ter
+
+                        faixa3.style.textTransform = 'capitalize'
+                        faixa3.textContent = this.levar[i].tipo
+
+                        votacao.textContent = this.levar[i].votacao
+                        votacaoEs()
+
+                        this.c.style.transform = `translateX(-${v*i}px)`
+
+                        imgHeader.src = this.levar[i].fundo
+                        streamimg.src = this.levar[i].stream
+                        titulo.textContent = this.levar[i].titulo
+                        faixa.textContent = this.levar[i].faixa[0]
+
+                        
+
+                        if(this.levar[i].faixa[1]){
+                            faixa2.textContent = this.levar[i].faixa[1]
+                        }else{
+                            faixa2.textContent = ''
+                        }
+                        // console.log(this.levar[i].faixa[1])
+                        // // this.levar[i].faixa[1]? faixa2.textContent = this.levar[i].faixa[1] : faixa2.textContent = ''
+                        corFaixa2()
+                        audios.src = './musicas/'+ this.levar[i].musicas
+                        sinopes.textContent = this.levar[i].sinopes
+                        generoSobre.textContent = this.levar[i].genero
+                        objPegar.textContent = JSON.stringify(this.levar[i]) 
+                        this.levar[i].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+
+                        contA = 0
+                        
+                        while(contA<this.c.children.length){
+                            this.c.children[contA].classList.remove('bordar')
+                            contA++
+                        }
+                        this.c.children[i].classList.add('bordar')
+
+                        if(i>0){
+                            btnPrev.style.display = ''
+                        }
+                    })
+                })
+                // console.log(gets)
+            }
+
+            // let qw=0
+            // function addId(){
+            //     var tcc = this.c.children[1].className
+
+            //     while(this.c.children.length>qw){
+            //         this.c.children[qw].id = tcc+qw
+            //         qw++
+            //     }
+            // }
+            
+            let contA = 0
+            function elevar(){
+                h=0
+                play.textContent = '▶'
+   
+                if(this.c.children.length > 1){
+                    var tcc = this.c.children[1].className
+
+                    var gets = document.querySelectorAll('.'+tcc)
+                    
+                    gets.forEach(get=>{
+                        get.addEventListener('click',()=>{
+                            var trId = get.id.replace(tcc,'')
+                            i=trId
+    
+                            this.c.style.transform = `translateX(-${v*i}px)`
+    
+                            imgHeader.src = this.levar[i].fundo
+                            streamimg.src = this.levar[i].stream
+                            titulo.textContent = this.levar[i].titulo
+                            faixa.textContent = this.levar[i].faixa[0]
+
+                            votacao.textContent = this.levar[i].votacao
+                            votacaoEs()
+                            // console.log(this.levar[i].tipo)
+                            // faixa3.textContent = this.levar[i].tipo
+                            // this.levar[i].faixa[1]? faixa2.textContent = this.levar[i].faixa[1] : faixa2.textContent = ''
+                            // console.log(this.levar[i].faixa[1])
+                            if(this.levar[i].faixa[1]){
+                                faixa2.textContent = this.levar[i].faixa[1]
+                            }else{
+                                faixa2.textContent = ''
+                            }
+                            corFaixa2()
+                            audios.src = './musicas/'+ this.levar[i].musicas
+                            sinopes.textContent = this.levar[i].sinopes
+                            generoSobre.textContent = this.levar[i].genero
+                            objPegar.textContent = JSON.stringify(this.levar[i]) 
+                            this.levar[i].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+    
+                            contA = 0
+                            
+                            while(contA<this.c.children.length){
+                                this.c.children[contA].classList.remove('bordar')
+                                contA++
+                            }
+    
+                            this.c.children[i].classList.add('bordar')
+    
+    
+                            // alert(trId)
+                            if(i>0){
+                                btnPrev.style.display = ''
+                            }
+                        })
+                    })
+                }
+            }
+
+            
+                 
+                
+            
+
+
+
+
+            
+            
+            
+            function next(){
+                i++
+                h=0
+                play.textContent = '▶'
+
+                
+                
+                if(i>0){
+                    btnPrev.style.display = ''
+                }
+                
+
+                this.c.style.transform = `translateX(-${v*i}px)`
+
+                if(this.c.style.transform == `translateX(-${this.b}px)`){
+                    i=0
+                    this.c.style.transform = `translateX(-${v*i}px)`
+                    btnPrev.style.display = 'none'
+
+                }
+                if(i==0){
+
+                    this.c.children[0].classList.add('bordar')
+
+                    imgHeader.src = this.levar[0].fundo
+
+                    streamimg.src = this.levar[0].stream
+                    titulo.textContent = this.levar[0].titulo
+                    faixa.textContent = this.levar[0].faixa[0]
+                    faixa3.textContent = this.levar[0].tipo
+
+                    votacao.textContent = this.levar[0].votacao
+                    votacaoEs()
+
+                    this.levar[0].faixa[1]? faixa2.textContent = this.levar[0].faixa[1] : faixa2.textContent = ''
+                        corFaixa2()
+                    audios.src = './musicas/'+ this.levar[0].musicas
+                    sinopes.textContent = this.levar[0].sinopes
+                    generoSobre.textContent = this.levar[0].genero
+                    objPegar.textContent = JSON.stringify(this.levar[0])
+                    this.levar[i].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+
+                    
+                }
+
+
+                // bordar white começo
+
+                this.conte = this.c.children.length
+                let cont = 0
+                while(cont<this.conte){
+                    this.c.children[cont].classList.remove('bordar')
+                    cont++
+                }
+                this.c.children[i].classList.add('bordar')
+
+                // bordar whte fim
+
+                imgHeader.src = this.levar[i].fundo
+
+                streamimg.src = this.levar[i].stream
+                titulo.textContent = this.levar[i].titulo
+                faixa.textContent = this.levar[i].faixa[0]
+
+                votacao.textContent = this.levar[i].votacao
+                votacaoEs()
+
+                if(this.c.id == 'gene0' || this.c.id == 'gene6' ){
+                    faixa3.style.textTransform = 'capitalize'
+                    faixa3.textContent = this.levar[i].tipo
+                }else{
+                    faixa3.style.textTransform = ''
+                    faixa3.textContent = ''
+                }
+                // console.log(this.levar[i].faixa[1])
+                // this.levar[i].faixa[1]? faixa2.textContent = this.levar[i].faixa[1] : faixa2.textContent = ''
+                if(this.levar[i].faixa[1]){
+                    faixa2.textContent = this.levar[i].faixa[1]
+                }else{
+                    faixa2.textContent = ''
+                }
+                corFaixa2()
+                audios.src = './musicas/'+ this.levar[i].musicas
+                sinopes.textContent = this.levar[i].sinopes
+                generoSobre.textContent = this.levar[i].genero
+                objPegar.textContent = JSON.stringify(this.levar[i])   
+                this.levar[i].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"   
+        }
+        function prev(){
+            h=0
+            play.textContent = '▶'
+
+            i--
+            
+            if(i==0){
+                btnPrev.style.display = 'none'
+                i=0
+                this.c.style.transform = `translateX(${i}px)`
+                
+            }
+
+            // card border white começo 
+
+            this.conte = this.c.children.length
+            let cont = 0
+            while(cont<this.conte){
+                this.c.children[cont].classList.remove('bordar')
+                cont++
+            }
+            this.c.children[i].classList.add('bordar')
+
+            // card border white fim
+
+
+            this.c.style.transform = `translateX(-${v*i}px)`
+
+            imgHeader.src = this.levar[i].fundo
+            streamimg.src = this.levar[i].stream
+            titulo.textContent = this.levar[i].titulo
+            faixa.textContent = this.levar[i].faixa[0]
+
+            votacao.textContent = this.levar[i].votacao
+            votacaoEs()
+
+
+            if(this.c.id == 'gene0' || this.c.id == 'gene6' ){
+                faixa3.style.textTransform = 'capitalize'
+                faixa3.textContent = this.levar[i].tipo
+            }else{
+                faixa3.style.textTransform = ''
+                faixa3.textContent = ''
+            }
+            // console.log(this.levar[i].faixa[1])
+            // this.levar[i].faixa[1]? faixa2.textContent = this.levar[i].faixa[1] : faixa2.textContent = ''
+            if(this.levar[i].faixa[1]){
+                faixa2.textContent = this.levar[i].faixa[1]
+            }else{
+                faixa2.textContent = ''
+            }
+            corFaixa2()
+            audios.src = './musicas/'+ this.levar[i].musicas
+            sinopes.textContent = this.levar[i].sinopes
+            generoSobre.textContent = this.levar[i].genero
+            objPegar.textContent = JSON.stringify(this.levar[i])
+            this.levar[i].lista=='0' ? btnAdd.textContent="+" : btnAdd.textContent="-"
+        }
+
+
+        function h1portall1(){
+            location.href = '../quiz/quiz.html'
+        }
+
+        // function textoFaixa2(){
+        //     if(faixa2.textContent != ''){
+        //         var texF = faixa2.textContent
+        //         corFaixa2(texF)
+        //     }
+        // }
+
+
+        function corFaixa2(){
+            if(faixa2.textContent!=''){
+                var texTem = faixa2.textContent 
+                faixa2.style.display = ''
+                switch(texTem){
+                    case "Livre":
+                        faixa2.style.background = 'green'
+                        break
+                    case "10":
+                        faixa2.style.background = 'blue'
+                        break
+                    case "12":
+                        faixa2.style.background = 'yellow'
+                        break
+                    case "14":
+                        faixa2.style.background = 'orange'
+                        break
+                    case "16":
+                        faixa2.style.background = 'red'
+                        break
+                    case "18":
+                        faixa2.style.background = 'black'
+                        break
+                    default:
+                        break
+                }
+            }else{
+                faixa2.style.display = 'none'
+            }
+        }
+
+        
+        function verificarLista(){
+            if(myListas.length>0){
+                listaVery.textContent = ''
+                btnAdd.style.display = ''
+                btnVoto.style.display = ''
+                stream.style.display = ''
+                faixa2.style.display = ''
+                votacaoP.style.display = ''
+                
+                // meuLiA6.style.display = ''
+                // menuLi6.style.display = ''
+                // alert('maior')
+            }else{
+                zeroTexto()
+                
+                gene6.innerHTML = ''
+                btnAdd.style.display = 'none'
+                btnVoto.style.display = 'none'
+                stream.style.display = 'none'
+                faixa2.style.display = 'none'
+                votacaoP.textContent = ''
+                listaVery.textContent = 'Lista Vazia'
+                votacaoP.style.display = 'none'
+
+                // meuLiA6.style.display = 'flex'
+                
+                
+                // alert('menor')
+            }
+        }
+
+
+
+        document.addEventListener('keydown',menuT)
+
+        let sobr = 0
+        let zT = 0
+        var liConte = meusLi.length
+        let muLi =0
+
+        
+
+        function menuT(){
+            console.log(event.key)
+            if(event.key === 'PageUp'){
+                
+
+                sobr++
+                if(sobr == 2){
+                    sobre.style.transform = ''
+                    sobre.style.transition= '3s all'
+                    menuDiplay.style.opacity = '100%'
+                    menuDiplay.transition= '1s all'
+                    sobr=0
+                    audios.pause()
+                    play.textContent = '▶'
+                    h=0
+                    
+                
+                }else{
+                    sobre.style.transform = 'translate(200%)'
+                    sobre.style.transition= '3s all'
+                    menuDiplay.style.opacity = '0'
+                    menuDiplay.style.transition= '1s all'
+                    player.style.display = ''
+                    
+                }
+                // music()
+            }
+            
+            if(event.key === 'ArrowDown'){
+                muLi++
+                if(muLi < liConte){
+                    // muLi=0
+                    var getli = document.getElementById('menuLi'+muLi)
+                    getli.click()
+                }
+                else if(muLi == liConte){
+                    var getli = document.getElementById('menuLi0')
+                    getli.click()
+                    muLi =0
+                }  
+            } 
+            if(event.key === 'ArrowUp'){
+                muLi--
+                if(muLi < 0){
+                    muLi = liConte-1
+                    var getli = document.getElementById('menuLi'+muLi)
+                    getli.click()
+                }
+                if(muLi >= 0){
+                    var getli = document.getElementById('menuLi'+muLi)
+                    getli.click()
+                    // muLi= liConte-1
+                }
+                
+            }
+
+            if(event.key === 'End'){
+                add()
+            }
+            
+            if(event.key == '/'){
+                zT++
+                if(zT==2){
+                    zT = 0
+                    document.exitFullscreen()
+                }else{
+                    document.documentElement.requestFullscreen()
+                }
+            }
+            if(event.key === '['){
+                pular()
+            }
+            if(event.key === 'PageDown'){
+                ocultarC()
+            }
+            if(event.key === 'Home'){
+                hamburguer.click()
+            }
+            if(event.key === 'ArrowRight'){
+                
+                if(btnNextP.style.display != 'none' && btnNext.style.display == 'none'){
+                    nextP()
+                }
+                if(passN.style.display != 'none'){
+                    passN.click()
+                }
+                if(btnNext.style.display != 'none'){
+                    next()
+                }
+            }
+            if(event.key === 'ArrowLeft'){
+                
+                if(btnPrevP.style.display != 'none' && btnNext.style.display == 'none'){
+                    btnPrevP.click()
+                }
+                if(passP.style.display != 'none'){
+                    passP.click()
+                }
+                if(btnPrev.style.display != 'none'){
+                    prev()
+                }
+            }
+            
+        }
+
+        function votacaoEs(){
+
+            
+
+            if(votacao.textContent != '' ){
+
+                var numV = parseInt(votacao.textContent)
+
+                var maxNumVoto = 300
+
+                var votoPorcento = (numV/maxNumVoto)*100
+ 
+                // votoPorcento ++
+                // var subir = votoPorcento
+                // votacaoP.textContent = subir.toFixed(2)
+                var votoPor = votoPorcento.toFixed(2)
+
+
+                switch(true){
+                    case (votoPor >= 0 && votoPor <= 20.00):
+                        votacaoP.textContent = `${votoPor}% Ruim`
+                        votacaoP.style.background = 'red'
+                        break
+                    case (votoPor >= 20.01 && votoPor <= 40.00):
+                        votacaoP.textContent = `${votoPor}% Relevante`
+                        votacaoP.style.background = 'orange'
+                        break
+                    case (votoPor >= 40.01 && votoPor <= 60.00):
+                        votacaoP.textContent = `${votoPor}% Bom`
+                        votacaoP.style.background = 'yellow'
+                        break
+                    case (votoPor >= 60.01 && votoPor <= 80.00):
+                        votacaoP.textContent = `${votoPor}% Otimo`
+                        votacaoP.style.background = 'green'
+                        break
+                    case (votoPor >= 80.01 && votoPor <= 100.00):
+                        votacaoP.textContent = `${votoPor}% Excelente`
+                        votacaoP.style.background = 'blue'
+                        break
+                    default:
+                        break
+                }
+
+            }else{
+                votacaoP.textContent = ''
+            }
+            
+        }
+        
+        
+        
+        let h = 0
+        function play1(){
+            h++
+            if(h == 2){
+                alert('pause')
+                play.textContent = '▶'
+                audios.pause()
+                h=0
+            }else{
+                play.textContent = 'II'
+                play.style.background = 'transparent'
+                audios.play()
+                
+
+                // alert('play')
+            }
+            var duracaoEmSegundos = audios.duration
+            const minutos = duracaoEmSegundos / 60;
+            // const segundos = Math.floor(duracaoEmSegundos % 60);
+            
+            mduracao.textContent = `${minutos.toFixed(2)}`
+            while(audios.currentTime.toFixed(2)>minutos.toFixed(2)){
+                audios.currentTime++    
+                mcorrer.innerHTML = ''
+                mcorrer.innerHTML = `${audios.currentTime.toFixed(2)}`
+            }
+            
+            // mduracao.textContent = `${minutos.toFixed(2)}`
+            console.log(``);
+        }
+        function pause1(){
+            play1()
+            audios.pause()
+            audios.currentTime = 0
+            
+        }
+
+        function votacao(){
+            votoPorcento ++
+            var subir = votoPorcento
+            votacaoP.textContent = subir.toFixed(2)
+        }
+        
+        function correr(){
+            mcorrer.innerHTML = ''
+            mcorrer.innerHTML = `${audios.currentTime.toFixed(2)}`
+        }
+        
+
+        
+
+        // function menuProximo(){
+        //     console.log(event.key)
+            
+        // }
+        
+         
+        </script>
+</body>
+</html>

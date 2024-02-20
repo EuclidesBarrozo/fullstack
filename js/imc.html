@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="calculo">
+        Peso: <input type="text" id="peso">
+        Altura: <input type="text" id="altura">
+        
+        <br>
+        IMC: <input type="text" id="imc" disabled>
+        <input type="submit" value="Calcular">
+    </form>
+    <script>
+        document.getElementById('calculo').onsubmit = function () {
+            var peso = document.getElementById('peso').value;
+            var altura = document.getElementById('altura').value;
+            
+
+            var imc = peso/Math.pow(altura, 2);
+
+            if (imc < 18.5) {
+                alert("Baixo peso");
+            }
+            if (imc >= 18.5 && imc < 25) {
+                alert("Peso normal")
+            }
+            if (imc >= 25 && imc < 30) {
+                alert("Sobrepeso")
+            }
+            if (imc >= 30 && imc < 35) {
+                alert("Obesidade grau I")
+            }
+            if (imc >= 35 && imc < 40) {
+                alert("Obesidade grau II")
+            }
+            if (imc >= 40) {
+                alert("Obesidade grau III");
+            }
+            document.getElementById('media').value = media;
+
+            return false;
+        };
+    </script>
+</body>
+
+</html>

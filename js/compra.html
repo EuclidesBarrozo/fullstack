@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="calculo">
+        valor: <input type="text" id="valor">
+        <select id="opcao">
+            <option value="avista">à vista</option>
+            <option value="credito">crédito</option>
+        </select>
+        <br>
+        Valor Final: <input type="text" id="valorFinal" disabled>
+        <input type="submit" value="Calcular">
+    </form>
+    <script>
+        document.getElementById('calculo').onsubmit = function () {
+            var valor = document.getElementById('valor').value;
+            var opcao = document.getElementById('opcao').value;
+            if (opcao == "avista") {
+                var VF = valor - valor * 0.1;
+                alert("Valor Final: " + VF);
+            }
+            else {
+                var VF = valor;
+                alert("Valor FInal: " + VF);
+            }
+            document.getElementById('valorFinal').value = VF;
+            return false;
+        };
+    </script>
+</body>
+
+</html>

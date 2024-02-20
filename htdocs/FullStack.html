@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html lang="pt br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linguagens Web</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+      }
+      body{
+        padding: 2%;
+        /*background-image: url("wallpaper-lua.jpg");*/
+        cursor: url(http://webcis.com.br/img/lupa-clentes.cur), default;
+      }
+      fieldset, p class  {
+        padding: 1%
+      }
+      table{
+        width: 35%
+      }
+      table, td, th{
+        text-align: Left;
+        border: 1px solid green ;
+        border-collapse: collapse;
+        padding: 0px;
+        
+      }
+      tr:hover {
+        background-color: gold;
+      }
+      
+      h1 {
+        font-family: cursive;
+      
+      }
+      li {
+        font-family: Arial, Helvetica, sans-serif;
+        font-family: bold;
+        font-size: large;
+        font-style: italic;
+      }
+      p {
+        font-family: "Courier New", Courier, monospace;
+        text-align: Left;
+      }
+      p.rodape{
+        text-align: left;
+      }
+      div {
+      background-color: goldenrod;
+      /*margin: 0px 0px 0px 0px; padding: 0px;*/
+    /*left(esquerda), rigth(direita), top(topo), botton(base)*/
+    }
+    h1, h2, h3 {
+      margin: 0;
+      color: whitesmoke;
+      text-align: left;
+    }
+    .menu {
+      list-style: none; /*remove os pontos*/
+      border: 1px solid whitesmoke;
+      float: left; /*posicionamento*/
+    }
+    .menu li {
+      position: relative; /*elemento pai*/
+      float: left; /*um ao lado do outro*/
+      border-right: 1px solid whitesmoke;
+    }
+    .menu li ul {
+      position: absolute; /*sua posição depende de onde está a tag pai*/
+      background-color: white;
+      top: 25px;
+      display: none;
+    }
+    .menu li:hover ul {
+      display: block; /*deixa a lista visível e organizada em blocos verticais*/
+    }
+    .menu li ul li {
+      border: 1px solid white;
+      display: block;
+      width: 150px;
+    }
+    .menu li a {
+      color: green;
+      text-decoration: none;
+      padding: 5px 10px;
+      display: block;
+    }
+    .menu li a:hover {
+      background: black;
+      color: azure;
+      text-shadow: 0px 0px 1px white; /*sombra do texto*/
+    }
+
+  </style>
+  </head>
+  
+  <body style="background-color: black">  
+    
+    <div class="container-fluid bg-warning p-1 "> 
+      
+      <nav class="navbar navbar-expand-lg navbar-light p-2">
+        <a class="navbar-brand" href="#">
+          <img
+            src="C:\Users\Aluno\Documents\JOSE DE ANCHIETA\6d997ebb3c172258b3f177f918b2dd3e-removebg-preview (2).png"
+            width="40"
+            heidht="40"
+            class="m-1"
+          />
+        </a>
+        <h4>FamilyHealth</h4>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Conteudo"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Conteudo">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cadastro</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                O Que Fazemos?</a
+              >
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Consultoria</a>
+                <a class="dropdown-item" href="#">Cursos OnLine</a>
+                <a class="dropdown-item" href="#">Web Designer</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                Cursos</a
+              >
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"> Desenvolvedor FullStack</a>
+                <a class="dropdown-item" href="#">Lógica de Programação</a>
+                <a class="dropdown-item" href="#">Programação em Python</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                Link's Úteis</a
+              ></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                  Contatos</a
+                ></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="menu">
+        
+      </ul></div>
+  <div class="container-fluid ">
+      <p></p><p><marquee style="color: white">Sejam Todos (as) Bem Vindos (as) ao <b>FamilyHealth</b>, o Site da Família Brasileira sobre Saúde da Família!</marquee></p></div>
+      
+      <div class="container-fluid bg-warning p-3"><h1>Uso exagerado de Internet</h1><hr>
+    <h2>O Alerta da Organização Mundial de Saúde para Doenças Mentais</h2></div>
+    <hr>
+    <div><br>
+      <div class="container text-center">
+      <div class="row align-items-start">
+      <div class=" embed-responsive embed-responsive-16by9">
+          <iframe class="col-12 embed-responsive-item" src="https://www.youtube.com/embed/vioY7EGOHLg?si=_2ZQfIZNkMpBUFtM" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      </div>
+      </div>
+      
+      
+    <br>
+    <p>
+      Executivos pelo mundo cada vez mais veem viajando mais e mais, e, utilizado ainda mais a tecnologia para se comunicar com seus parentes ou familiares. A Organização Mundial de Saúde vem alertando sobre o uso exagerado de Internet para crianças, jovens e adultos. As consequências causadas pelo distanciamento e isolamento social, e, também, as eventualmente ocasionadas pela Pandemia da Covid-19, podem ser evitadas e a resolução do problema pode estar na própria tecnologia através do Desenvolvimento FullStack, ou seja, através do desenvolvimento das competências de habilidades profissionais front-end e back-and.</p>
+      <p>É comum que os nascisdos em um certo intervalo de anos sejam conhecidos por serem de uma geração. Assim, temos, por exemplo, a Geração Y, que é aquela que nasceu entre as décadas de 1980 e 1990 e é caracterizada por ter sido uma geração que pôde ter contato com a internet logo. Numa iniciativa concebida pelo projeto Geração Cordão e pelo Ispa - Instituto Universitário, um teste online avaliou o risco de dependência da Internet entre os jovens. Este teste procurou fazer uma análise dos hábitos de consumo das tecnologias e da Internet entre os utilizadores mais jovens, e, segundo a coordenadora do projeto Ivone Patrão "É útil para famílias e é importante, sobretudo, para que, em caso de intervenção de um psicólogo, já tenhamos uma avaliação inicial, e, em seguida, avaliar e intervir de forma mais profunda e direcionada, caso a caso". O uso do cordão de fita com desenhos de girassóis foi instituído por lei como símbolo nacional de identificação das pessoas com deficiências ocultas, aquelas que não podem ser observadas de imediato, como é o caso da surdez, Transtorno do Espectro Autista (TEA), algumas deficiências intelectuais, entre outras ( A Lei n° 14.624, sancionada em 17 de julho de 2023, altera o Estatuto da Pessoa com Deficiência, já vigente pela Lei n° 13.146, de 6 de julho de 2015 ). </p>
+      <p>Deficiências ocultas ou invisíveis são aquelas não percebidas de imediato, variam de distúrbios como ansiedade, depressão e distúrbios do espectro autista, perda auditiva, etc. Depressão é um estado mental caracterizado por tristeza profunda persistente e aversão a atividades. Pode afetar os pensamentos, comportamentos, sentimentos e o bem-estar de uma pessoa. Afeta, aproximadamente, mais de 280 milhões de pessoas de todas as idades. A doença atinge em torno de 3% a 5% da população em geral; em pacientes clínicos, a depressão é encontrada em de 9% a 16% dos internados e em de 5% a 10% dos pacientes ambulatoriais. A depressão ainda é erroneamente diagnosticada. Quando diagnosticada corretamente, ainda pode ser tratada de forma errada, comprometendo a evolução dos pacientes. Se não tratada de forma correta, a depressão pode durar por muito tempo, causando sérios problemas a vida do paciente, comprometendo relações familiares, no trabalho, amizades e aumentando os riscos de suicídio. Dois pontos de extrema importância para o tratamento contra a depressão são: o tempo e a dosagem certa. A única maneira de saber se os resultados são positivos, é após o início do tratamento, feito junto a um profissional.</p>
+      <p>Algumas pessoas apresentam episódios de depressão separados por um intervalo de vários anos em que o comportamento é normal ( distúrbio depressivo maior ), enquanto outras manifestam sintomas de forma quase permanente. A depressão pode afetar de forma negativa as relações familiares da pessoa, o trabalho, a vida escolar, o sono, as refeições e a saúde em geral. Entre 2 a 7% dos adultos com depressão morrem de suicídio e cerca de 60% das pessoas que morrem por suicídio apresentavam depressão ou outro distúrbio de humor. Em 2013, o distúrbio depressivo maior afetava aproximadamente 235 milhões de pessoas em todo o mundo (3,6%). A percentagem de pessoas afetadas em determinado momento da vida varia entre 7% no Japão e 21% em França. A taxa ao longo da vida é maior nos países desenvolvidos (15%) do que nos países em vias de desenvolvimento (11%). A doença é a segunda maior causa de anos de vida com incapacidade, apenas atrás da dor de costas. Os sintomas aparecem geralmente entre os 20 e os 40 anos de idade. A doença é duas vezes mais comum entre mulheres do que entre homens.</p>
+      <p>A depressão é considerada pela Organização Mundial da Saúde (OMS) como o "Mal do Século". No sentido patológico, há presença de tristeza, pessimismo, baixa auto-estima, que aparecem com freqüência e podem combinar-se entre si. A depressão provoca ainda ausência de prazer em coisas que antes faziam bem e grande oscilação de humor e pensamentos, que podem culminar em comportamentos e atos suicidas. Uma pessoa deprimida pode relatar múltiplos sintomas físicos, como fadiga, dores de cabeça ou problemas digestivos; queixas físicas são o problema mais comum em países em desenvolvimento, de acordo com os critérios da Organização Mundial da Saúde para depressão.</p>
+      <p class="rodape" >https://pt.wikipedia.org/wiki/Transtorno_depressivo_maior</p>
+      <p>https://www.dn.pt/sociedade/teste-online-vai-avaliar-risco-de-dependencia-da-internet-nos-jovens-16368551.html</p>
+      <p>https://coisasdojapao.com/2022/05/nascidos-no-japao-entre-1971-82-sao-chamdos-de-geracao-perdida-saiba-os-motivos/</p>
+    <p>https://pt.wikipedia.org/wiki/Depress%C3%A3o_(humor)</p>
+  <p>https://www.tre-pe.jus.br/comunicacao/noticias/2023/Julho/cordao-de-girassol-sera-usado-para-identificar-pessoas-com-deficiencias-ocultas#:~:text=O%20uso%20do%20cord%C3%A3o%20de,algumas%20defici%C3%AAncias%20intelectuais%2C%20entre%20outras.</p>
+  <p>https://www.tjdft.jus.br/informacoes/programas-projetos-e-acoes/pro-vida/dicas-de-saude/pilulas-de-saude/depressao-causas-sintomas-tratamentos-diagnostico-e-prevencao</p>
+
+      <div class="row d-flex justify-content-center">
+        <div class="card col-lg-3 col-sm-12 m-3 shadow-lg">
+          <img
+            class="card-img-top"
+            width="225" height="225"src="C:\Users\Aluno\Documents\JOSE DE ANCHIETA\images-removebg-preview.png"
+            alt="Imagem de capa do card"
+          />
+          <div class="card-body">
+            <hr class="mt-2" />
+            <h5 class="card-title">Título do card</h5>
+            <p class="card-text">
+              Um exemplo de texto rápido para construir o titulo do card e
+              fazer preencher o conteúdo do card.
+            </p>
+            <a href="#" class="btn btn-primary">Visitar</a>
+          </div>
+        </div>
+  <div class="card col-lg-3 col-sm-12 m-3 shadow-lg">
+    <img
+      class="card-img-top"
+      width="225" height="225"src="C:\Users\Aluno\Documents\JOSE DE ANCHIETA\png-transparent-common-sunflower-others-sunflower-sunflower-seed-flower-removebg-preview.png"
+      alt="Imagem de capa do card"
+    />
+    <div class="card-body">
+      <hr class="mt-2" />
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">
+        Um exemplo de texto rápido para construir o titulo do card e
+        fazer preencher o conteúdo do card.
+      </p>
+      <a href="#" class="btn btn-primary">Visitar</a>
+    </div>
+  </div>
+  <div class="card col-lg-3 col-sm-12 m-3 shadow-lg">
+    <img
+      class="card-img-top"
+      width="225" height="225"src="C:\Users\Aluno\Documents\JOSE DE ANCHIETA\girassol.png"
+      alt="Imagem de capa do card"
+    />
+    <div class="card-body">
+      <hr class="mt-2" />
+      <h5 class="card-title">Título do card</h5>
+      <p class="card-text">
+        Um exemplo de texto rápido para construir o titulo do card e
+        fazer preencher o conteúdo do card.
+      </p>
+      <a href="#" class="btn btn-primary">Visitar</a>
+    </div>
+  </div>
+</div>
+  </fieldset></div><br>
+      <legend><div class="container-fluid bg-warning p-3"><h3>Problemas Causados em Crianças</h3></div></legend><div>
+<p>Introdução: OMS alerta para exposição das crianças à aparelhos digitais e eletrônicos. Novas diretrizes orientam pais e cuidadores de crianças menores de 5 anos quanto ao uso de aparelhos digitais, atividade física e horas de acesso à Internet.
+Quem nunca ficou surpreso com tamanha esperteza de uma criança ao interagir sozinha com um smartphone? Elas conseguem fazer de tudo como fazer selfies, selecionar seus desenhos e jogos favoritos e muito mais. É assim, com os pequenos dedinhos deslizando na tela, que se resume a infância moderna, imersa na tecnologia como referência de lazer. Porém especialistas da Organização Mundial da Saúde (OMS) alertam para os impactos do uso excessivo dos dispositivos móveis e eletrônicos.
+A OMS lançou em abril deste ano novas diretrizes para orientar pais e cuidadores de crianças menores de 5 anos quanto ao uso de aparelhos digitais, atividade física e horas de sono. Conforme o documento, crianças menores de dois anos não devem ter contato com telas e aquelas com dois anos ou mais devem assistir televisão por até, no máximo, uma hora por dia. 
+Não são só as crianças devem fazer o uso adequado das tecnologias. Os adultos também devem dar o exemplo, pois os pequenos, de acordo com o psicoterapeuta Iarodi Bezerra, adquirem parte de seu aprendizado por meio da imitação de seus pais e adultos de sua referência. “Ao ver os adultos vivendo cada vez mais dependentes dos aparelhos tecnológicos as crianças tendem a seguir o mesmo caminho, tornando-se presas aos jogos virtuais”, alerta.
+Para o especialista, a divisão da atenção dos adultos entre o bate-papo nas redes sociais e os momentos de interação com as crianças molda a forma de relacionar-se socialmente. Iarodi explica que a carência da conexão com o ‘aqui-e-agora’, consequentemente, os levam a aprender a viver em um mundo restrito ao virtual.
+Ansiedade, transtorno do humor, psicose, transtorno do apego, baixa autoestima, insônia e outros inúmeros transtornos que podem atrapalhar o desenvolvimento infantil são reflexos dos impactos da exposição excessiva a aparelhos tecnológicos. “Os pais podem observar sintomas como nervosismo, dificuldade da criança em ficar longe deles de maneira descontrolada, agitação, agressividade, entre outras. Após observação é importante que os pais busquem acompanhamento psicológico para que tais problemas sejam sanados e gerem bem-estar para a criança e consequentemente para a família”, recomenda Iarodi. </p>
+<p>Processo de Aprendizagem:
+Para o psicoterapeuta o desenvolvimento infantil é único para cada geração. No processo de aprendizagem, a tecnologia é uma grande aliada. “Mas é necessário, no que diz respeito ao aprendizado infantil, que o uso dos recursos eletrônicos seja restrito e que o lúdico, o uso da psicomotricidade, da imaginação sejam amplamente utilizados. Faço uma ressalva que no processo de aprendizagem deve haver um alinhamento do corpo pedagógico com a família”.
+Confira as recomendações da OMS:
+
+- Crianças menores de 1 ano: não devem ser expostas às telas; não devem passar mais de 1 hora restritas a carrinhos ou cadeirões; devem dormir de 14 a 17 horas (entre 0-3 meses) e entre 12 a 16 horas (4-11 meses), incluindo sonecas;
+
+- Crianças de 1-2 anos: não é recomendado o uso de aparelhos eletrônicos e digitais; não devem exceder mais de 1 hora diária restritas a cadeirões e similares; devem passar 180 minutos por dia realizando atividades físicas; precisam dormir de 11-14 horas;
+
+- Crianças de 2-4 anos: não devem exceder 1 hora diante das telas; podem passar no máximo 1 hora restritas a cadeirões e similares; ter 180 minutos diários em atividades físicas; dormir de 10-13 horas por dia;
+
+Quantos aos pais, devem buscar realizar com seus filhos atividades lúdicas e priorizá-las evitando, nos momentos dedicados à família, o contato com smartphones, tablets, entre outros. Um dica importante: não ter medo de dizer ‘não’, mesmo que a reação seja negativa por parte da criança.</p>
+<p class="rodape" >https://www.educamaisbrasil.com.br/educacao/noticias/oms-alerta-para-exposicao-das-criancas-a-aparelhos-digitais-e-eletronicos</p> </div></fieldset>
+<fieldset><legend><div class="container-fluid bg-warning p-3"><h3>Malefícios Causados em Jovens</h3></div></legend><div>
+<p>Introdução: Dependência digital prejudica saúde de adolescentes. Um Trabalho realizado pelo "Adolescentro" que auxilia famílias a moderar uso de eletrônicos e distúrbio de jogo foi feito por Josiane Canterle, da Agência Saúde. O uso excessivo de aparelhos eletrônicos, em especial o celular, tem sido objeto de reclamação recorrente dos pais de adolescentes. Em casos extremos, o usuário não consegue viver sem o equipamento. Quando fica longe do aparelho, o jovem ou a garota sente sintomas físicos e psíquicos pela falta do objeto.   Esse tipo de comportamento é descrito pelos pais com filhos em acompanhamento no Adolescentro e que não sabem como agir diante da situação. Mesmo não havendo um grupo de trabalho específico sobre o tema, a dependência tecnológica está presente na maioria dos atendimentos.   “Muitas vezes, a queixa que vem não é diretamente sobre a dependência tecnológica. Ela é consequência de um isolamento, de um processo depressivo, de um processo de fobia social, dificuldade de interação. Outras vezes, ela é a causa”, confirma a assistente social Ana Miriam Garcia Barbosa, que trabalha há 16 anos com esse público.</p>
+<p>
+  Processo de Aprendizagem:  ISOLAMENTO – Do alto da sua experiência com os jovens, Ana Miriam esclarece: “Os meninos ficam tão interessados, tão compulsivos, tão dependentes que passam a ter disfunções. Não querem mais ir à escola, para eventos de família. Buscam ficar sozinhos, mas só se tiver internet livre, um celular ou um computador disponível também”.   O Adolescentro acolhe, diariamente, pelo menos dez novos adolescentes, com idade entre 12 e 18 anos incompletos. Eles são encaminhados por escolas, por médicos das Unidades Básicas de Saúde (UBS) e ainda há os que chegam por demanda espontânea.   Foi um médico de UBS que encaminhou o garoto R.R.M.M. aos dez anos de idade para o acompanhamento no centro por causa do diagnóstico de déficit de atenção. Hoje, aos 14 anos, o adolescente permanece em tratamento ao lado da família. O pai, Sérgio Ricardo Alves de Melo, conta que aprendeu a dar limites aos filhos.   “Ano passado, ele ficou em recuperação. Perdia o sono. Quando ia ver, era uma hora da manhã, duas horas, e ele estava lá. Às vezes, até pensava que ele estivesse me enganando. Eu entrava no quarto e ele fingia que estava dormindo”, recorda Sérgio.   LIMITES – Ele lembra que o filho não queria dormir à noite. “Quando ia para o colégio cedo, estava cansado, com sono. Agora, dorme mais cedo. O desempenho na escola já está melhorando”. Sérgio conta que limitou o uso do celular a uma hora e meia por dia.   A assistente social, Ana Miriam, afirma que não há uma medida de tempo ideal para evitar a dependência tecnológica. Segundo ela, tudo depende da preservação das funcionalidades, ou seja, o uso de eletrônicos não deve afetar o rendimento nos estudos, o sono ou o convívio social.   A assistente também alerta para os prejuízos que uma abordagem agressiva e radical por parte dos pais pode trazer. “A orientação é diminuir as horas, fazer uma redução de danos, e não, simplesmente, tirar tudo. A gente trabalha muito com o controle parental, no sentido de poder regular, regular o sono, regular o horário”, sugere.   FAMÍLIA – Os profissionais do Adolescentro influenciam em mudanças de comportamentos de toda a família, a partir dos atendimentos individuais e das ações em grupo. Foi com recebendo essas orientações que Sérgio conseguiu demonstrar mais o seu afeto pelo filho adolescente.   “Aprendemos a estabelecer limites, horário de dormir, tempo de uso do celular, aproximação da família, entre pai e mãe, estar mais juntos, falar que amamos, abraçar mais vezes. Nesta fase da vida, eles não querem muito”, concorda Sérgio.   EXEMPLO – Outro alerta importante, dado por Ana Miriam, diz respeito ao exemplo que os pais estão dando no dia-a-dia, quanto ao uso dos eletrônicos, especialmente os celulares e as redes sociais. “Às vezes, eles dizem para os filhos que estão resolvendo coisas do trabalho, mas é um tempo que você não está com os meninos, não está com a família, não está no momento”, alerta.   Ana Miriam lembra que, nos grupos, não é incomum os pais dizerem que passam muitas horas no celular e que muitos trabalhos, hoje, dependem de estarem de porta aberta para as respostas. A partir desta constatação, os pais começam a se policiar”.   DEPENDÊNCIA DIGITAL – Em 18 de junho de 2018, a Organização Mundial da Saúde (OMS) reconheceu o  no Código Internacional de Doenças (CID). Com isso, a OMS passou a considerar como doença a dependência digital e a nomofobia, que é o medo irracional de estar sem celular ou aparelho eletrônico no geral.   São doenças relativamente recentes, que surgiram em função das mudanças e dos avanços tecnológicos da/na sociedade. Um levantamento aponta que 176 milhões de pessoas no mundo são viciadas em tecnologia. A dependência está relacionada ao vício em outras tecnologias, como computadores e videogames. Ou seja, quanto maior a dependência digital, maior a fobia.   Em casos extremos, a dependência digital pode ser comparada a ao uso de uma droga que, quando o usuário se vê sem ela, pode apresentar sintomas como taquicardia, sudorese, irritabilidade, impaciência, pânico.   ADOLESCENTRO – A unidade funciona das 8h às 12h e das 14h às 17h, na quadra 605, lotes 32/33, na Asa Sul.
+</p>
+<p class="rodape">https://www.saude.df.gov.br/web/guest/w/dependenciadigitalprejudica-saude-de-adolescentes</p></fieldset></div>
+<fieldset><legend><div class="container-fluid bg-warning p-3"><h3>Doenças Causados em Adultos</h3></div></legend><div>
+<p>Introdução: UM ALERTA PARA A SAÚDE, Sintomas, prevenção e tratamentos para uma vida melhor. Uso excessivo de tecnologia pode causar insônia, dores e prejudicar visão e muito mais. É difícil imaginar a vida sem computadores e smartphones, não é? Ainda mais para nós, brasileiros, que somos um dos povos mais conectados do mundo. De acordo com o relatório "2018 Global Digital", divulgado pela agência We Are Social, em parceria com a HootSuite, passamos em média 9 horas e 14 minutos na internet e 3 horas e 39 minutos nas redes sociais. Não há dúvidas de que os aparelhos eletrônicos são úteis no trabalho, facilitam a comunicação e oferecem infinitas opções de lazer. Mas, se usados com exagero, eles podem ser prejudiciais à saúde. Veja a seguir alguns problemas desenvolvidos por quem abusa da tecnologia. Quem vive digitando pode ter dores nos punhos, nas mãos e nos dedos. Isso acontece porque fazer sempre os mesmos movimentos pode gerar uma inflamação nas articulações. "Lesões por esforço repetitivo são a principal causa de afastamento médico. E diversos desses problemas são ocasionadas pelo uso de dispositivos tecnológicos, como o celular", afirma Marcus Gaz, clínico geral do Hospital Albert Einstein. Outros incômodos relacionados ao uso de smartphones e afins são as dores no pescoço, nos ombros e nas costas. Ao manter a cabeça flexionada para baixo, na direção do queixo, você sobrecarrega a coluna cervical. Só para ter ideia, quando o pescoço fica inclinado para baixo, o peso da cabeça passa de cerca de 5 kg para 27 kg, de acordo com a revista científica Surgical Technology International.
+  <p>Processo de Aprendizagem: <b>Alterações na visão:</b> Não é raro os usuários sofrerem de "falsa miopia", um tipo de contração demasiada da musculatura dos olhos, que acontece quando a vista é forçada por muito tempo com imagens próximas e acaba ficando embaçada para longe. Outros incômodos comuns são ardência, irritação e vermelhidão, além da sensação de vista cansada, que ocorre pelo ressecamento dos olhos quando ficamos diante das telas sem piscar. Esse esforço que as telas pequenas exigem dos olhos leva à dificuldade de enxergar em lugares mais abertos, segundo Gaz. O risco é maior para crianças, adolescentes e adultos jovens, já que os músculos em volta dos olhos ainda estão em formação. "Quando eles se acostumam a olhar em curtas distâncias e ao movimento repetitivo de ler na tela, isso pode ocasionar uma alteração de movimento do olho e estar relacionado com a necessidade de correção de grau de miopia, de astigmatismo e hipermetropia", explica. <b>Problemas de audição:</b> Ouvir a sua playlist no transporte, no treino ou no trabalho é muito prazeroso. Mas usar fones constantemente pode comprometer a saúde do seu ouvido. "Ficar muitas horas com algo obstruindo o seu canal auditivo e um som muito alto pode causar um dano permanente na audição", diz o clínico geral. A Organização Mundial da Saúde (OMS) alerta que jovens entre 12 e 35 anos de idade correm o risco de terem perdas auditivas irreversíveis porque escutam música em volume muito alto em fones de ouvido. <b>Infecções</b> Não é novidade que teclados de computador, celulares, tablets e fones de ouvido estão cheios de micróbios. Uma pesquisa da Devry Metrocamp identificou nesses equipamentos a presença de até 23 mil fungos e bactérias. Não é algo tão comum de acontecer, mas, principalmente se sua imunidade estiver baixa, esses micro-organismos podem causar infecções respiratórias, otite externa, conjuntivite, acne, irritações na pele e acne. <b>Insônia</b> Um dos obstáculos para uma boa noite de sono é a luz azul emitida pelas telas de dispositivos eletrônicos. Isso porque ela estimula o cérebro, o deixando mais ativo no momento em que deveria estar relaxado. A luz também inibe a produção de melatonina, hormônio regulador do sono. A conclusão é de um estudo realizado pela Universidade de Haifa, em Israel, que acrescenta que a luz azul danifica os ciclos do sono. <b>Transtornos psicológicos:</b> Para algumas pessoas, os "likes" e a interação no mundo virtual disparar a sensação de prazer no cérebro. Isso pode causar uma dependência e fazer com que a vida social "real" fique em segundo plano. Esse isolamento pode ser o caminho para uma depressão, principalmente em pessoas que têm propensão à doença. Outro inimigo de quem prioriza as relações virtuais é a ansiedade, que é acentuada pelo costume de checar constantemente as notificações no celular. "O uso descontrolado da tecnologia causa prejuízos na vida das pessoas como um todo. Elas perdem o foco das coisas realmente importantes e têm uma qualidade das relações empobrecida. Isso é pouco percebido, principalmente por quem é viciado em jogos. A pessoa perde o foco, fica mais distraída, retém menos informações e tem uma diminuição da memória", observa Dora observa Dora Góes, psicóloga do Programa de Dependências Tecnológicas do IPQ (Instituto de Psiquiatria do Hospital das Clínicas). O segredo é usar com moderação. Os especialistas recomendam medidas simples para evitar que a tecnologia faça mais mal do que bem. Evite usar esses dispositivos para lazer por mais de quatro horas por dia; Faça pausas a cada 40 minutos para alongar o corpo ou caminhar um pouco, para evitar lesões; Higienize os aparelhos com álcool isopropílico, de preferência diariamente; Use aplicativos que estimulam atividades físicas, assim você mantém bons hábitos sem ficar longe do celular; Silencie o smartphone durante o trabalho ou os estudos; Evite usar aparelhos eletrônicos que emitem luz muito perto da hora de ir para a cama. E como administrar o tempo que ficamos conectados? "A partir do momento que você percebe que está exagerando no uso da tecnologia, é interessante criar algumas "regras" para si mesmo. Defina horários e um tempo limite para estar conectado, por exemplo", sugere José Roberto Marques, presidente do Instituto Brasileiro de Coaching.</p>
+  <p class="rodape">- Veja mais em https://www.uol.com.br/vivabem/noticias/redacao/2018/07/21/quais-problemas-de-saude-o-uso-excessivo-de-tecnologia-pode-causar.htm?cmpid=copiaecola</p></fieldset></div>
+  <legend><div class="container-fluid bg-warning p-3"><h2>Estatísticas de Suicídio dos Principais Países do Mundo</h2></div></legend><fieldset><div>
+    <p>O suicídio é a causa de cerca de 0,5% das mortes no mundo. Em cada ano, 12 em cada 100 000 pessoas morrem por suicídio. Três quartos dos suicídios ocorrem nos países em desenvolvimento. As taxas de suicídios consumados são geralmente mais elevadas nos homens do que nas mulheres. Em países em desenvolvimento suicidam-se 1,5 vezes mais homens do que mulheres e em países desenvolvidos suicidam-se 3,5 vezes mais homens do que mulheres. Na generalidade dos países, o suicídio é mais comum entre os maiores de 70 anos. No entanto, em alguns países o grupo etário de maior risco é aquele com idades compreendidas entre os 15 e 30 anos. Estima-se que em todo o mundo haja anualmente entre 10 a 20 milhões de tentativas de suicídio não fatais. As tentativas de suicídio – gestos auto-destrutivos não fatais – podem provocar lesões e incapacidade a longo prazo. No mundo ocidental, as tentativas são mais comuns nos jovens e pessoas do sexo feminino.
+
+    No mundo, 815 000 pessoas cometeram suicídio no ano 2000, o que perfaz 14,5 mortes por 100 000 habitantes (uma morte a cada 40 segundos). Países do Leste Europeu são os recordistas em média de suicídio por 100 000 habitantes. A Lituânia (41,9), Estônia (40,1), Rússia (37,6), Letônia (33,9) e Hungria (32,9). Guatemala, Filipinas e Albânia estão no lado oposto, com a menor taxa, variando entre 0,5 e 2. Os demais estão na faixa de 10 a 16. Em números absolutos, porém, a República Popular da China lidera as estatísticas. Foram 195 mil suicídios no ano de 2000, seguido pela Índia com 87 mil, a Rússia com 52,5 mil, os Estados Unidos com 31 mil, o Japão com vinte mil (24,1 por 100 000 habitantes) e a Alemanha com 12,5 mil.</p>
+    <p>Na <b>França</b>, em 1996, a França teve 12 000 suicídios por 160 000 tentativas; com 62 milhões de habitantes, esses números representam aproximadamente 19,6 suicídios por 100 000 habitantes, ou seja, um suicídio por 5 000 pessoas, e uma tentativa por 400 pessoas. A França ocupa o quarto lugar entre os países desenvolvidos. Esses números são mais ou menos estáveis desde 1980. Assim como em outros países da Europa o suicídio já se tornou uma causa mortis mais frequente que os acidentes de trânsito. Fatores culturais e crises sócio-econômicas agravaram a situação em 2008-2009.
+
+      No <b>Brasil</b>, 4,9 pessoas a cada 100 mil morrem por suicídio por ano, uma das menores médias do mundo. E ao contrário do resto do mundo onde é mais comum entre adultos, no Brasil há uma prevalência entre os jovens entre 15 e 24 anos. Entre os estados, o Rio Grande do Sul é o que tem a maior taxa, 9,88 para 100 mil. Entre as cidades, o município com o maior índice é o de Amambai (MS), com mais de 49,3 casos a cada 100 mil habitantes, uma das cidades com maior índice de suicídio do mundo. Um dos métodos mais comuns no país são venenos como o agrotóxico Tamaron. Foram registradas 7 987 mortes por suicídio no País. Entre os índios, o índice de suicídio foi de 98 por 100 mil, um índice alarmante que já responde por 81% dos suicídios em Mato Grosso do Sul e no Amazonas.
+      
+      No Rio Grande do Sul, em 2004, foi identificada a maior mortalidade masculina por suicídio do país com 16,6 mortes a cada 100 mil homens, enquanto Maranhão ficou em último lugar com 2,3 mortes a cada 100 mil homens. Em relação às mulheres, Mato Grosso do Sul ocupou o primeiro lugar com 4,2 mortes a cada 100 mil mulheres, e Rio Grande do Norte o último com mortalidade de 0,6 a cada 100 mil mulheres.
+      
+      Em 2005, seguindo as recomendações da OMS para combater o aumento no número de casos, foram elaborado de políticas nacionais de prevenção ao suicídio, atuando em esfera nacional, estadual e municipal.
+      
+      No Brasil o número de suicídios aumentou quase 30% entre 1980 e 2006 com uma tendência crescente. Como muitos casos de suicídio são ocultos pela família ou não reportados pelos médicos, portanto os números reais podem ser muito maiores.
+      
+      Já, em <b>Portugal</b>, em 2003 11,1 pessoas por cada 100 mil morreram por suicídio sendo que a distribuição por género é de 17,1 por 100 mil para os homens e 5 por 100 mil para as mulheres. A taxa de suicídio em Portugal dobrou na última década, de cerca de 600 para mais de 1 200 casos por ano.
+      
+      Entre os jovens masculinos dos 15 aos 24, Portugal é o país que apresenta a taxa mais baixa da Europa. Além disso, é um dos países com menos suicídios entre mulheres. O número de suicídios aumenta com a faixa etária, sendo mais frequente em homens acima dos 50 anos, esta peculiaridade pode ser reflexo de fatores históricos e culturais. Entre 1902 e 1939 o número de suicídios registrados aumentou de 236 para 969 casos e seguiu estável entre 750 e 1 000 até 1975. E desde essa época que o número de suicídios entre homens já era entre duas e quatro vezes mais comuns do que mulheres e predominava entre os mais velhos. Houve um grande decréscimo a partir da década de 70, chegando a 516 casos em 2000, menos número em 40 anos. Porém, em 2002 e 2003, esse número dobrou ultrapassando os mil casos e seguiu aumentando até 2010, tornando-se a causa de morte não-natural mais comum do país, superando o número por acidentes viários.
+      
+      Segundo a Sociedade Portuguesa de Suicidologia, entre 1998 a 2008, a média anual de suicídios no Baixo Alentejo foi de 53 casos, enquanto no concelho de Odemira, em 2007, foram registrados 61 mortes a cada 100 mil habitantes, com um grande número de casos na freguesia de Saboia, levando a região a um dos maiores índices de suicídio em todo o mundo. Um dos prováveis motivos pode ser o aumento no índice de desemprego e depressão maior.
+      
+      No sexo feminino, a menor taxa registou-se na região autónoma da Madeira, onde não houve casos registrados. Salienta-se que nas regiões Norte e Açores ocorreu menos de um suicídio por 100 000 habitantes. No sexo masculino, a região com menor taxa foi a do Norte. De um modo geral, em Portugal registaram-se mais suicídios nos meses de Junho, Julho e Setembro. Janeiro e Fevereiro foram os meses com menor número de registos. Fazendo uma análise por sexos, não se verificam grandes diferenças de perfis, registando-se um maior número de suicídios no sexo masculino nos meses de Junho e Setembro e no sexo feminino em Junho e Julho.</p>
+      
+    <p>A seguir estão listas de países por taxa de suicídio, conforme publicadas pela Organização Mundial da Saúde (OMS) e outras fontes.
+
+    Cerca de uma pessoa em 5 000–15 000 morre por suicídio a cada ano, com uma taxa global estimada de 10,5 para cada 100 000 habitantes. Em países modernizados de alta renda, as taxas de comportamentos suicidas masculinos e femininos diferem muito em comparação com as do resto do mundo: embora as mulheres sejam mais propensas a pensamentos suicidas, as taxas de suicídio são maiores entre os homens (o suicídio em homens foi descrito como uma "epidemia silenciosa"). O estado mais suicida em todo o mundo é, por uma ampla margem, a Groenlândia, com Lesoto sendo o país mais suicida. A África é a região mais suicida do mundo, enquanto o Mediterrâneo Oriental é a menos.
+    
+    De acordo com um estudo recente, o número absoluto de mortes por suicídio aumentou 6,7% de 762 000 pessoas para 817 000 pessoas anualmente entre 1990 e 2016, enquanto as taxas de suicídio padronizadas por idade caíram em um terço. Em todo o mundo, as taxas em 2016 foram de cerca de 16 mortes por 100 000 homens e 7 mortes por 100 000 mulheres: as mulheres também experimentaram uma queda maior em comparação com os homens durante o período de estudo.</p></fieldset></div>
+    <fieldset><legend><div class="container-fluid bg-warning p-3"><h3>Taxas de suicídio por sexo e país</h3></div></legend><div>
+    <table class="sortable mw-datatable static-row-numbers wikitable jquery-tablesorter" style="text-align: Left">
+      <caption>Taxas de suicídio por sexo e país (padronizadas por idade, para cada 100 000 habitantes, Organização Mundial da Saúde, 2019)
+      </caption>
+      <thead><tr>
+      <th class="headerSort" tabindex="0" role="columnheader button" title="Ordenar por ordem ascendente">
+      </th>
+      <th class="headerSort" tabindex="0" role="columnheader button" title="Ordenar por ordem ascendente">País
+      </th>
+      <th class="headerSort" tabindex="0" role="columnheader button" title="Ordenar por ordem ascendente">Todos
+      </th>
+      <th class="headerSort" tabindex="0" role="columnheader button" title="Ordenar por ordem ascendente">Homens
+      </th>
+      <th class="headerSort" tabindex="0" role="columnheader button" title="Ordenar por ordem ascendente">Mulheres
+      </th></tr></thead><tbody>
+      <tr>
+      <td>1
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/23px-Flag_of_the_Taliban.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/35px-Flag_of_the_Taliban.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/46px-Flag_of_the_Taliban.svg.png 2x" data-file-width="1000" data-file-height="500"></span></span>&nbsp;</span><a href="/wiki/Afeganist%C3%A3o" title="Afeganistão">Afeganistão</a>
+      </td>
+      <td>6,0
+      </td>
+      <td>6,2
+      </td>
+      <td>5,7
+      </td></tr>
+      <tr>
+      <td>2
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/21px-Flag_of_Albania.svg.png" decoding="async" width="21" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/32px-Flag_of_Albania.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/42px-Flag_of_Albania.svg.png 2x" data-file-width="700" data-file-height="500"></span></span>&nbsp;</span><a href="/wiki/Alb%C3%A2nia" title="Albânia">Albânia</a>
+      </td>
+      <td>3,7
+      </td>
+      <td>5,3
+      </td>
+      <td>2,2
+      </td></tr>
+      <tr>
+      <td>3
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/23px-Flag_of_Algeria.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/35px-Flag_of_Algeria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/45px-Flag_of_Algeria.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Arg%C3%A9lia" title="Argélia">Argélia</a>
+      </td>
+      <td>2,6
+      </td>
+      <td>3,3
+      </td>
+      <td>1,9
+      </td></tr>
+      <tr>
+      <td>4
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/23px-Flag_of_Angola.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/35px-Flag_of_Angola.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/45px-Flag_of_Angola.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Angola" title="Angola">Angola</a>
+      </td>
+      <td>12,6
+      </td>
+      <td>21,7
+      </td>
+      <td>4,7
+      </td></tr>
+      <tr>
+      <td>5
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/23px-Flag_of_Antigua_and_Barbuda.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/35px-Flag_of_Antigua_and_Barbuda.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/45px-Flag_of_Antigua_and_Barbuda.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Ant%C3%ADgua_e_Barbuda" title="Antígua e Barbuda">Antígua e Barbuda</a>
+      </td>
+      <td>0,3
+      </td>
+      <td>0,0
+      </td>
+      <td>0,6
+      </td></tr>
+      <tr>
+      <td>6
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/23px-Flag_of_Argentina.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/35px-Flag_of_Argentina.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/46px-Flag_of_Argentina.svg.png 2x" data-file-width="800" data-file-height="500"></span></span>&nbsp;</span><a href="/wiki/Argentina" title="Argentina">Argentina</a>
+      </td>
+      <td>8,1
+      </td>
+      <td>13,5
+      </td>
+      <td>3,3
+      </td></tr>
+      <tr>
+      <td>7
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/23px-Flag_of_Armenia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/35px-Flag_of_Armenia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/46px-Flag_of_Armenia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Arm%C3%A9nia" title="Arménia">Arménia</a>
+      </td>
+      <td>2,7
+      </td>
+      <td>4,9
+      </td>
+      <td>1,0
+      </td></tr>
+      <tr>
+      <td>8
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/35px-Flag_of_Australia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/46px-Flag_of_Australia.svg.png 2x" data-file-width="1280" data-file-height="640"></span></span>&nbsp;</span><a href="/wiki/Austr%C3%A1lia" title="Austrália">Austrália</a>
+      </td>
+      <td>11,3
+      </td>
+      <td>17,0
+      </td>
+      <td>5,6
+      </td></tr>
+      <tr>
+      <td>9
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/23px-Flag_of_Austria.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/35px-Flag_of_Austria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/45px-Flag_of_Austria.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/%C3%81ustria" title="Áustria">Áustria</a>
+      </td>
+      <td>10,4
+      </td>
+      <td>16,6
+      </td>
+      <td>4,6
+      </td></tr>
+      <tr>
+      <td>10
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/23px-Flag_of_Azerbaijan.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/35px-Flag_of_Azerbaijan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/46px-Flag_of_Azerbaijan.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Azerbaij%C3%A3o" title="Azerbaijão">Azerbaijão</a>
+      </td>
+      <td>4,0
+      </td>
+      <td>6,6
+      </td>
+      <td>1,5
+      </td></tr>
+      <tr>
+      <td>11
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_the_Bahamas.svg/23px-Flag_of_the_Bahamas.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_the_Bahamas.svg/35px-Flag_of_the_Bahamas.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_the_Bahamas.svg/46px-Flag_of_the_Bahamas.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Bahamas" title="Bahamas">Bahamas</a>
+      </td>
+      <td>3,4
+      </td>
+      <td>5,8
+      </td>
+      <td>1,2
+      </td></tr>
+      <tr>
+      <td>12
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/23px-Flag_of_Bahrain.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/35px-Flag_of_Bahrain.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/46px-Flag_of_Bahrain.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Bahrein" title="Bahrein">Bahrein</a>
+      </td>
+      <td>7,2
+      </td>
+      <td>9,9
+      </td>
+      <td>2,3
+      </td></tr>
+      <tr>
+      <td>13
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/23px-Flag_of_Bangladesh.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/35px-Flag_of_Bangladesh.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/46px-Flag_of_Bangladesh.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Bangladesh" title="Bangladesh">Bangladesh</a>
+      </td>
+      <td>3,9
+      </td>
+      <td>6,0
+      </td>
+      <td>1,7
+      </td></tr>
+      <tr>
+      <td>14
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/23px-Flag_of_Barbados.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/35px-Flag_of_Barbados.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/45px-Flag_of_Barbados.svg.png 2x" data-file-width="1500" data-file-height="1000"></span></span>&nbsp;</span><a href="/wiki/Barbados" title="Barbados">Barbados</a>
+      </td>
+      <td>0,3
+      </td>
+      <td>0,5
+      </td>
+      <td>0,2
+      </td></tr>
+      <tr>
+      <td>15
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/23px-Flag_of_Belarus.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/35px-Flag_of_Belarus.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/46px-Flag_of_Belarus.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Bielorr%C3%BAssia" title="Bielorrússia">Bielorrússia</a>
+      </td>
+      <td>16,5
+      </td>
+      <td>30,1
+      </td>
+      <td>5,3
+      </td></tr>
+      <tr>
+      <td>16
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/23px-Flag_of_Belgium_%28civil%29.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/35px-Flag_of_Belgium_%28civil%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/45px-Flag_of_Belgium_%28civil%29.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/B%C3%A9lgica" title="Bélgica">Bélgica</a>
+      </td>
+      <td>13,9
+      </td>
+      <td>19,6
+      </td>
+      <td>8,4
+      </td></tr>
+      <tr>
+      <td>17
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_Belize.svg/23px-Flag_of_Belize.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_Belize.svg/35px-Flag_of_Belize.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_Belize.svg/46px-Flag_of_Belize.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Belize" title="Belize">Belize</a>
+      </td>
+      <td>7,7
+      </td>
+      <td>13,6
+      </td>
+      <td>1,8
+      </td></tr>
+      <tr>
+      <td>18
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/23px-Flag_of_Benin.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/35px-Flag_of_Benin.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/45px-Flag_of_Benin.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Benim" title="Benim">Benim</a>
+      </td>
+      <td>12,7
+      </td>
+      <td>20,3
+      </td>
+      <td>6,1
+      </td></tr>
+      <tr>
+      <td>19
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/23px-Flag_of_Bhutan.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/35px-Flag_of_Bhutan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/45px-Flag_of_Bhutan.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/But%C3%A3o" title="Butão">Butão</a>
+      </td>
+      <td>5,1
+      </td>
+      <td>6,8
+      </td>
+      <td>3,1
+      </td></tr>
+      <tr>
+      <td>20
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bandera_de_Bolivia_%28Estado%29.svg/22px-Bandera_de_Bolivia_%28Estado%29.svg.png" decoding="async" width="22" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bandera_de_Bolivia_%28Estado%29.svg/34px-Bandera_de_Bolivia_%28Estado%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bandera_de_Bolivia_%28Estado%29.svg/44px-Bandera_de_Bolivia_%28Estado%29.svg.png 2x" data-file-width="1100" data-file-height="750"></span></span>&nbsp;</span><a href="/wiki/Bol%C3%ADvia" title="Bolívia">Bolívia</a>
+      </td>
+      <td>6,8
+      </td>
+      <td>9,6
+      </td>
+      <td>4,2
+      </td></tr>
+      <tr>
+      <td>21
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/23px-Flag_of_Bosnia_and_Herzegovina.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/35px-Flag_of_Bosnia_and_Herzegovina.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/46px-Flag_of_Bosnia_and_Herzegovina.svg.png 2x" data-file-width="800" data-file-height="400"></span></span>&nbsp;</span><a href="/wiki/B%C3%B3snia_e_Herzegovina" title="Bósnia e Herzegovina">Bósnia e Herzegovina</a>
+      </td>
+      <td>8,3
+      </td>
+      <td>13,5
+      </td>
+      <td>3,4
+      </td></tr>
+      <tr>
+      <td>22
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/23px-Flag_of_Botswana.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/35px-Flag_of_Botswana.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/45px-Flag_of_Botswana.svg.png 2x" data-file-width="1200" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Botswana" title="Botswana">Botswana</a>
+      </td>
+      <td>20,2
+      </td>
+      <td>35,5
+      </td>
+      <td>7,8
+      </td></tr>
+      <tr>
+      <td>23
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/22px-Flag_of_Brazil.svg.png" decoding="async" width="22" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/33px-Flag_of_Brazil.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/43px-Flag_of_Brazil.svg.png 2x" data-file-width="1060" data-file-height="742"></span></span>&nbsp;</span><a href="/wiki/Brasil" title="Brasil">Brasil</a>
+      </td>
+      <td>6,4
+      </td>
+      <td>10,3
+      </td>
+      <td>2,8
+      </td></tr>
+      <tr>
+      <td>24
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/23px-Flag_of_Brunei.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/35px-Flag_of_Brunei.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/46px-Flag_of_Brunei.svg.png 2x" data-file-width="1440" data-file-height="720"></span></span>&nbsp;</span><a href="/wiki/Brunei" title="Brunei">Brunei</a>
+      </td>
+      <td>2,5
+      </td>
+      <td>4,2
+      </td>
+      <td>0,8
+      </td></tr>
+      <tr>
+      <td>25
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/23px-Flag_of_Bulgaria.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/35px-Flag_of_Bulgaria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/46px-Flag_of_Bulgaria.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Bulg%C3%A1ria" title="Bulgária">Bulgária</a>
+      </td>
+      <td>6,5
+      </td>
+      <td>10,6
+      </td>
+      <td>2,9
+      </td></tr>
+      <tr>
+      <td>26
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/23px-Flag_of_Burkina_Faso.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/35px-Flag_of_Burkina_Faso.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/45px-Flag_of_Burkina_Faso.svg.png 2x" data-file-width="512" data-file-height="341"></span></span>&nbsp;</span><a href="/wiki/Burquina_Fasso" title="Burquina Fasso">Burquina Fasso</a>
+      </td>
+      <td>14,4
+      </td>
+      <td>24,5
+      </td>
+      <td>6,5
+      </td></tr>
+      <tr>
+      <td>27
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/23px-Flag_of_Burundi.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/35px-Flag_of_Burundi.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/46px-Flag_of_Burundi.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Burundi" title="Burundi">Burundi</a>
+      </td>
+      <td>12,1
+      </td>
+      <td>18,9
+      </td>
+      <td>6,4
+      </td></tr>
+      <tr>
+      <td>28
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/23px-Flag_of_Cape_Verde.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/35px-Flag_of_Cape_Verde.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/46px-Flag_of_Cape_Verde.svg.png 2x" data-file-width="1020" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Cabo_Verde" title="Cabo Verde">Cabo Verde</a>
+      </td>
+      <td>15,2
+      </td>
+      <td>27,4
+      </td>
+      <td>5,1
+      </td></tr>
+      <tr>
+      <td>29
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/23px-Flag_of_Cambodia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/35px-Flag_of_Cambodia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/46px-Flag_of_Cambodia.svg.png 2x" data-file-width="1000" data-file-height="640"></span></span>&nbsp;</span><a href="/wiki/Camboja" title="Camboja">Camboja</a>
+      </td>
+      <td>5,5
+      </td>
+      <td>8,4
+      </td>
+      <td>3,1
+      </td></tr>
+      <tr>
+      <td>30
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/23px-Flag_of_Cameroon.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/35px-Flag_of_Cameroon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/45px-Flag_of_Cameroon.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Camar%C3%B5es" title="Camarões">Camarões</a>
+      </td>
+      <td>15,9
+      </td>
+      <td>25,2
+      </td>
+      <td>7,6
+      </td></tr>
+      <tr>
+      <td>31
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/23px-Flag_of_Canada_%28Pantone%29.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/35px-Flag_of_Canada_%28Pantone%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/46px-Flag_of_Canada_%28Pantone%29.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Canad%C3%A1" title="Canadá">Canadá</a>
+      </td>
+      <td>10,3
+      </td>
+      <td>15,3
+      </td>
+      <td>5,4
+      </td></tr>
+      <tr>
+      <td>32
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/23px-Flag_of_the_Central_African_Republic.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/35px-Flag_of_the_Central_African_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/45px-Flag_of_the_Central_African_Republic.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Rep%C3%BAblica_Centro-Africana" title="República Centro-Africana">República Centro-Africana</a>
+      </td>
+      <td>23,0
+      </td>
+      <td>39,6
+      </td>
+      <td>9,3
+      </td></tr>
+      <tr>
+      <td>33
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Chad.svg/23px-Flag_of_Chad.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Chad.svg/35px-Flag_of_Chad.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Chad.svg/45px-Flag_of_Chad.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Chade" title="Chade">Chade</a>
+      </td>
+      <td>13,2
+      </td>
+      <td>20,2
+      </td>
+      <td>6,9
+      </td></tr>
+      <tr>
+      <td>34
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/23px-Flag_of_Chile.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/35px-Flag_of_Chile.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/45px-Flag_of_Chile.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Chile" title="Chile">Chile</a>
+      </td>
+      <td>8,0
+      </td>
+      <td>13,4
+      </td>
+      <td>3,0
+      </td></tr>
+      <tr>
+      <td>35
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/23px-Flag_of_the_People%27s_Republic_of_China.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/35px-Flag_of_the_People%27s_Republic_of_China.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/45px-Flag_of_the_People%27s_Republic_of_China.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/China" title="China">China</a>
+      </td>
+      <td>6,7
+      </td>
+      <td>8,6
+      </td>
+      <td>4,8
+      </td></tr>
+      <tr>
+      <td>34
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/23px-Flag_of_Colombia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/35px-Flag_of_Colombia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/45px-Flag_of_Colombia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Col%C3%B4mbia" title="Colômbia">Colômbia</a>
+      </td>
+      <td>3,7
+      </td>
+      <td>6,0
+      </td>
+      <td>1,7
+      </td></tr>
+      <tr>
+      <td>37
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/23px-Flag_of_the_Comoros.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/35px-Flag_of_the_Comoros.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/46px-Flag_of_the_Comoros.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Comores" title="Comores">Comores</a>
+      </td>
+      <td>8,5
+      </td>
+      <td>11,3
+      </td>
+      <td>5,8
+      </td></tr>
+      <tr>
+      <td>38
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/23px-Flag_of_the_Republic_of_the_Congo.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/35px-Flag_of_the_Republic_of_the_Congo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/45px-Flag_of_the_Republic_of_the_Congo.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Rep%C3%BAblica_do_Congo" title="República do Congo">República do Congo</a>
+      </td>
+      <td>11,6
+      </td>
+      <td>18,3
+      </td>
+      <td>6,1
+      </td></tr>
+      <tr>
+      <td>39
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/23px-Flag_of_Costa_Rica.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/35px-Flag_of_Costa_Rica.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/46px-Flag_of_Costa_Rica.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Costa_Rica" title="Costa Rica">Costa Rica</a>
+      </td>
+      <td>7,6
+      </td>
+      <td>13,3
+      </td>
+      <td>1,9
+      </td></tr>
+      <tr>
+      <td>40
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/23px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/35px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/45px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Costa_do_Marfim" title="Costa do Marfim">Costa do Marfim</a>
+      </td>
+      <td>15,7
+      </td>
+      <td>25,7
+      </td>
+      <td>5,0
+      </td></tr>
+      <tr>
+      <td>41
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/23px-Flag_of_Croatia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/35px-Flag_of_Croatia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/46px-Flag_of_Croatia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Cro%C3%A1cia" title="Croácia">Croácia</a>
+      </td>
+      <td>11,0
+      </td>
+      <td>17,7
+      </td>
+      <td>5,1
+      </td></tr>
+      <tr>
+      <td>42
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/23px-Flag_of_Cuba.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/35px-Flag_of_Cuba.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/46px-Flag_of_Cuba.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Cuba" title="Cuba">Cuba</a>
+      </td>
+      <td>10,2
+      </td>
+      <td>16,7
+      </td>
+      <td>4,1
+      </td></tr>
+      <tr>
+      <td>43
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/23px-Flag_of_Cyprus.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/35px-Flag_of_Cyprus.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/45px-Flag_of_Cyprus.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Chipre" title="Chipre">Chipre</a>
+      </td>
+      <td>3,2
+      </td>
+      <td>5,3
+      </td>
+      <td>1,1
+      </td></tr>
+      <tr>
+      <td>44
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/23px-Flag_of_the_Czech_Republic.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/35px-Flag_of_the_Czech_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Ch%C3%A9quia" title="Chéquia">República Checa</a>
+      </td>
+      <td>9,5
+      </td>
+      <td>15,4
+      </td>
+      <td>3,8
+      </td></tr>
+      <tr>
+      <td>45
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/23px-Flag_of_North_Korea.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/35px-Flag_of_North_Korea.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/46px-Flag_of_North_Korea.svg.png 2x" data-file-width="1600" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Coreia_do_Norte" title="Coreia do Norte">Coreia do Norte</a>
+      </td>
+      <td>8,2
+      </td>
+      <td>10,6
+      </td>
+      <td>6,3
+      </td></tr>
+      <tr>
+      <td>46
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/20px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png" decoding="async" width="20" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/31px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/40px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png 2x" data-file-width="800" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Rep%C3%BAblica_Democr%C3%A1tica_do_Congo" title="República Democrática do Congo">República Democrática do Congo</a>
+      </td>
+      <td>12,4
+      </td>
+      <td>20,7
+      </td>
+      <td>5,0
+      </td></tr>
+      <tr>
+      <td>47
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/20px-Flag_of_Denmark.svg.png" decoding="async" width="20" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/40px-Flag_of_Denmark.svg.png 2x" data-file-width="512" data-file-height="387"></span></span>&nbsp;</span><a href="/wiki/Dinamarca" title="Dinamarca">Dinamarca</a>
+      </td>
+      <td>7,6
+      </td>
+      <td>11,1
+      </td>
+      <td>4,2
+      </td></tr>
+      <tr>
+      <td>48
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/23px-Flag_of_Djibouti.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/35px-Flag_of_Djibouti.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/45px-Flag_of_Djibouti.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Djibouti" title="Djibouti">Djibouti</a>
+      </td>
+      <td>11,9
+      </td>
+      <td>16,3
+      </td>
+      <td>7,6
+      </td></tr>
+      <tr>
+      <td>49
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/23px-Flag_of_the_Dominican_Republic.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/35px-Flag_of_the_Dominican_Republic.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/45px-Flag_of_the_Dominican_Republic.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Rep%C3%BAblica_Dominicana" title="República Dominicana">República Dominicana</a>
+      </td>
+      <td>5,1
+      </td>
+      <td>8,5
+      </td>
+      <td>1,9
+      </td></tr>
+      <tr>
+      <td>50
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/23px-Flag_of_Ecuador.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/35px-Flag_of_Ecuador.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/45px-Flag_of_Ecuador.svg.png 2x" data-file-width="1440" data-file-height="960"></span></span>&nbsp;</span><a href="/wiki/Equador" title="Equador">Equador</a>
+      </td>
+      <td>7,7
+      </td>
+      <td>11,9
+      </td>
+      <td>3,6
+      </td></tr>
+      <tr>
+      <td>51
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/23px-Flag_of_Egypt.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/35px-Flag_of_Egypt.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/45px-Flag_of_Egypt.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Egito" title="Egito">Egito</a>
+      </td>
+      <td>3,4
+      </td>
+      <td>4,7
+      </td>
+      <td>2,2
+      </td></tr>
+      <tr>
+      <td>52
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_El_Salvador.svg/23px-Flag_of_El_Salvador.svg.png" decoding="async" width="23" height="13" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_El_Salvador.svg/35px-Flag_of_El_Salvador.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_El_Salvador.svg/46px-Flag_of_El_Salvador.svg.png 2x" data-file-width="1005" data-file-height="567"></span></span>&nbsp;</span><a href="/wiki/El_Salvador" title="El Salvador">El Salvador</a>
+      </td>
+      <td>6,1
+      </td>
+      <td>11,1
+      </td>
+      <td>2,1
+      </td></tr>
+      <tr>
+      <td>53
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Equatorial_Guinea.svg/23px-Flag_of_Equatorial_Guinea.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Equatorial_Guinea.svg/35px-Flag_of_Equatorial_Guinea.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Equatorial_Guinea.svg/45px-Flag_of_Equatorial_Guinea.svg.png 2x" data-file-width="1200" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Guin%C3%A9_Equatorial" title="Guiné Equatorial">Guiné Equatorial</a>
+      </td>
+      <td>13,5
+      </td>
+      <td>18,5
+      </td>
+      <td>8,8
+      </td></tr>
+      <tr>
+      <td>54
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/23px-Flag_of_Eritrea.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/35px-Flag_of_Eritrea.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/46px-Flag_of_Eritrea.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Eritreia" title="Eritreia">Eritreia</a>
+      </td>
+      <td>17,3
+      </td>
+      <td>27,2
+      </td>
+      <td>8,3
+      </td></tr>
+      <tr>
+      <td>55
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/23px-Flag_of_Estonia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/35px-Flag_of_Estonia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/46px-Flag_of_Estonia.svg.png 2x" data-file-width="990" data-file-height="630"></span></span>&nbsp;</span><a href="/wiki/Est%C3%B3nia" title="Estónia">Estónia</a>
+      </td>
+      <td>12,0
+      </td>
+      <td>20,2
+      </td>
+      <td>4,5
+      </td></tr>
+      <tr>
+      <td>56
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_of_Eswatini.svg/23px-Flag_of_Eswatini.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_of_Eswatini.svg/35px-Flag_of_Eswatini.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_of_Eswatini.svg/45px-Flag_of_Eswatini.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Essuat%C3%ADni" title="Essuatíni">Essuatíni</a>
+      </td>
+      <td>40,5
+      </td>
+      <td>78,7
+      </td>
+      <td>6,4
+      </td></tr>
+      <tr>
+      <td>57
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/23px-Flag_of_Ethiopia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/35px-Flag_of_Ethiopia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/46px-Flag_of_Ethiopia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Eti%C3%B3pia" title="Etiópia">Etiópia</a>
+      </td>
+      <td>9,5
+      </td>
+      <td>14,2
+      </td>
+      <td>5,2
+      </td></tr>
+      <tr>
+      <td>58
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Fiji.svg/23px-Flag_of_Fiji.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Fiji.svg/35px-Flag_of_Fiji.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Fiji.svg/46px-Flag_of_Fiji.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Fiji" title="Fiji">Fiji</a>
+      </td>
+      <td>9,5
+      </td>
+      <td>13,1
+      </td>
+      <td>6,0
+      </td></tr>
+      <tr>
+      <td>59
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/23px-Flag_of_Finland.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/35px-Flag_of_Finland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/46px-Flag_of_Finland.svg.png 2x" data-file-width="1800" data-file-height="1100"></span></span>&nbsp;</span><a href="/wiki/Finl%C3%A2ndia" title="Finlândia">Finlândia</a>
+      </td>
+      <td>13,4
+      </td>
+      <td>20,1
+      </td>
+      <td>6,8
+      </td></tr>
+      <tr>
+      <td>60
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg/23px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg/35px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg/45px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg.png 2x" data-file-width="512" data-file-height="341"></span></span>&nbsp;</span><a href="/wiki/Fran%C3%A7a" title="França">França</a>
+      </td>
+      <td>9,7
+      </td>
+      <td>15,2
+      </td>
+      <td>4,5
+      </td></tr>
+      <tr>
+      <td>61
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/20px-Flag_of_Gabon.svg.png" decoding="async" width="20" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/31px-Flag_of_Gabon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/40px-Flag_of_Gabon.svg.png 2x" data-file-width="512" data-file-height="384"></span></span>&nbsp;</span><a href="/wiki/Gab%C3%A3o" title="Gabão">Gabão</a>
+      </td>
+      <td>13,1
+      </td>
+      <td>23,3
+      </td>
+      <td>3,8
+      </td></tr>
+      <tr>
+      <td>62
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/23px-Flag_of_The_Gambia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/35px-Flag_of_The_Gambia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/45px-Flag_of_The_Gambia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/G%C3%A2mbia" title="Gâmbia">Gâmbia</a>
+      </td>
+      <td>9,6
+      </td>
+      <td>13,3
+      </td>
+      <td>6,2
+      </td></tr>
+      <tr>
+      <td>63
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/23px-Flag_of_Georgia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/35px-Flag_of_Georgia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/45px-Flag_of_Georgia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Ge%C3%B3rgia" title="Geórgia">Geórgia</a>
+      </td>
+      <td>7,7
+      </td>
+      <td>14,0
+      </td>
+      <td>2,2
+      </td></tr>
+      <tr>
+      <td>64
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Alemanha" title="Alemanha">Alemanha</a>
+      </td>
+      <td>8,3
+      </td>
+      <td>12,8
+      </td>
+      <td>3,9
+      </td></tr>
+      <tr>
+      <td>65
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/23px-Flag_of_Ghana.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/35px-Flag_of_Ghana.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/45px-Flag_of_Ghana.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Gana" title="Gana">Gana</a>
+      </td>
+      <td>10,5
+      </td>
+      <td>20,0
+      </td>
+      <td>1,8
+      </td></tr>
+      <tr>
+      <td>66
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/23px-Flag_of_Greece.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/35px-Flag_of_Greece.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/45px-Flag_of_Greece.svg.png 2x" data-file-width="600" data-file-height="400"></span></span>&nbsp;</span><a href="/wiki/Gr%C3%A9cia" title="Grécia">Grécia</a>
+      </td>
+      <td>3,6
+      </td>
+      <td>5,9
+      </td>
+      <td>1,5
+      </td></tr>
+      <tr>
+      <td>67
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Grenada.svg/23px-Flag_of_Grenada.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Grenada.svg/35px-Flag_of_Grenada.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Grenada.svg/46px-Flag_of_Grenada.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Granada_(pa%C3%ADs)" title="Granada (país)">Granada</a>
+      </td>
+      <td>0,6
+      </td>
+      <td>0,5
+      </td>
+      <td>0,7
+      </td></tr>
+      <tr>
+      <td>68
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/23px-Flag_of_Guatemala.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/35px-Flag_of_Guatemala.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/46px-Flag_of_Guatemala.svg.png 2x" data-file-width="960" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Guatemala" title="Guatemala">Guatemala</a>
+      </td>
+      <td>6,2
+      </td>
+      <td>10,3
+      </td>
+      <td>2,5
+      </td></tr>
+      <tr>
+      <td>69
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/23px-Flag_of_Guinea.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/35px-Flag_of_Guinea.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/45px-Flag_of_Guinea.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Guin%C3%A9" title="Guiné">Guiné</a>
+      </td>
+      <td>12,3
+      </td>
+      <td>18,4
+      </td>
+      <td>8,0
+      </td></tr>
+      <tr>
+      <td>70
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/23px-Flag_of_Guinea-Bissau.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/35px-Flag_of_Guinea-Bissau.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/46px-Flag_of_Guinea-Bissau.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Guin%C3%A9-Bissau" title="Guiné-Bissau">Guiné-Bissau</a>
+      </td>
+      <td>12,4
+      </td>
+      <td>19,8
+      </td>
+      <td>6,7
+      </td></tr>
+      <tr>
+      <td>71
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_Guyana.svg/23px-Flag_of_Guyana.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_Guyana.svg/35px-Flag_of_Guyana.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_Guyana.svg/46px-Flag_of_Guyana.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Guiana" title="Guiana">Guiana</a>
+      </td>
+      <td>40,9
+      </td>
+      <td>65,0
+      </td>
+      <td>17,0
+      </td></tr>
+      <tr>
+      <td>72
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/23px-Flag_of_Haiti.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/35px-Flag_of_Haiti.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/46px-Flag_of_Haiti.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Haiti" title="Haiti">Haiti</a>
+      </td>
+      <td>11,2
+      </td>
+      <td>14,9
+      </td>
+      <td>8,0
+      </td></tr>
+      <tr>
+      <td>73
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_Honduras.svg/23px-Flag_of_Honduras.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_Honduras.svg/35px-Flag_of_Honduras.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_Honduras.svg/46px-Flag_of_Honduras.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Honduras" title="Honduras">Honduras</a>
+      </td>
+      <td>2,6
+      </td>
+      <td>4,4
+      </td>
+      <td>1,0
+      </td></tr>
+      <tr>
+      <td>74
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/23px-Flag_of_Hungary.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/35px-Flag_of_Hungary.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Hungria" title="Hungria">Hungria</a>
+      </td>
+      <td>11,8
+      </td>
+      <td>19,1
+      </td>
+      <td>5,5
+      </td></tr>
+      <tr>
+      <td>75
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/21px-Flag_of_Iceland.svg.png" decoding="async" width="21" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/32px-Flag_of_Iceland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/42px-Flag_of_Iceland.svg.png 2x" data-file-width="1250" data-file-height="900"></span></span>&nbsp;</span><a href="/wiki/Isl%C3%A2ndia" title="Islândia">Islândia</a>
+      </td>
+      <td>11,2
+      </td>
+      <td>18,7
+      </td>
+      <td>3,5
+      </td></tr>
+      <tr>
+      <td>76
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/35px-Flag_of_India.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/45px-Flag_of_India.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/%C3%8Dndia" title="Índia">Índia</a>
+      </td>
+      <td>12,9
+      </td>
+      <td>14,7
+      </td>
+      <td>11,1
+      </td></tr>
+      <tr>
+      <td>77
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/23px-Flag_of_Indonesia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/35px-Flag_of_Indonesia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/45px-Flag_of_Indonesia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Indon%C3%A9sia" title="Indonésia">Indonésia</a>
+      </td>
+      <td>2,6
+      </td>
+      <td>4,0
+      </td>
+      <td>1,2
+      </td></tr>
+      <tr>
+      <td>78
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/23px-Flag_of_Iran.svg.png" decoding="async" width="23" height="13" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/35px-Flag_of_Iran.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/46px-Flag_of_Iran.svg.png 2x" data-file-width="630" data-file-height="360"></span></span>&nbsp;</span><a href="/wiki/Ir%C3%A3" title="Irã">Irã</a>
+      </td>
+      <td>5,1
+      </td>
+      <td>7,5
+      </td>
+      <td>2,8
+      </td></tr>
+      <tr>
+      <td>79
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/23px-Flag_of_Iraq.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/35px-Flag_of_Iraq.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/45px-Flag_of_Iraq.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Iraque" title="Iraque">Iraque</a>
+      </td>
+      <td>4,7
+      </td>
+      <td>7,3
+      </td>
+      <td>2,4
+      </td></tr>
+      <tr>
+      <td>80
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/23px-Flag_of_Ireland.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Rep%C3%BAblica_da_Irlanda" class="mw-redirect" title="República da Irlanda">República da Irlanda</a>
+      </td>
+      <td>8,9
+      </td>
+      <td>14,3
+      </td>
+      <td>3,6
+      </td></tr>
+      <tr>
+      <td>81
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/21px-Flag_of_Israel.svg.png" decoding="async" width="21" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/32px-Flag_of_Israel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png 2x" data-file-width="1100" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Israel" title="Israel">Israel</a>
+      </td>
+      <td>5,2
+      </td>
+      <td>8,3
+      </td>
+      <td>2,1
+      </td></tr>
+      <tr>
+      <td>82
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/23px-Flag_of_Italy.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/35px-Flag_of_Italy.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/45px-Flag_of_Italy.svg.png 2x" data-file-width="1500" data-file-height="1000"></span></span>&nbsp;</span><a href="/wiki/It%C3%A1lia" title="Itália">Itália</a>
+      </td>
+      <td>4,3
+      </td>
+      <td>6,7
+      </td>
+      <td>2,1
+      </td></tr>
+      <tr>
+      <td>83
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/23px-Flag_of_Jamaica.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/35px-Flag_of_Jamaica.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/46px-Flag_of_Jamaica.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Jamaica" title="Jamaica">Jamaica</a>
+      </td>
+      <td>2,3
+      </td>
+      <td>3,6
+      </td>
+      <td>1,0
+      </td></tr>
+      <tr>
+      <td>84
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/23px-Flag_of_Japan.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/35px-Flag_of_Japan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/45px-Flag_of_Japan.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Jap%C3%A3o" title="Japão">Japão</a>
+      </td>
+      <td>12,2
+      </td>
+      <td>17,5
+      </td>
+      <td>6,9
+      </td></tr>
+      <tr>
+      <td>85
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/23px-Flag_of_Jordan.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/35px-Flag_of_Jordan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/46px-Flag_of_Jordan.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Jord%C3%A2nia" title="Jordânia">Jordânia</a>
+      </td>
+      <td>2,0
+      </td>
+      <td>3,0
+      </td>
+      <td>0,9
+      </td></tr>
+      <tr>
+      <td>86
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/23px-Flag_of_Kazakhstan.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/35px-Flag_of_Kazakhstan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/46px-Flag_of_Kazakhstan.svg.png 2x" data-file-width="1000" data-file-height="500"></span></span>&nbsp;</span><a href="/wiki/Cazaquist%C3%A3o" title="Cazaquistão">Cazaquistão</a>
+      </td>
+      <td>18,1
+      </td>
+      <td>30,9
+      </td>
+      <td>6,9
+      </td></tr>
+      <tr>
+      <td>87
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/23px-Flag_of_Kenya.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/35px-Flag_of_Kenya.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/45px-Flag_of_Kenya.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Qu%C3%A9nia" title="Quénia">Quénia</a>
+      </td>
+      <td>11,0
+      </td>
+      <td>18,1
+      </td>
+      <td>5,3
+      </td></tr>
+      <tr>
+      <td>88
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/23px-Flag_of_Kiribati.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/35px-Flag_of_Kiribati.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/46px-Flag_of_Kiribati.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Kiribati" title="Kiribati">Kiribati</a>
+      </td>
+      <td>30,6
+      </td>
+      <td>53,6
+      </td>
+      <td>9,5
+      </td></tr>
+      <tr>
+      <td>89
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/23px-Flag_of_Kuwait.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/35px-Flag_of_Kuwait.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/46px-Flag_of_Kuwait.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Kuwait" title="Kuwait">Kuwait</a>
+      </td>
+      <td>2,7
+      </td>
+      <td>3,8
+      </td>
+      <td>0,7
+      </td></tr>
+      <tr>
+      <td>90
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/23px-Flag_of_Kyrgyzstan.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/35px-Flag_of_Kyrgyzstan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/46px-Flag_of_Kyrgyzstan.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Quirguist%C3%A3o" title="Quirguistão">Quirguistão</a>
+      </td>
+      <td>8,3
+      </td>
+      <td>13,5
+      </td>
+      <td>3,5
+      </td></tr>
+      <tr>
+      <td>91
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Laos.svg/23px-Flag_of_Laos.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Laos.svg/35px-Flag_of_Laos.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Laos.svg/45px-Flag_of_Laos.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Laos" title="Laos">Laos</a>
+      </td>
+      <td>6,0
+      </td>
+      <td>8,6
+      </td>
+      <td>3,5
+      </td></tr>
+      <tr>
+      <td>92
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/23px-Flag_of_Latvia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/35px-Flag_of_Latvia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/46px-Flag_of_Latvia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Let%C3%B3nia" title="Letónia">Letónia</a>
+      </td>
+      <td>16,1
+      </td>
+      <td>29,0
+      </td>
+      <td>4,6
+      </td></tr>
+      <tr>
+      <td>93
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/23px-Flag_of_Lebanon.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/35px-Flag_of_Lebanon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/45px-Flag_of_Lebanon.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/L%C3%ADbano" title="Líbano">Líbano</a>
+      </td>
+      <td>2,8
+      </td>
+      <td>3,9
+      </td>
+      <td>1,7
+      </td></tr>
+      <tr>
+      <td>94
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/23px-Flag_of_Lesotho.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/35px-Flag_of_Lesotho.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/45px-Flag_of_Lesotho.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Lesoto" title="Lesoto">Lesoto</a>
+      </td>
+      <td>87,5
+      </td>
+      <td>146,9
+      </td>
+      <td>34,6
+      </td></tr>
+      <tr>
+      <td>95
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Liberia.svg/23px-Flag_of_Liberia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Liberia.svg/35px-Flag_of_Liberia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Liberia.svg/46px-Flag_of_Liberia.svg.png 2x" data-file-width="1140" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Lib%C3%A9ria" title="Libéria">Libéria</a>
+      </td>
+      <td>7,4
+      </td>
+      <td>9,4
+      </td>
+      <td>5,5
+      </td></tr>
+      <tr>
+      <td>96
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/23px-Flag_of_Libya.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/35px-Flag_of_Libya.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/46px-Flag_of_Libya.svg.png 2x" data-file-width="960" data-file-height="480"></span></span>&nbsp;</span><a href="/wiki/L%C3%ADbia" title="Líbia">Líbia</a>
+      </td>
+      <td>4,5
+      </td>
+      <td>6,1
+      </td>
+      <td>2,9
+      </td></tr>
+      <tr>
+      <td>97
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/23px-Flag_of_Lithuania.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/35px-Flag_of_Lithuania.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/46px-Flag_of_Lithuania.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Litu%C3%A2nia" title="Lituânia">Lituânia</a>
+      </td>
+      <td>20,2
+      </td>
+      <td>36,1
+      </td>
+      <td>6,2
+      </td></tr>
+      <tr>
+      <td>98
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/23px-Flag_of_Luxembourg.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="512" data-file-height="307"></span></span>&nbsp;</span><a href="/wiki/Luxemburgo" title="Luxemburgo">Luxemburgo</a>
+      </td>
+      <td>8,6
+      </td>
+      <td>11,8
+      </td>
+      <td>5,4
+      </td></tr>
+      <tr>
+      <td>99
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/23px-Flag_of_Madagascar.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/35px-Flag_of_Madagascar.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/45px-Flag_of_Madagascar.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Madagascar" class="mw-redirect" title="Madagascar">Madagáscar</a>
+      </td>
+      <td>9,2
+      </td>
+      <td>13,3
+      </td>
+      <td>5,4
+      </td></tr>
+      <tr>
+      <td>100
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_Malawi.svg/23px-Flag_of_Malawi.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_Malawi.svg/35px-Flag_of_Malawi.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_Malawi.svg/45px-Flag_of_Malawi.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Malawi" title="Malawi">Malawi</a>
+      </td>
+      <td>10,6
+      </td>
+      <td>20,0
+      </td>
+      <td>3,3
+      </td></tr>
+      <tr>
+      <td>101
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/23px-Flag_of_Malaysia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/35px-Flag_of_Malaysia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/46px-Flag_of_Malaysia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Mal%C3%A1sia" title="Malásia">Malásia</a>
+      </td>
+      <td>5,8
+      </td>
+      <td>9,0
+      </td>
+      <td>2,4
+      </td></tr>
+      <tr>
+      <td>102
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Maldives.svg/23px-Flag_of_Maldives.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Maldives.svg/35px-Flag_of_Maldives.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Maldives.svg/45px-Flag_of_Maldives.svg.png 2x" data-file-width="720" data-file-height="480"></span></span>&nbsp;</span><a href="/wiki/Maldivas" title="Maldivas">Maldivas</a>
+      </td>
+      <td>2,8
+      </td>
+      <td>4,1
+      </td>
+      <td>0,9
+      </td></tr>
+      <tr>
+      <td>103
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/23px-Flag_of_Mali.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/35px-Flag_of_Mali.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/45px-Flag_of_Mali.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Mali" title="Mali">Mali</a>
+      </td>
+      <td>8,0
+      </td>
+      <td>10,5
+      </td>
+      <td>5,7
+      </td></tr>
+      <tr>
+      <td>104
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/23px-Flag_of_Malta.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/35px-Flag_of_Malta.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/45px-Flag_of_Malta.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Malta" title="Malta">Malta</a>
+      </td>
+      <td>5,3
+      </td>
+      <td>8,4
+      </td>
+      <td>2,3
+      </td></tr>
+      <tr>
+      <td>105
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Mauritania.svg/23px-Flag_of_Mauritania.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Mauritania.svg/35px-Flag_of_Mauritania.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Mauritania.svg/45px-Flag_of_Mauritania.svg.png 2x" data-file-width="1200" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Maurit%C3%A2nia" title="Mauritânia">Mauritânia</a>
+      </td>
+      <td>5,5
+      </td>
+      <td>7,4
+      </td>
+      <td>3,9
+      </td></tr>
+      <tr>
+      <td>106
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Mauritius.svg/23px-Flag_of_Mauritius.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Mauritius.svg/35px-Flag_of_Mauritius.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Mauritius.svg/45px-Flag_of_Mauritius.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Maur%C3%ADcia" title="Maurícia">Maurícia</a>
+      </td>
+      <td>8,8
+      </td>
+      <td>15,0
+      </td>
+      <td>2,5
+      </td></tr>
+      <tr>
+      <td>107
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/23px-Flag_of_Mexico.svg.png" decoding="async" width="23" height="13" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/35px-Flag_of_Mexico.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/46px-Flag_of_Mexico.svg.png 2x" data-file-width="980" data-file-height="560"></span></span>&nbsp;</span><a href="/wiki/M%C3%A9xico" title="México">México</a>
+      </td>
+      <td>5,3
+      </td>
+      <td>8,7
+      </td>
+      <td>2,2
+      </td></tr>
+      <tr>
+      <td>108
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg/23px-Flag_of_the_Federated_States_of_Micronesia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg/35px-Flag_of_the_Federated_States_of_Micronesia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg/46px-Flag_of_the_Federated_States_of_Micronesia.svg.png 2x" data-file-width="760" data-file-height="400"></span></span>&nbsp;</span><a href="/wiki/Estados_Federados_da_Micron%C3%A9sia" title="Estados Federados da Micronésia">Micronésia</a>
+      </td>
+      <td>29,0
+      </td>
+      <td>44,3
+      </td>
+      <td>13,2
+      </td></tr>
+      <tr>
+      <td>109
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Mongolia.svg/23px-Flag_of_Mongolia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Mongolia.svg/35px-Flag_of_Mongolia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Mongolia.svg/46px-Flag_of_Mongolia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Mong%C3%B3lia" title="Mongólia">Mongólia</a>
+      </td>
+      <td>18,0
+      </td>
+      <td>31,1
+      </td>
+      <td>5,6
+      </td></tr>
+      <tr>
+      <td>110
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/23px-Flag_of_Montenegro.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/35px-Flag_of_Montenegro.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/46px-Flag_of_Montenegro.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Montenegro" title="Montenegro">Montenegro</a>
+      </td>
+      <td>16,2
+      </td>
+      <td>25,4
+      </td>
+      <td>7,9
+      </td></tr>
+      <tr>
+      <td>111
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/23px-Flag_of_Morocco.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/35px-Flag_of_Morocco.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/45px-Flag_of_Morocco.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Marrocos" title="Marrocos">Marrocos</a>
+      </td>
+      <td>7,3
+      </td>
+      <td>10,1
+      </td>
+      <td>4,7
+      </td></tr>
+      <tr>
+      <td>112
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/23px-Flag_of_Mozambique.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/35px-Flag_of_Mozambique.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/45px-Flag_of_Mozambique.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Mo%C3%A7ambique" title="Moçambique">Moçambique</a>
+      </td>
+      <td>23,2
+      </td>
+      <td>42,6
+      </td>
+      <td>8,9
+      </td></tr>
+      <tr>
+      <td>113
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/23px-Flag_of_Myanmar.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/35px-Flag_of_Myanmar.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/45px-Flag_of_Myanmar.svg.png 2x" data-file-width="1200" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Myanmar" title="Myanmar">Myanmar</a>
+      </td>
+      <td>3,0
+      </td>
+      <td>5,1
+      </td>
+      <td>1,1
+      </td></tr>
+      <tr>
+      <td>114
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/23px-Flag_of_Namibia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/35px-Flag_of_Namibia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/45px-Flag_of_Namibia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Nam%C3%ADbia" title="Namíbia">Namíbia</a>
+      </td>
+      <td>13,5
+      </td>
+      <td>24,9
+      </td>
+      <td>4,4
+      </td></tr>
+      <tr>
+      <td>115
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/12px-Flag_of_Nepal.svg.png" decoding="async" width="12" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/19px-Flag_of_Nepal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/25px-Flag_of_Nepal.svg.png 2x" data-file-width="726" data-file-height="885"></span></span>&nbsp;&nbsp;&nbsp;</span><a href="/wiki/Nepal" title="Nepal">Nepal</a>
+      </td>
+      <td>9,8
+      </td>
+      <td>18,6
+      </td>
+      <td>2,9
+      </td></tr>
+      <tr>
+      <td>116
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/23px-Flag_of_the_Netherlands.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Pa%C3%ADses_Baixos" title="Países Baixos">Países Baixos</a>
+      </td>
+      <td>9,3
+      </td>
+      <td>12,5
+      </td>
+      <td>6,1
+      </td></tr>
+      <tr>
+      <td>117
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/23px-Flag_of_New_Zealand.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/35px-Flag_of_New_Zealand.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/46px-Flag_of_New_Zealand.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Nova_Zel%C3%A2ndia" title="Nova Zelândia">Nova Zelândia</a>
+      </td>
+      <td>10,3
+      </td>
+      <td>15,4
+      </td>
+      <td>5,4
+      </td></tr>
+      <tr>
+      <td>118
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Nicaragua.svg/23px-Flag_of_Nicaragua.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Nicaragua.svg/35px-Flag_of_Nicaragua.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Nicaragua.svg/46px-Flag_of_Nicaragua.svg.png 2x" data-file-width="1000" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Nicar%C3%A1gua" title="Nicarágua">Nicarágua</a>
+      </td>
+      <td>4,7
+      </td>
+      <td>7,8
+      </td>
+      <td>1,9
+      </td></tr>
+      <tr>
+      <td>119
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/18px-Flag_of_Niger.svg.png" decoding="async" width="18" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/27px-Flag_of_Niger.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/35px-Flag_of_Niger.svg.png 2x" data-file-width="700" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/N%C3%ADger" title="Níger">Níger</a>
+      </td>
+      <td>10,1
+      </td>
+      <td>14,1
+      </td>
+      <td>6,4
+      </td></tr>
+      <tr>
+      <td>120
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/23px-Flag_of_Nigeria.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/35px-Flag_of_Nigeria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/46px-Flag_of_Nigeria.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Nig%C3%A9ria" title="Nigéria">Nigéria</a>
+      </td>
+      <td>6,9
+      </td>
+      <td>10,1
+      </td>
+      <td>3,8
+      </td></tr>
+      <tr>
+      <td>121
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/23px-Flag_of_North_Macedonia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/35px-Flag_of_North_Macedonia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/46px-Flag_of_North_Macedonia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Maced%C3%B3nia_do_Norte" title="Macedónia do Norte">Macedónia do Norte</a>
+      </td>
+      <td>7,2
+      </td>
+      <td>11,0
+      </td>
+      <td>3,5
+      </td></tr>
+      <tr>
+      <td>122
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/21px-Flag_of_Norway.svg.png" decoding="async" width="21" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/32px-Flag_of_Norway.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png 2x" data-file-width="512" data-file-height="372"></span></span>&nbsp;</span><a href="/wiki/Noruega" title="Noruega">Noruega</a>
+      </td>
+      <td>11,8
+      </td>
+      <td>15,8
+      </td>
+      <td>7,7
+      </td></tr>
+      <tr>
+      <td>123
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/23px-Flag_of_Oman.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/35px-Flag_of_Oman.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/46px-Flag_of_Oman.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Om%C3%A3" title="Omã">Omã</a>
+      </td>
+      <td>4,5
+      </td>
+      <td>6,4
+      </td>
+      <td>1,1
+      </td></tr>
+      <tr>
+      <td>124
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/23px-Flag_of_Pakistan.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/35px-Flag_of_Pakistan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/45px-Flag_of_Pakistan.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Paquist%C3%A3o" title="Paquistão">Paquistão</a>
+      </td>
+      <td>9,8
+      </td>
+      <td>14,6
+      </td>
+      <td>4,8
+      </td></tr>
+      <tr>
+      <td>125
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/23px-Flag_of_Panama.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/35px-Flag_of_Panama.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/45px-Flag_of_Panama.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Panam%C3%A1" title="Panamá">Panamá</a>
+      </td>
+      <td>2,9
+      </td>
+      <td>4,8
+      </td>
+      <td>1,0
+      </td></tr>
+      <tr>
+      <td>126
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/20px-Flag_of_Papua_New_Guinea.svg.png" decoding="async" width="20" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/31px-Flag_of_Papua_New_Guinea.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/40px-Flag_of_Papua_New_Guinea.svg.png 2x" data-file-width="600" data-file-height="450"></span></span>&nbsp;</span><a href="/wiki/Papua-Nova_Guin%C3%A9" title="Papua-Nova Guiné">Papua-Nova Guiné</a>
+      </td>
+      <td>3,6
+      </td>
+      <td>5,2
+      </td>
+      <td>1,9
+      </td></tr>
+      <tr>
+      <td>127
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/23px-Flag_of_Paraguay.svg.png" decoding="async" width="23" height="13" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/35px-Flag_of_Paraguay.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/46px-Flag_of_Paraguay.svg.png 2x" data-file-width="1200" data-file-height="660"></span></span>&nbsp;</span><a href="/wiki/Paraguai" title="Paraguai">Paraguai</a>
+      </td>
+      <td>6,2
+      </td>
+      <td>9,0
+      </td>
+      <td>3,3
+      </td></tr>
+      <tr>
+      <td>128
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/23px-Flag_of_Peru.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/35px-Flag_of_Peru.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/45px-Flag_of_Peru.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Peru" title="Peru">Peru</a>
+      </td>
+      <td>2,7
+      </td>
+      <td>4,1
+      </td>
+      <td>1,4
+      </td></tr>
+      <tr>
+      <td>129
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/23px-Flag_of_the_Philippines.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/35px-Flag_of_the_Philippines.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/46px-Flag_of_the_Philippines.svg.png 2x" data-file-width="800" data-file-height="400"></span></span>&nbsp;</span><a href="/wiki/Filipinas" title="Filipinas">Filipinas</a>
+      </td>
+      <td>2,5
+      </td>
+      <td>3,9
+      </td>
+      <td>1,3
+      </td></tr>
+      <tr>
+      <td>130
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/23px-Flag_of_Poland.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="640" data-file-height="400"></span></span>&nbsp;</span><a href="/wiki/Pol%C3%B3nia" title="Polónia">Polónia</a>
+      </td>
+      <td>9,3
+      </td>
+      <td>16,5
+      </td>
+      <td>2,4
+      </td></tr>
+      <tr>
+      <td>131
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/23px-Flag_of_Portugal.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/35px-Flag_of_Portugal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/45px-Flag_of_Portugal.svg.png 2x" data-file-width="600" data-file-height="400"></span></span>&nbsp;</span><a href="/wiki/Portugal" title="Portugal">Portugal</a>
+      </td>
+      <td>7,2
+      </td>
+      <td>11,6
+      </td>
+      <td>3,5
+      </td></tr>
+      <tr>
+      <td>132
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/23px-Flag_of_Qatar.svg.png" decoding="async" width="23" height="9" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/35px-Flag_of_Qatar.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/46px-Flag_of_Qatar.svg.png 2x" data-file-width="512" data-file-height="201"></span></span>&nbsp;</span><a href="/wiki/Catar" title="Catar">Catar</a>
+      </td>
+      <td>4,7
+      </td>
+      <td>5,7
+      </td>
+      <td>1,7
+      </td></tr>
+      <tr>
+      <td>133
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/23px-Flag_of_South_Korea.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/35px-Flag_of_South_Korea.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/45px-Flag_of_South_Korea.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Coreia_do_Sul" title="Coreia do Sul">Coreia do Sul</a>
+      </td>
+      <td>21,2
+      </td>
+      <td>29,7
+      </td>
+      <td>13,4
+      </td></tr>
+      <tr>
+      <td>134
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/23px-Flag_of_Moldova.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/35px-Flag_of_Moldova.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/46px-Flag_of_Moldova.svg.png 2x" data-file-width="1800" data-file-height="900"></span></span>&nbsp;</span><a href="/wiki/Mold%C3%A1via" title="Moldávia">Moldávia</a>
+      </td>
+      <td>12,2
+      </td>
+      <td>22,1
+      </td>
+      <td>3,3
+      </td></tr>
+      <tr>
+      <td>135
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/23px-Flag_of_Romania.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/35px-Flag_of_Romania.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/45px-Flag_of_Romania.svg.png 2x" data-file-width="600" data-file-height="400"></span></span>&nbsp;</span><a href="/wiki/Rom%C3%A9nia" class="mw-redirect" title="Roménia">Romênia</a>
+      </td>
+      <td>7,3
+      </td>
+      <td>12,6
+      </td>
+      <td>2,4
+      </td></tr>
+      <tr>
+      <td>136
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/23px-Flag_of_Russia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/R%C3%BAssia" title="Rússia">Rússia</a>
+      </td>
+      <td>21,6
+      </td>
+      <td>38,2
+      </td>
+      <td>7,2
+      </td></tr>
+      <tr>
+      <td>137
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/23px-Flag_of_Rwanda.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/35px-Flag_of_Rwanda.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/45px-Flag_of_Rwanda.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Ruanda" title="Ruanda">Ruanda</a>
+      </td>
+      <td>9,5
+      </td>
+      <td>14,8
+      </td>
+      <td>5,0
+      </td></tr>
+      <tr>
+      <td>138
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Saint_Lucia.svg/23px-Flag_of_Saint_Lucia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Saint_Lucia.svg/35px-Flag_of_Saint_Lucia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Saint_Lucia.svg/46px-Flag_of_Saint_Lucia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Santa_L%C3%BAcia" title="Santa Lúcia">Santa Lúcia</a>
+      </td>
+      <td>6,9
+      </td>
+      <td>12,5
+      </td>
+      <td>1,5
+      </td></tr>
+      <tr>
+      <td>139
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg/23px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg/35px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg/45px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/S%C3%A3o_Vicente_e_Granadinas" title="São Vicente e Granadinas">São Vicente e Granadinas</a>
+      </td>
+      <td>1,0
+      </td>
+      <td>1,3
+      </td>
+      <td>0,7
+      </td></tr>
+      <tr>
+      <td>140
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/23px-Flag_of_Samoa.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/35px-Flag_of_Samoa.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/46px-Flag_of_Samoa.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Samoa" title="Samoa">Samoa</a>
+      </td>
+      <td>14,6
+      </td>
+      <td>20,9
+      </td>
+      <td>7,8
+      </td></tr>
+      <tr>
+      <td>141
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/23px-Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/35px-Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/46px-Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/S%C3%A3o_Tom%C3%A9_e_Pr%C3%ADncipe" title="São Tomé e Príncipe">São Tomé e Príncipe</a>
+      </td>
+      <td>2,2
+      </td>
+      <td>3,3
+      </td>
+      <td>1,2
+      </td></tr>
+      <tr>
+      <td>142
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/23px-Flag_of_Saudi_Arabia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/35px-Flag_of_Saudi_Arabia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/45px-Flag_of_Saudi_Arabia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Ar%C3%A1bia_Saudita" title="Arábia Saudita">Arábia Saudita</a>
+      </td>
+      <td>5,4
+      </td>
+      <td>7,8
+      </td>
+      <td>1,9
+      </td></tr>
+      <tr>
+      <td>143
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/23px-Flag_of_Senegal.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/35px-Flag_of_Senegal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/45px-Flag_of_Senegal.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Senegal" title="Senegal">Senegal</a>
+      </td>
+      <td>11,0
+      </td>
+      <td>18,5
+      </td>
+      <td>5,2
+      </td></tr>
+      <tr>
+      <td>144
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/23px-Flag_of_Serbia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/35px-Flag_of_Serbia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/45px-Flag_of_Serbia.svg.png 2x" data-file-width="945" data-file-height="630"></span></span>&nbsp;</span><a href="/wiki/S%C3%A9rvia" title="Sérvia">Sérvia</a>
+      </td>
+      <td>7,9
+      </td>
+      <td>12,2
+      </td>
+      <td>3,9
+      </td></tr>
+      <tr>
+      <td>145
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/23px-Flag_of_Seychelles.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/35px-Flag_of_Seychelles.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/46px-Flag_of_Seychelles.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Seicheles" title="Seicheles">Seicheles</a>
+      </td>
+      <td>7,7
+      </td>
+      <td>14,0
+      </td>
+      <td>1,3
+      </td></tr>
+      <tr>
+      <td>146
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Sierra_Leone.svg/23px-Flag_of_Sierra_Leone.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Sierra_Leone.svg/35px-Flag_of_Sierra_Leone.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Sierra_Leone.svg/45px-Flag_of_Sierra_Leone.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Serra_Leoa" title="Serra Leoa">Serra Leoa</a>
+      </td>
+      <td>11,3
+      </td>
+      <td>14,8
+      </td>
+      <td>8,2
+      </td></tr>
+      <tr>
+      <td>147
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/23px-Flag_of_Singapore.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/35px-Flag_of_Singapore.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/45px-Flag_of_Singapore.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Singapura" title="Singapura">Singapura</a>
+      </td>
+      <td>9,7
+      </td>
+      <td>12,7
+      </td>
+      <td>6,4
+      </td></tr>
+      <tr>
+      <td>148
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/23px-Flag_of_Slovakia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/35px-Flag_of_Slovakia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/45px-Flag_of_Slovakia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Eslov%C3%A1quia" title="Eslováquia">Eslováquia</a>
+      </td>
+      <td>9,3
+      </td>
+      <td>16,7
+      </td>
+      <td>2,6
+      </td></tr>
+      <tr>
+      <td>149
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/23px-Flag_of_Slovenia.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/35px-Flag_of_Slovenia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/46px-Flag_of_Slovenia.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Eslov%C3%A9nia" title="Eslovénia">Eslovénia</a>
+      </td>
+      <td>14,0
+      </td>
+      <td>22,7
+      </td>
+      <td>5,5
+      </td></tr>
+      <tr>
+      <td>150
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/23px-Flag_of_the_Solomon_Islands.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/35px-Flag_of_the_Solomon_Islands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/46px-Flag_of_the_Solomon_Islands.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Ilhas_Salom%C3%A3o" title="Ilhas Salomão">Ilhas Salomão</a>
+      </td>
+      <td>17,4
+      </td>
+      <td>32,2
+      </td>
+      <td>2,4
+      </td></tr>
+      <tr>
+      <td>151
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/23px-Flag_of_Somalia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/35px-Flag_of_Somalia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/45px-Flag_of_Somalia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Som%C3%A1lia" title="Somália">Somália</a>
+      </td>
+      <td>14,7
+      </td>
+      <td>22,8
+      </td>
+      <td>7,1
+      </td></tr>
+      <tr>
+      <td>152
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/23px-Flag_of_South_Africa.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/35px-Flag_of_South_Africa.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/45px-Flag_of_South_Africa.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/%C3%81frica_do_Sul" title="África do Sul">África do Sul</a>
+      </td>
+      <td>23,5
+      </td>
+      <td>37,9
+      </td>
+      <td>9,8
+      </td></tr>
+      <tr>
+      <td>153
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_South_Sudan.svg/23px-Flag_of_South_Sudan.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_South_Sudan.svg/35px-Flag_of_South_Sudan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_South_Sudan.svg/46px-Flag_of_South_Sudan.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Sud%C3%A3o_do_Sul" title="Sudão do Sul">Sudão do Sul</a>
+      </td>
+      <td>6,7
+      </td>
+      <td>10,4
+      </td>
+      <td>3,4
+      </td></tr>
+      <tr>
+      <td>154
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/23px-Flag_of_Spain.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/35px-Flag_of_Spain.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/45px-Flag_of_Spain.svg.png 2x" data-file-width="750" data-file-height="500"></span></span>&nbsp;</span><a href="/wiki/Espanha" title="Espanha">Espanha</a>
+      </td>
+      <td>5,3
+      </td>
+      <td>7,9
+      </td>
+      <td>2,8
+      </td></tr>
+      <tr>
+      <td>155
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/23px-Flag_of_Sri_Lanka.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/35px-Flag_of_Sri_Lanka.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/46px-Flag_of_Sri_Lanka.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Sri_Lanka" title="Sri Lanka">Sri Lanka</a>
+      </td>
+      <td>12,9
+      </td>
+      <td>20,9
+      </td>
+      <td>6,1
+      </td></tr>
+      <tr>
+      <td>156
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/23px-Flag_of_Sudan.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/35px-Flag_of_Sudan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/46px-Flag_of_Sudan.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Sud%C3%A3o" title="Sudão">Sudão</a>
+      </td>
+      <td>4,8
+      </td>
+      <td>6,3
+      </td>
+      <td>3,3
+      </td></tr>
+      <tr>
+      <td>157
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/23px-Flag_of_Suriname.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/35px-Flag_of_Suriname.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/45px-Flag_of_Suriname.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Suriname" title="Suriname">Suriname</a>
+      </td>
+      <td>25,9
+      </td>
+      <td>41,3
+      </td>
+      <td>11,8
+      </td></tr>
+      <tr>
+      <td>158
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/23px-Flag_of_Sweden.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="512" data-file-height="320"></span></span>&nbsp;</span><a href="/wiki/Su%C3%A9cia" title="Suécia">Suécia</a>
+      </td>
+      <td>12,4
+      </td>
+      <td>16,9
+      </td>
+      <td>7,7
+      </td></tr>
+      <tr>
+      <td>159
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/16px-Flag_of_Switzerland.svg.png" decoding="async" width="16" height="16" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/24px-Flag_of_Switzerland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png 2x" data-file-width="512" data-file-height="512"></span></span>&nbsp;&nbsp;</span><a href="/wiki/Su%C3%AD%C3%A7a" title="Suíça">Suíça</a>
+      </td>
+      <td>9,8
+      </td>
+      <td>14,2
+      </td>
+      <td>5,7
+      </td></tr>
+      <tr>
+      <td>160
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/23px-Flag_of_Syria.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/35px-Flag_of_Syria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/45px-Flag_of_Syria.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/S%C3%ADria" title="Síria">Síria</a>
+      </td>
+      <td>2,1
+      </td>
+      <td>3,5
+      </td>
+      <td>0,8
+      </td></tr>
+      <tr>
+      <td>161
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/23px-Flag_of_Tajikistan.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/35px-Flag_of_Tajikistan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/46px-Flag_of_Tajikistan.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Tajiquist%C3%A3o" title="Tajiquistão">Tajiquistão</a>
+      </td>
+      <td>5,3
+      </td>
+      <td>7,4
+      </td>
+      <td>3,4
+      </td></tr>
+      <tr>
+      <td>162
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/23px-Flag_of_Thailand.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/35px-Flag_of_Thailand.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/45px-Flag_of_Thailand.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Tail%C3%A2ndia" title="Tailândia">Tailândia</a>
+      </td>
+      <td>8,0
+      </td>
+      <td>13,9
+      </td>
+      <td>2,3
+      </td></tr>
+      <tr>
+      <td>163
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/23px-Flag_of_East_Timor.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/35px-Flag_of_East_Timor.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/46px-Flag_of_East_Timor.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Timor-Leste" title="Timor-Leste">Timor-Leste</a>
+      </td>
+      <td>4,5
+      </td>
+      <td>6,7
+      </td>
+      <td>2,4
+      </td></tr>
+      <tr>
+      <td>164
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flag_of_Togo.svg/23px-Flag_of_Togo.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flag_of_Togo.svg/35px-Flag_of_Togo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flag_of_Togo.svg/46px-Flag_of_Togo.svg.png 2x" data-file-width="809" data-file-height="500"></span></span>&nbsp;</span><a href="/wiki/Togo" title="Togo">Togo</a>
+      </td>
+      <td>14,8
+      </td>
+      <td>24,0
+      </td>
+      <td>6,5
+      </td></tr>
+      <tr>
+      <td>165
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Tonga.svg/23px-Flag_of_Tonga.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Tonga.svg/35px-Flag_of_Tonga.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Tonga.svg/46px-Flag_of_Tonga.svg.png 2x" data-file-width="960" data-file-height="480"></span></span>&nbsp;</span><a href="/wiki/Tonga" title="Tonga">Tonga</a>
+      </td>
+      <td>4,4
+      </td>
+      <td>5,9
+      </td>
+      <td>2,9
+      </td></tr>
+      <tr>
+      <td>166
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Trinidad_and_Tobago.svg/23px-Flag_of_Trinidad_and_Tobago.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Trinidad_and_Tobago.svg/35px-Flag_of_Trinidad_and_Tobago.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Trinidad_and_Tobago.svg/46px-Flag_of_Trinidad_and_Tobago.svg.png 2x" data-file-width="800" data-file-height="480"></span></span>&nbsp;</span><a href="/wiki/Trinidad_e_Tobago" class="mw-redirect" title="Trinidad e Tobago">Trindade e Tobago</a>
+      </td>
+      <td>8,3
+      </td>
+      <td>13,1
+      </td>
+      <td>3,7
+      </td></tr>
+      <tr>
+      <td>167
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/23px-Flag_of_Tunisia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/35px-Flag_of_Tunisia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/45px-Flag_of_Tunisia.svg.png 2x" data-file-width="1200" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Tun%C3%ADsia" title="Tunísia">Tunísia</a>
+      </td>
+      <td>3,2
+      </td>
+      <td>4,6
+      </td>
+      <td>1,8
+      </td></tr>
+      <tr>
+      <td>168
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/23px-Flag_of_Turkey.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/35px-Flag_of_Turkey.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/45px-Flag_of_Turkey.svg.png 2x" data-file-width="1200" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Turquia" title="Turquia">Turquia</a>
+      </td>
+      <td>2,3
+      </td>
+      <td>3,6
+      </td>
+      <td>1,2
+      </td></tr>
+      <tr>
+      <td>169
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/23px-Flag_of_Turkmenistan.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/35px-Flag_of_Turkmenistan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/45px-Flag_of_Turkmenistan.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Turquemenist%C3%A3o" title="Turquemenistão">Turquemenistão</a>
+      </td>
+      <td>6,1
+      </td>
+      <td>9,4
+      </td>
+      <td>2,9
+      </td></tr>
+      <tr>
+      <td>170
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/23px-Flag_of_Uganda.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/35px-Flag_of_Uganda.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/45px-Flag_of_Uganda.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Uganda" title="Uganda">Uganda</a>
+      </td>
+      <td>10,4
+      </td>
+      <td>19,4
+      </td>
+      <td>3,7
+      </td></tr>
+      <tr>
+      <td>171
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/23px-Flag_of_Ukraine.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/35px-Flag_of_Ukraine.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/45px-Flag_of_Ukraine.svg.png 2x" data-file-width="1200" data-file-height="800"></span></span>&nbsp;</span><a href="/wiki/Ucr%C3%A2nia" title="Ucrânia">Ucrânia</a>
+      </td>
+      <td>17,7
+      </td>
+      <td>32,7
+      </td>
+      <td>4,7
+      </td></tr>
+      <tr>
+      <td>172
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/23px-Flag_of_the_United_Arab_Emirates.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/35px-Flag_of_the_United_Arab_Emirates.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/46px-Flag_of_the_United_Arab_Emirates.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Emirados_%C3%81rabes_Unidos" title="Emirados Árabes Unidos">Emirados Árabes Unidos</a>
+      </td>
+      <td>5,2
+      </td>
+      <td>6,3
+      </td>
+      <td>2,6
+      </td></tr>
+      <tr>
+      <td>173
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/23px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/35px-Flag_of_the_United_Kingdom_%281-2%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/46px-Flag_of_the_United_Kingdom_%281-2%29.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Reino_Unido" title="Reino Unido">Reino Unido</a>
+      </td>
+      <td>6,9
+      </td>
+      <td>10,4
+      </td>
+      <td>3,4
+      </td></tr>
+      <tr>
+      <td>174
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/23px-Flag_of_Tanzania.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/35px-Flag_of_Tanzania.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/45px-Flag_of_Tanzania.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Tanz%C3%A2nia" title="Tanzânia">Tanzânia</a>
+      </td>
+      <td>8,2
+      </td>
+      <td>13,5
+      </td>
+      <td>3,7
+      </td></tr>
+      <tr>
+      <td>175
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/23px-Flag_of_the_United_States.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/35px-Flag_of_the_United_States.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/46px-Flag_of_the_United_States.svg.png 2x" data-file-width="1235" data-file-height="650"></span></span>&nbsp;</span><a href="/wiki/Estados_Unidos" title="Estados Unidos">Estados Unidos</a>
+      </td>
+      <td>14,5
+      </td>
+      <td>22,4
+      </td>
+      <td>6,8
+      </td></tr>
+      <tr>
+      <td>176
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/23px-Flag_of_Uruguay.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/35px-Flag_of_Uruguay.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/45px-Flag_of_Uruguay.svg.png 2x" data-file-width="945" data-file-height="630"></span></span>&nbsp;</span><a href="/wiki/Uruguai" title="Uruguai">Uruguai</a>
+      </td>
+      <td>18,8
+      </td>
+      <td>31,1
+      </td>
+      <td>7,7
+      </td></tr>
+      <tr>
+      <td>177
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/23px-Flag_of_Uzbekistan.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/35px-Flag_of_Uzbekistan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/46px-Flag_of_Uzbekistan.svg.png 2x" data-file-width="1000" data-file-height="500"></span></span>&nbsp;</span><a href="/wiki/Uzbequist%C3%A3o" title="Uzbequistão">Uzbequistão</a>
+      </td>
+      <td>8,3
+      </td>
+      <td>11,8
+      </td>
+      <td>4,9
+      </td></tr>
+      <tr>
+      <td>178
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/23px-Flag_of_Vanuatu.svg.png" decoding="async" width="23" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/35px-Flag_of_Vanuatu.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/46px-Flag_of_Vanuatu.svg.png 2x" data-file-width="600" data-file-height="360"></span></span>&nbsp;</span><a href="/wiki/Vanuatu" title="Vanuatu">Vanuatu</a>
+      </td>
+      <td>21,0
+      </td>
+      <td>33,1
+      </td>
+      <td>9,0
+      </td></tr>
+      <tr>
+      <td>179
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/23px-Flag_of_Venezuela.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/35px-Flag_of_Venezuela.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/45px-Flag_of_Venezuela.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Venezuela" title="Venezuela">Venezuela</a>
+      </td>
+      <td>2,1
+      </td>
+      <td>3,7
+      </td>
+      <td>0,7
+      </td></tr>
+      <tr>
+      <td>180
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/23px-Flag_of_Vietnam.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/35px-Flag_of_Vietnam.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/45px-Flag_of_Vietnam.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Vietname" class="mw-redirect" title="Vietname">Vietnã</a>
+      </td>
+      <td>7,2
+      </td>
+      <td>10,6
+      </td>
+      <td>4,2
+      </td></tr>
+      <tr>
+      <td>181
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/23px-Flag_of_Yemen.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/35px-Flag_of_Yemen.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/45px-Flag_of_Yemen.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/I%C3%A9men" title="Iémen">Iémen</a>
+      </td>
+      <td>7,1
+      </td>
+      <td>9,0
+      </td>
+      <td>5,3
+      </td></tr>
+      <tr>
+      <td>182
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/23px-Flag_of_Zambia.svg.png" decoding="async" width="23" height="15" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/35px-Flag_of_Zambia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/45px-Flag_of_Zambia.svg.png 2x" data-file-width="900" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Z%C3%A2mbia" title="Zâmbia">Zâmbia</a>
+      </td>
+      <td>14,4
+      </td>
+      <td>25,7
+      </td>
+      <td>5,3
+      </td></tr>
+      <tr>
+      <td>183
+      </td>
+      <td style="text-align:left"><span class="flagicon"><span class="mw-image-border" typeof="mw:File"><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/23px-Flag_of_Zimbabwe.svg.png" decoding="async" width="23" height="12" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/35px-Flag_of_Zimbabwe.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/46px-Flag_of_Zimbabwe.svg.png 2x" data-file-width="1200" data-file-height="600"></span></span>&nbsp;</span><a href="/wiki/Zimbabwe" title="Zimbabwe">Zimbabwe</a>
+      </td>
+      <td>23,6
+      </td>
+      <td>37,8
+      </td>
+      <td>13,5
+      </td></tr>
+      <tr class="static-row-header" style="font-weight:bold">
+      <td>
+      </td>
+      <td style="text-align:left">África
+      </td>
+      <td>11,2
+      </td>
+      <td>18,0
+      </td>
+      <td>5,2
+      </td></tr>
+      <tr class="static-row-header" style="font-weight:bold">
+      <td>
+      </td>
+      <td style="text-align:left">Américas
+      </td>
+      <td>9,0
+      </td>
+      <td>14,2
+      </td>
+      <td>4,1
+      </td></tr>
+      <tr class="static-row-header" style="font-weight:bold">
+      <td>
+      </td>
+      <td style="text-align:left">Sudeste Asiático
+      </td>
+      <td>10,2
+      </td>
+      <td>12,3
+      </td>
+      <td>8,1
+      </td></tr>
+      <tr class="static-row-header" style="font-weight:bold">
+      <td>
+      </td>
+      <td style="text-align:left">Europa
+      </td>
+      <td>10,5
+      </td>
+      <td>17,1
+      </td>
+      <td>4,3
+      </td></tr>
+      <tr class="static-row-header" style="font-weight:bold">
+      <td>
+      </td>
+      <td style="text-align:left">Leste do Mediterrâneo
+      </td>
+      <td>6,4
+      </td>
+      <td>9,2
+      </td>
+      <td>3,5
+      </td></tr>
+      <tr class="static-row-header" style="font-weight:bold">
+      <td>
+      </td>
+      <td style="text-align:left">Pacífico Ocidental
+      </td>
+      <td>7,2
+      </td>
+      <td>9,7
+      </td>
+      <td>4,8
+      </td></tr>
+      </tbody><tfoot><tr class="static-row-header">
+      <th>
+      </th>
+      <th style="text-align:left"><span class="flagicon" style="padding-left:22px;">&nbsp;</span>Global
+      </th>
+      <th style="text-align:right">9,0
+      </th>
+      <th style="text-align:right">12,6
+      </th>
+      <th style="text-align:right">5,4
+      </th></tr></tfoot></table>
+      <p class="rodapé"><p>https://pt.wikipedia.org/wiki/Lista_de_pa%C3%ADses_por_taxa_de_suic%C3%ADdio</p>
+      <p>https://pt.wikipedia.org/wiki/Suic%C3%ADdio#:~:text=No%20mundo%2C%20815%20000%20pessoas,Hungria%20(32%2C9).</p>
+  </fieldset></div>
+<div><fieldset></fieldset><div class="container-fluid bg-warning p-3"><h2> 
+A Resolução do Problema pode estar na Própria Tecnologia
+</h2></div><hr>
+    <p>
+      Para o desenvolveimento FullStack será necessário unir as habilidades de
+      profissionais front-end e back-and. Assim serão necessários utilizar as
+      seguintes Linguagens:
+    </p>
+    <ul>
+      <li><b>Front-End</b></li>
+      <ul>
+        <i
+          ><li>
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank"
+              >HTML</a
+            >
+          </li>
+          <li>
+            <a href="https://www.w3schools.com/css/default.asp" target="_blank"
+              >CSS</a
+            >
+          </li>
+          <li>
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank"
+              >JavaScript</a
+            >
+          </li></i
+        >
+      </ul>
+      <li>
+        <b>Back-End</b>
+        <ul>
+          <i>
+            <li>PHP</li>
+            <li>SQL</li></i
+          >
+        </ul>
+      </li>
+    </ul>
+    <br> <!--break row-->
+    <a href="https://www.w3schools.com/#gsc.tab=0">
+    <button value=>Cadastre-se</button></a></fieldset></div>
+  </body>
+</html>

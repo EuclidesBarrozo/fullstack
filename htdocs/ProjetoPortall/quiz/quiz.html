@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <header id="header">
+        <div id="container-completo">
+
+            <select name="" id="sele">
+                <option value="acao5">5 Perguntas</option>
+                <option value="acao6">6 Perguntas</option>
+                <option value="acao7">7 Perguntas</option>
+                <option value="acao8">8 Perguntas</option>
+                <option value="acao9">9 Perguntas</option>
+                <option value="acao10">10 Perguntas</option>
+            </select>
+            <!-- <button onclick="vert()">ver</button> -->
+            
+            <div id="radios">
+                <!-- <input type="radio" name="radio" class="radios" id="radio0" onclick="radioper(this)" checked>
+                    <input type="radio" name="radio" class="radios" id="radio1" onclick="radioper(this)">
+                    <input type="radio" name="radio" class="radios" id="radio2" onclick="radioper(this)">
+                    <input type="radio" name="radio" class="radios" id="radio3" onclick="radioper(this)">
+                    <input type="radio" name="radio" class="radios" id="radio4" onclick="radioper(this)">
+                    <input type="radio" name="radio" class="radios" id="radio5" onclick="radioper(this)"> -->
+                </div>
+                
+                
+                
+                <div id="container">
+                    <h3 id="contadorP"></h3>
+                    <h1 id="quiz">Quiz</h1>
+                    <h3 id="per">PERGUNTA </h3>
+                    <div id="card">
+                        <button id="op1" onclick="op(this)" class="opc">Opcao 1</button>
+                        <button id="op2" onclick="op(this)" class="opc">Opcao 2</button>
+                        <button id="op3" onclick="op(this)" class="opc">Opcao 3</button>
+                        <button id="op4" onclick="op(this)" class="opc">Opcao 4</button>
+                    </div>
+                    <input type="hidden" id="res">
+                    <button id="btnInicio" onclick="inicio()">Iniciar</button>
+                    <h4 id="conte"></h4>
+                    <div id="placarE">
+                        <h1 id="contes"></h1>
+                        <h2 id="contesA"></h2>
+                        <h2 id="contesE"></h2>
+                    </div>
+                    
+                </div>
+                <!-- <button id="btnChheia" onclick="telaCheia()">btn</button> -->
+            </div>
+            <button id="voltar" onclick="voltar()">I◀ Home</button>
+            </header>
+            
+            
+            <script src="quiz.js"></script>
+            <script>
+                
+                
+
+
+        function voltar(){
+            location.href = '../amazon/amazon.html'
+        }
+        const header = document.getElementById('header')
+        const per = document.getElementById('per')
+        const res = document.getElementById('res')
+        const op1 = document.getElementById('op1')
+        const op2 = document.getElementById('op2')
+        const op3 = document.getElementById('op3')
+        const op4 = document.getElementById('op4')
+        var sele = document.getElementById('sele')
+        const btnInicio = document.getElementById('btnInicio')
+        const quiz = document.getElementById('quiz')
+        const radios = document.getElementById('radios')
+
+    
+        const valor = {
+            pergunta:"",
+            opcao1:"", 
+            opcao2:"", 
+            opcao3:"", 
+            opcao4:"", 
+            resposta:""
+        }
+
+        var numS = []
+        
+        per.style.display = 'none'
+        res.style.display = 'none'
+        op1.style.display = 'none'
+        op2.style.display = 'none'
+        op3.style.display = 'none'
+        op4.style.display = 'none'
+        radios.style.display = 'none'
+
+        let c=1
+        function inicio(){
+
+            numSo = []
+            numS = []
+
+            console.log(c)
+
+            c=1
+            
+            
+            contadorP.style.display = ''
+            placarE.style.display = 'none'
+            per.style.display = ''
+            res.style.display = ''
+            op1.style.display = ''
+            op2.style.display = ''
+            op3.style.display = ''
+            op4.style.display = ''
+            radios.style.display = ''
+
+            radios.innerHTML = ''
+            sorteio()
+
+            // console.log(numSo)
+            contadorP.textContent = `${c}/${lhe}`
+        
+            
+            numSo.forEach(numM =>{
+                numS.push(Obj[numM])
+            })
+
+            numS.push(valor)
+            
+            // console.log(numS)
+            
+          
+            per.textContent = numS[0].pergunta
+            op1.textContent = numS[0].opcao1
+            op2.textContent = numS[0].opcao2
+            op3.textContent = numS[0].opcao3
+            op4.textContent = numS[0].opcao4
+            res.value = numS[0].resposta
+
+            quiz.textContent = ''
+            
+            btnInicio.style.display = 'none'
+            sele.style.display = 'none'
+            
+
+            var id = document.getElementById("radio0")
+            id.checked = true
+            i=1
+            contador = 0
+            erros = 0
+            conte.textContent = ''
+
+            
+            
+        }
+        btnInicio.style.display = ''
+        
+        let i=1;
+        let j=1
+        let contador = 0
+        let erros = 0
+
+        function op(ele){
+            console.log(c)
+            
+            
+            // console.log(i)
+            if(i== numS.length-1){
+                
+                conte.style.display = 'none'
+                contadorP.style.display = 'none'
+                placarE.style.display = ''
+                
+                
+                
+                per.style.display = 'none'
+                res.style.display = 'none'
+                op1.style.display = 'none'
+                op2.style.display = 'none'
+                op3.style.display = 'none'
+                op4.style.display = 'none'
+
+                btnInicio.style.display = ''
+                btnInicio.textContent = 'Recomeçar'
+                sele.style.display = ''
+
+                
+                setTimeout(placar,1000)
+                
+            
+                // placar()
+                function placar(){
+                    contadorP.textContent = ''
+                    
+                    conte.textContent = ''
+                    var acerto = ''
+                    var erro = ''
+                    contador>1 ? acerto = 'Perguntas' : acerto = 'Pergunta'
+                    erros>1 ? erro ='Perguntas': erro = 'Pergunta'
+
+                    contes.textContent = 'Você'
+                    contesA.textContent = `Acertou: ${contador} ${acerto}`
+                    contesE.textContent = `Errou: ${erros} ${erro}`
+
+                    
+                }
+                
+            }else{
+                conte.style.display = ''
+                placarE.style.display = 'none'
+            }
+            
+            desabilitar()
+            // console.log(ele)
+            ele.classList.add('ativo')
+
+            if(ele.textContent === res.value){
+                ele.style.background='green'
+                setTimeout(()=>{
+                    contador++
+                    btn()
+                    habilitar()
+                },1000)  
+            }else{
+                ele.style.background='red'
+                setTimeout(()=>{
+                    erros++
+                    btn()
+                    habilitar()
+                },1000) 
+            }
+            c++
+            contadorP.textContent = `${c}/${lhe}`
+            if(c==lhe+1){
+                // alert(c)
+                c=0
+                contadorP.textContent = ''
+            }
+        }
+
+
+        
+
+        function btn(){
+            
+            
+
+            var id = document.getElementById("radio"+i)
+            if(id==numS.length){
+                // alert("stop")
+                id.checked = false
+            }
+            
+            conte.textContent = `Voce Acertou: ${contador} Errou: ${erros}`
+            // var tirar = id.id.replace('radio','')
+            id.checked = true
+            op1.style.background = ''
+            op2.style.background = ''
+            op3.style.background = ''
+            op4.style.background = ''
+            per.textContent = numS[i].pergunta
+            op1.textContent = numS[i].opcao1
+            op2.textContent = numS[i].opcao2
+            op3.textContent = numS[i].opcao3
+            op4.textContent = numS[i].opcao4
+            res.value = numS[i].resposta
+            i++
+            // c++
+            // contadorP.textContent = `${c}/${lhe}`
+
+            // if(c>lhe){
+            //     alert(c)
+            //     c=0
+            //     // lhe=0
+            //     contadorP.textContent = ''
+            // }
+
+        }
+        function desabilitar(){
+            const btns = document.querySelectorAll('.opc')
+            btns.forEach(btn=>{
+                btn.classList.remove('ativo')
+                btn.disabled = true
+            })
+        }
+        function habilitar(){
+            const btns = document.querySelectorAll('.opc')
+            btns.forEach(btn=>{
+                btn.classList.remove('ativo')
+                btn.disabled = false
+            })
+        }
+    
+        var numSo=[]
+
+        let lhe = ''
+
+        function sorteio(){
+            var tirar = sele.value.replace('acao','')
+            // alert(tirar)
+            lhe = tirar
+            
+            let le =0
+            while(le<(parseInt(tirar)+1)){
+                // console.log(parseInt(tirar)+1)
+                var input = document.createElement('input')
+                input.type = 'radio'
+                input.id = 'radio'+le
+                input.className = 'radios'
+                input.name = 'radio'
+                input.onclick = 'radioper(this)'
+
+                radios.appendChild(input)
+
+                le++
+            }
+
+            while(numSo.length<tirar){
+                var num = Math.floor(Math.random()* Obj.length)
+                
+                if(numSo.indexOf(num)=== -1){
+                    numSo.push(num)
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

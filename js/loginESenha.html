@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="cadastro">
+        Login: <input type="text" id="login"><br>
+        Senha: <input type="text" id="senha"><br>       
+        <input type="submit" value="Cadastrar">
+    </form>
+    <script>
+        document.getElementById('cadastro').onsubmit = function () {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value; 
+            if (login == "Senac" && senha == "123") 
+                alert("Bem-vindo");
+            
+            else {
+                if(login != "Senac")
+                    alert("Login incorreto.");                    
+    
+                if(senha != "123")
+                    alert("Senha incorreto.");
+            }
+            return false;
+        };
+    </script>
+</body>
+
+</html>

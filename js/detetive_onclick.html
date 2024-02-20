@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>Formulário Investigativo</h2>
+        <button onclick="return pergunta1()">1</button>
+        <button onclick="return pergunta2()">2</button>
+    </div>
+    <div id = "p1">
+        Você telefonou para a vítiva?: <input type="text" id="r1">
+    </div>
+    <div id="p2">
+        Você esteve no local do crime?: <input type="text" id="r2">
+    </div>
+    <script>
+        document.getElementById("p1").style.display = "none";
+        document.getElementById("p2").style.display = "none";
+
+        function pergunta1(){
+            document.getElementById("p1").style.display = "block";
+            document.getElementById("p2").style.display = "none";
+        }
+        function pergunta2() {
+            document.getElementById("p1").style.display = "none";
+            document.getElementById("p2").style.display = "block";
+        }        
+    </script>
+</body>
+
+</html>

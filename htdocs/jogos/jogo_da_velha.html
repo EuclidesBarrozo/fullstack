@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="card container mt-2" id="cardInicio">
+        <h1>Jogo da Velha</h1>
+
+        <div id="l0" class="row">
+            <input class="form-control m-1 col-1" type="text" id="l0c0" disabled>
+            <input class="form-control m-1 col-1" type="text" id="l0c1" disabled>
+            <input class="form-control m-1 col-1" type="text" id="l0c2" disabled>
+        </div>
+        <div id="l1" class="row">
+            <input class="form-control m-1 col-1" type="text" id="l1c0" disabled>
+            <input class="form-control m-1 col-1" type="text" id="l1c1" disabled>
+            <input class="form-control m-1 col-1" type="text" id="l1c2" disabled>
+        </div>
+        <div id="l2" class="row">
+            <input class="form-control m-1 col-1" type="text" id="l2c0" disabled>
+            <input class="form-control m-1 col-1" type="text" id="l2c1" disabled>
+            <input class="form-control m-1 col-1" type="text" id="l2c2" disabled>
+        </div>
+        <div class="row">
+            <label>Linha: </label><input class="form-control m-1 col-1" type="number" id="linha" min= 0 max=2>
+            <label>Coluna: </label><input class="form-control m-1 col-1" type="number" id="coluna" min= 0 max=2>           
+        </div>
+        <button class="btn btn-primary m-1 col-3" onclick="jogar()" id="btnJogar">Confirmar Jogada</button>
+        <button class="btn btn-primary m-1 col-3 d-none" onclick="reiniciar()" id="btnReiniciar">Reiniciar</button>
+    </div>
+
+    
+    <script>
+        //matriz para representar o jogo da velha
+        velha =      [  ["", "", ""],
+                        ["", "", ""],
+                        ["", "", ""]];
+        
+        jogada = 0; //Quantidade de jogadas realizadas
+        maxJogadas = 9; // número máximo de jogadas
+        quemJoga = 1; // representa o jogador1 ou jogador2
+        venceu = false;//variável de controle de vitória
+
+        function jogar(){
+            linha = document.getElementById("linha").value;
+            coluna = document.getElementById("coluna").value;
+            if(jogada < maxJogadas && venceu == false){
+                if(velha[linha][coluna] == ""){
+                    if(quemJoga == 1){
+                        velha[linha][coluna] = "X";
+                        quemJoga = 2;
+                    }else{
+                        velha[linha][coluna] = "O";
+                        quemJoga = 1;
+                    }
+                    jogada++;
+                }else{
+                    alert("Linha e/ou Coluna inválida!");
+                }
+                tela();
+                venceu = verificar();
+            }
+            if(venceu){
+                btnJogar = document.getElementById("btnJogar");
+                btnJogar.classList.add("d-none");
+                btnReiniciar = document.getElementById("btnReiniciar");
+                btnReiniciar.classList.remove("d-none");
+            }
+        }
+        function tela(){
+            for(i = 0; i< 3; i++){
+                for(j = 0; j < 3; j++){
+                    celula = document.getElementById("l"+i+"c"+j);
+                    celula.value = velha[i][j];
+                }
+            }
+        }
+
+        function verificar(){
+            vitoria = false;
+            simbolos = ["X","O"];
+            
+            for (i = 0; i < 2; i++){
+                //verificar vitória em linhas
+                vitoria = false;
+                c = 0;//
+                for(l = 0 ;l < 3; l++){
+                //while(l < 3){//percorrer as linhas
+                    //contar qtd de simbolos iguais em uma linha
+                    soma = 0;
+                    //c = 0;//inicialização da variável
+                    for(c = 0; c < 3; c++){
+                    //while(c < 3){//(condição)percorrer as colunas
+                        if(velha[l][c] == simbolos[i]){
+                            soma++;
+                        }
+                        //c++;//incremento da variável
+                    }
+                    //verificar se o jogador ganhou
+                    if(soma == 3){
+                        vitoria = true;
+                        break;//para o 1º while (linhas)
+                    }
+                    //l++;
+                //confirmar a vitoria    
+                }if(vitoria){
+                    alert("O jogador "+ simbolos[i]+" ganhou!");
+                    break;//para o for
+                }               
+                //verificar vitória colunas
+                l = 0;
+                for(c = 0;c < 3; c++){
+                //while (c < 3) {//
+                    soma = 0;
+                    //l = 0;//
+                    for(l = 0; l < 3; l++){
+                    //while (l < 3) {//
+                        if (velha[l][c] == simbolos[i]) {
+                            soma++;
+                        }
+                        //l++;//
+                    }
+                    if (soma == 3) {
+                        vitoria = true;
+                        break;
+                    }
+                    //c++;//
+                } if (vitoria) {
+                    alert("O jogador " + simbolos[i] + " ganhou!");
+                    break;
+                }
+                //verificar vitória diagonal 1
+                soma = 0;
+                //idiag = 0;
+                for(idiag = 0; idiag < 3; idiag++){
+                //while (idiag < 3){
+                    if (velha[idiag][idiag] == simbolos[i])
+                        soma++;
+                //idiag++;
+                }if (soma == 3){
+                    alert("O jogador " + simbolos[i] + " ganhou!");
+                    vitoria = true;
+                    break;
+                }
+                //verificar vitória diagonal 2
+                soma = 0;
+                //idiagl = 0;
+                //idiagc = 2;
+
+                for (idiagl = 0, idiagc = 2; idiagc >= 0; idiagl++, idiagc--){
+                    if (velha[idiagl][idiagc] == simbolos[i])
+                        soma++;
+                //idiagl++;
+                //idiagc--;
+                }if (soma == 3){
+                    alert("O jogador " + simbolos[i] + " ganhou!");
+                    vitoria = true;
+                    break;
+                }
+            }
+            
+            return vitoria;//retorna o valor da váriavel vitoria
+
+        }
+        function reiniciar(){
+            location.reload(true);
+        }
+         
+    </script>
+</body>
+
+</html>

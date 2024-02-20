@@ -1,0 +1,4 @@
+Calcular o valor de uma venda 
+
+se à vista: valor da venda - desconto (10%)
+se a prazo: valor da venda

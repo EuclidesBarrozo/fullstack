@@ -1,0 +1,16 @@
+Exemplo -> média
+
+2. área do quadrado, 
+
+1. juros simples, 
+Juros = Capital * taxa * tempo => J = C * (I/100) * T
+
+3. área do trapézio, 
+4. P.A, 
+5. P.G
+
+
+
+
+
+ 

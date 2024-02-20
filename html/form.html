@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="table.html" method="GET">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <table border="1">
+                <tr>
+        <td>Nome:</td> <td><input type="text" maxlength="15"></td>
+        </tr>
+        <tr><td>email:</td><td><input type="text"></td>
+            </tr>
+        <tr><td>senha:</td> <td><input type="password"></td></tr>
+        gênero:
+        <br><input type="radio" name="genero" value="M" checked>Masculino
+        <br><input type="radio" name="genero" value="F">Feminino
+        <br><input type="radio" name="genero" value="O">Outros
+        <br>Data de Nascimento<input type="date">
+        </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Dados Educacionais</legend>
+        <br>Qual idioma você já estudou?
+        <br><input type="checkbox" value="português">Português
+        <br><input type="checkbox" value="inglês">Inglês
+        <br><input type="checkbox" value="mandarim">Mandarim
+        <br>Escolaridade
+        <select>
+            <option value="EF1">Ensino Fundamental 1</option>
+            <option value="EF2">Ensino Fundamental 2</option>
+            <option value="EM">Ensino Médio</option>
+            <option value="ES">Ensino Superior</option>
+        </select>
+        </fieldset>
+        <fieldset>
+            <legend>Endereço</legend>
+            Rua:<input type="text">
+            Número:<input type="number" min="0">
+        </fieldset>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>

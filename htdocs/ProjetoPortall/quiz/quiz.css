@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(244, 130, 17);
+    background-image: url(SuccessDesktop.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header::before{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(8, 8, 8, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+#container-completo{
+    position: absolute;
+    z-index: 2;
+}
+#radios{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radios{
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    /* display: none; */
+}
+#container{
+    width: 400px;
+    height: 400px;
+    /* background-color: green; */
+    box-shadow: 0 0 10px 1px white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+#per{
+    content: '';
+    position: absolute;
+    top: 20px;
+    padding: 5px;
+    color: white;
+}
+#card{
+    width: 100%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column ;
+}
+#op1 , #op2, #op3, #op4{
+    width: 80%;
+    height: 15%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+#btnres{
+    position: absolute;
+    bottom: 30px; 
+    width: 40%;
+    height: 10%;
+    border-radius: 7px;
+    display: none;
+}
+
+#quiz{
+    font-size: 50px;
+    position: absolute;
+    top:25%;
+    color: white;
+}
+#btnInicio{
+    padding: 10px 20px;
+    position: absolute;
+    bottom:25%;
+    border-radius:6px;
+
+}
+#placarE{
+    top: 120px;
+    position: absolute;
+    color: white;
+}
+.radios{
+    display: none;
+}
+#sele{
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 0 5px;
+    border-radius: 6px;
+}
+#contadorP{
+    position: absolute;
+    top: -30px;
+    right: 50px ;
+    color: white;
+}
+#conte{
+    position: absolute;
+    bottom: 30px;
+    color: white;
+}
+#voltar{
+    padding: 2px 10px;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    border: none;
+    background-color: rgb(76, 75, 75);
+    /* color: white; */
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    opacity: 30%;
+    cursor: pointer;
+    z-index: 3;
+
+}
+#voltar:hover{
+    background-color: rgb(150, 149, 149);
+    color: white;
+    opacity: 100%;
+}

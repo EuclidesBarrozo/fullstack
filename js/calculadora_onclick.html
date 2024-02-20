@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    n1: <input type="text" id="n1">
+    n2: <input type="text" id="n2">
+
+    <br>
+    resultado: <input type="text" id="resultado" disabled>
+    <button value="Calcular" onclick="return soma()">+</button>
+    <button value="Calcular" onclick="return sub()">-</button>
+    
+    <script>
+        function soma(){
+            num1 = document.getElementById('n1').value;
+            num2 = document.getElementById('n2').value;
+            resultado = parseFloat(num1) + parseFloat(num2);
+            document.getElementById('resultado').value = resultado;
+            return false;
+        };
+
+        function sub() {
+                num1 = document.getElementById('n1').value;
+                num2 = document.getElementById('n2').value;
+                resultado = parseFloat(num1) - parseFloat(num2);
+                document.getElementById('resultado').value = resultado;
+                return false;
+            };
+
+        
+      
+    </script>
+</body>
+
+</html>

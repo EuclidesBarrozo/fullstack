@@ -1,0 +1,11 @@
+Classes bootstrap para tabelas
+table-dark -> background preto
+<thead class="thead-dark">
+
+<table class="table table-striped"> -> background listrado
+<table class="table table-striped table-dark">
+<table class="table table-bordered"> -> bordas da tabela
+<table class="table table-hover"> -> modifica o background quando passa o mouse
+<table class="table table-sm"> -> tira o espaçamento interno 
+<tr class="table-primary">...</tr> -> background azul para tabela
+border border-danger -> inserir borda e mudar a cor da borda

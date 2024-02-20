@@ -1,0 +1,99 @@
+//SELECT todas as colunas FROM nome da tabela
+SELECT * FROM produto
+
+//SELECT todas as colunas FROM nome da tabela WHERE nome da coluna = valor procurado
+SELECT * FROM produto WHERE id = 1
+
+//SELECT nomes das colunas FROM nome da tabela 
+//WHERE nome da coluna > valor procurado and nome da coluna < valor procurado
+SELECT produto, nome FROM produto WHERE valor > 3 and valor < 10
+
+//SELECT todas as colunas FROM nome da tabela 
+//WHERE nome da coluna LIKE "valor procurado%"
+SELECT * FROM produto WHERE produto LIKE "b%"
+
+//UPDATE nome da tabela SET nome da coluna = 'valor atual' 
+//WHERE nome da coluna = valor procurado
+UPDATE produtos SET valor='1.00' WHERE id = 1
+
+//DELETE FROM nome da tabela 
+//WHERE coluna da tabela = valor procurado
+DELETE FROM produtos WHERE id = 1
+
+//CRIAR UM BANCO DE DADOS
+CREATE DATABASE empresa;
+
+//Especificar o banco de dados utilizado
+use empresa;
+
+//criar tabela nome_da_tabela(
+	nome_do_campo tipo_de_dados,
+	...
+CREATE TABLE Pessoa (
+    id_pessoa int NOT NULL AUTO_INCREMENT,
+    nome varchar(255) NOT NULL,
+    sobrenome varchar(255),
+    idade int,
+    PRIMARY KEY (id_pessoa)
+);
+//Alterar tabela nome_do_banco.nome_da_tabela
+//ADD significa adicionar
+ALTER TABLE empresa.Pessoa
+ADD email varchar(100) not null, 
+ADD profissao varchar(100);
+
+// Mudar o nome de uma coluna
+//CHANGE nome_antigo nome_novo tipo_de_dados;
+ALTER TABLE empresa.pessoa
+CHANGE id_pessoa id INT;
+
+//Deletar uma coluna
+ALTER TABLE empresa.pessoa
+DROP COLUMN email;
+
+//deletar uma tabela
+DROP TABLE pessoa;
+
+//deletar banco de dados
+drop database empresa;
+
+//Seleciona ordenando com base em uma coluna especificada
+//do menor para o maior
+SELECT * FROM produtos ORDER BY validade;
+
+//Conta a quantidade de registros na tabela produtos
+SELECT COUNT(*) FROM produtos;
+
+//Média da coluna valor
+SELECT AVG(valor) FROM produtos;
+
+//Soma os valores da coluna quantidade
+SELECT SUM(quantidade) FROM produtos;
+
+//Seleciona o maior valor
+SELECT MAX(valor) FROM produtos;
+
+//Seleciona o menor valor
+SELECT MIN(valor) FROM produtos;
+
+//cria uma coluna com diferença entre duas datas
+SELECT TIMESTAMPDIFF(DAY, NOW(), validade) AS prazo FROM produtos;
+
+//Limita a quantidade de registros selecionados
+//determina a posição inicial da pesquisa
+SELECT * FROM produtos LIMIT 0, 10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

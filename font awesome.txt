@@ -1,0 +1,6 @@
+font awesome
+<i class="fa fa-car fa-lg"></i>
+<i class="fa fa-car fa-2x"></i>
+<i class="fa fa-car fa-3x"></i>
+<i class="fa fa-car fa-4x"></i>
+<i class="fa fa-car fa-5x"></i>

@@ -1,0 +1,7 @@
+Fluxograma
+1. pensar em uma situação/problema que será resolvido por um programa de computador.
+2. Descrever a funcionalidade e seu contexto
+3. Desenha o fluxograma dessa funcionalidade
+4. Só utilizar o que estudamos
+
+
